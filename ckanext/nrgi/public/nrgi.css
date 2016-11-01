@@ -1,0 +1,150 @@
+body {
+  font-family: "Palatino";
+  color: #000000;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p[class=lead] {
+  font-family: "Lucida Grande";
+}
+.homepage {
+  background-color: #fafafa;
+}
+.hero-unit {
+  margin-bottom: 0px;
+}
+#front-page-hero {
+  background-image: url(/hero.jpg);
+  background-size: cover;
+  color: #fafafa;
+  padding: 120px;
+  border-radius: initial;
+}
+#front-page-hero h1,
+#front-page-hero h2,
+#front-page-hero h3,
+#front-page-hero h4,
+#front-page-hero h5 {
+  font-weight: 200;
+}
+#front-page-hero h1 {
+  margin-bottom: 10px;
+}
+#front-page-hero #front-page-search-input {
+  padding: 14px 14px 14px 14px;
+}
+#front-page-hero .btn.btn-primary,
+#front-page-hero #front-page-search-input-icon {
+  padding: 14px 14px 14px 14px;
+  font-family: "Lucida Grande";
+  background-color: #ff6f4c;
+  border-color: #ff6f4c;
+  color: #fafafa;
+}
+#frontpage-sections {
+  background-color: #fafafa;
+}
+.account-masthead {
+  background-color: #fafafa;
+  background-image: none;
+}
+/* The "bubble" containing the number of new notifications. */
+.account-masthead .account .notifications a span {
+  background-color: black;
+}
+/* The text and icons in the user account info. */
+.account-masthead .account ul li {
+  border: none;
+}
+.account-masthead .account ul li a {
+  color: #232323;
+}
+/* The user account info text and icons, when the user's pointer is hovering
+   over them. */
+.account-masthead .account ul li a:hover {
+  color: rgba(215, 215, 215, 0.7);
+  background-color: black;
+}
+.masthead {
+  background-color: #fafafa;
+  padding-bottom: 20px;
+  background-image: none;
+}
+.masthead .navigation .nav-pills li a {
+  color: #557288;
+  padding-top: 20px;
+  background-color: #fafafa;
+}
+.masthead .navigation .nav-pills li a:hover {
+  color: #4a7493;
+  background-color: #fafafa;
+}
+.masthead .navigation .nav-pills li.active a {
+  color: #3f759e;
+  background-color: #fafafa;
+}
+.masthead input[type="text"]:focus {
+  -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
+}
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  box-shadow: none;
+  text-decoration: underline;
+}
+.breadcrumb {
+  font-family: "Lucida Grande";
+}
+.breadcrumb li {
+  text-shadow: none;
+}
+.site-footer {
+  font-family: "Lucida Grande";
+  background-color: #557288;
+  background-image: none;
+  color: rgba(250, 250, 250, 0.8);
+}
+.site-footer a {
+  color: rgba(250, 250, 250, 0.8);
+}
+.site-footer label {
+  color: rgba(250, 250, 250, 0.8);
+}
+body {
+  background-color: #557288;
+}
+.btn {
+  font-weight: 200;
+}
+.btn-primary {
+  background-color: #557288;
+  background-image: none;
+  border: #557288;
+}
+.btn-primary:hover {
+  background-image: none;
+  background-color: #476072;
+}
+div[role=main] {
+  background: none;
+  background-color: white;
+}
+.toolbar {
+  background-color: #557288;
+  border-radius: 4px;
+  padding: 4px;
+  color: #fafafa;
+}
+.toolbar .breadcrumb a {
+  color: #fafafa;
+}
+.wrapper {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}

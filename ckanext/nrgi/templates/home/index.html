@@ -1,0 +1,29 @@
+{% ckan_extends %}
+
+{% block content %}
+    <div class="homepage layout-nrgi">
+        <div class="container">{{self.flash()}}</div>
+
+        <div id="front-page-hero" class="hero-unit" style="margin-bottom: 0px;">
+            <div class="container">
+                <div class="row">
+                    <div class="span12 text-center">
+                        <div class="row">
+                            <div class="input-append" id="front-page-search-input-wrapper">
+                                <input id="front-page-search-input" type="search" placeholder="Search for Data...">
+                                <span id="front-page-search-input-icon" class="add-on"><i class="icon-search"></i></span>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div id="header-wrapper">
+                                <h1>Resource Governance Data Portal</h1>
+                            </div>
+                            <a href="/dataset" class="btn btn-primary">Explore Datasets</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

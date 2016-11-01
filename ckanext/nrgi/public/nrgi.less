@@ -1,0 +1,185 @@
+@white: #fafafa;
+@black: #000;
+@nrgi-primary-blue: #557288;
+@nrgi-primary-orange: #FF6F4C;
+@font-header: "Lucida Grande";
+@font-body: "Palatino";
+
+.gradient (@startColor: #eee, @endColor: white) {
+    background-color: @startColor;
+    background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+    background: -webkit-linear-gradient(top, @startColor, @endColor);
+    background: -moz-linear-gradient(top, @startColor, @endColor);
+    background: -ms-linear-gradient(top, @startColor, @endColor);
+    background: -o-linear-gradient(top, @startColor, @endColor);
+}
+.horizontal-gradient (@startColor: #eee, @endColor: white) {
+    background-color: @startColor;
+    background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+    background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+    background-image: -moz-linear-gradient(left, @startColor, @endColor);
+    background-image: -ms-linear-gradient(left, @startColor, @endColor);
+    background-image: -o-linear-gradient(left, @startColor, @endColor);
+}
+
+body {
+    font-family: @font-body;
+    color: @black;
+}
+h1,h2,h3,h4,h5,h6,p[class=lead] {
+    font-family: @font-header;
+}
+
+.homepage {
+    background-color: @white;
+    // max-height: 380px;
+}
+
+.hero-unit{
+    margin-bottom: 0px;
+}
+
+#front-page-hero {
+    background-image: url(/hero.jpg);
+    background-size: cover;
+    color: @white;
+    padding: 120px;
+    border-radius: initial;
+
+    h1,h2,h3,h4,h5 {
+        font-weight: 200;
+    }
+    h1 {
+        margin-bottom: 10px;
+    }
+    #front-page-search-input {
+        padding: 14px 14px 14px 14px;
+    }
+    .btn.btn-primary,#front-page-search-input-icon {
+        padding: 14px 14px 14px 14px;
+        font-family: @font-header;
+        background-color: @nrgi-primary-orange;
+        border-color: @nrgi-primary-orange;
+        color: @white;
+    }
+}
+
+
+#frontpage-sections {
+    background-color: @white;
+}
+
+
+.account-masthead {
+    background-color: @white;
+    background-image: none;
+}
+/* The "bubble" containing the number of new notifications. */
+.account-masthead .account .notifications a span {
+    background-color: black;
+}
+/* The text and icons in the user account info. */
+.account-masthead .account ul li {
+    border: none;
+}
+.account-masthead .account ul li a {
+    color: rgb(35, 35, 35);
+}
+/* The user account info text and icons, when the user's pointer is hovering
+   over them. */
+.account-masthead .account ul li a:hover {
+    color: rgba(215, 215, 215, 0.7);
+    background-color: black;
+}
+
+
+.masthead {
+    background-color: @white;
+    padding-bottom: 20px;
+    background-image: none;
+}
+.masthead .navigation .nav-pills li a {
+    color: @nrgi-primary-blue;
+    padding-top: 20px;
+    background-color: @white;
+}
+.masthead .navigation .nav-pills li a:hover {
+    color: saturate(@nrgi-primary-blue, 10%);
+    background-color: @white;
+}
+.masthead .navigation .nav-pills li.active a {
+    color: saturate(@nrgi-primary-blue, 20%);
+    background-color: @white;
+}
+.masthead input[type="text"]:focus {
+    -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.breadcrumb {
+    font-family: @font-header;
+
+    li {
+        text-shadow: none;
+    }
+}
+
+.site-footer {
+    font-family: @font-header;
+
+    background-color: @nrgi-primary-blue;
+    background-image: none;
+    color: fade(@white, 80%);
+
+    a {
+        color: fade(@white, 80%);
+    }
+    label {
+        color: fade(@white, 80%);
+    }
+}
+
+body {
+    background-color: @nrgi-primary-blue;
+}
+
+
+.btn {
+    font-weight: 200;
+}
+.btn-primary {
+    background-color: @nrgi-primary-blue;
+    background-image: none;
+    border: @nrgi-primary-blue;
+
+    &:hover {
+        background-image: none;
+        background-color: darken(@nrgi-primary-blue, 7%);
+    }
+}
+
+
+div[role=main] {
+    background: none;
+    background-color: white;
+}
+.toolbar {
+    background-color: @nrgi-primary-blue;
+    border-radius: 4px;
+    padding: 4px;
+    color: @white;
+
+    .breadcrumb a {
+        color: @white;
+    }
+}
+.wrapper {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
