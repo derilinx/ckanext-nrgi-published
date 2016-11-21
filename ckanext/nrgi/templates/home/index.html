@@ -1,5 +1,15 @@
 {% ckan_extends %}
 
+{% macro category_box(text, imgsrc) %}
+    <div class="span2 category-box">
+        <a href="/dataset?category={{text}}">
+            <img src="{{imgsrc}}">
+            <p>{{text}}</p>
+        </a>
+    </div>
+{% endmacro %}
+
+
 {% block content %}
     <div class="homepage layout-nrgi">
         <div class="container">{{self.flash()}}</div>
@@ -7,23 +17,130 @@
         <div id="front-page-hero" class="hero-unit" style="margin-bottom: 0px;">
             <div class="container">
                 <div class="row">
-                    <div class="span12 text-center">
-                        <div class="row">
-                            <div class="input-append" id="front-page-search-input-wrapper">
-                                <input id="front-page-search-input" type="search" placeholder="Search for Data...">
-                                <span id="front-page-search-input-icon" class="add-on"><i class="icon-search"></i></span>
-                            </div>
-
-                        </div>
+                    <div class="span8 offset2 text-center">
                         <div class="row">
                             <div id="header-wrapper">
-                                <h1>Resource Governance Data Portal</h1>
+                                <h1>Open Data</h1>
                             </div>
-                            <a href="/dataset" class="btn btn-primary">Explore Datasets</a>
+                            <p>Helping people to realize the benefits of their countries' endowments of oil, gas, and minerals.</p>
+                            <div class="row">
+                                <form action="dataset" method="get">
+                                    <div class="input-append" id="front-page-search-input-wrapper">
+                                        <input name="q" id="front-page-search-input" type="search" placeholder="Search for Datasets...">
+                                        <button type="submit" style="height:inherit;" id="front-page-search-input-icon" class="add-on">SEARCH</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- <a href="/dataset" class="btn btn-primary">Explore Datasets</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="span4 offset8">
+                        <div class="span1 count-box">
+                            <h5>4,249</h5>
+                            <small>Sources</small>
+                        </div>
+                        <div class="span1 count-box">
+                            <h5>58</h5>
+                            <small>Countries</small>
+                        </div>
+                        <div class="span1 count-box">
+                            <h5>3,249</h5>
+                            <small>Datasets</small>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="container">
+            <section id="categories">
+                <div class="row">
+                    {{ category_box('Strategy, Consultation, and Institutions', '/imgcat/agriculture.png') }}
+                    {{ category_box('Accountability and Transparency', '/imgcat/economy.png') }}
+                    {{ category_box('Exploration and License Allocation', '/imgcat/education.png') }}
+                    {{ category_box('Taxation', '/imgcat/energy.png') }}
+                    {{ category_box('Local Effects', '/imgcat/environment.png') }}
+                    {{ category_box('Nationally Owned Resource Companies', '/imgcat/government.png') }}
+                </div>
+                <div class="row">
+                    {{ category_box('Revenue Distribution', '/imgcat/health.png') }}
+                    {{ category_box('Revenue Volatility', '/imgcat/justice.png') }}
+                    {{ category_box('Government Spending', '/imgcat/population.png') }}
+                    {{ category_box('Private Sector Development', '/imgcat/science.png') }}
+                    {{ category_box('Roles of Multinational Companies', '/imgcat/transport.png') }}
+                    {{ category_box('Role of International Community', '/imgcat/housing.png') }}
+                </div>
+            </section>
+        </div>
+
+        <div class="container">
+            <section id="viz">
+                <div class="row">
+                    <div class="span4 viz-box">
+                        <h5>Lorem Ipsum</h5>
+                        <img src="/graphshim.jpg">
+                    </div>
+                    <div class="span4 viz-box">
+                        <h5>Lorem Ipsum</h5>
+                        <img src="/graphshim.jpg">
+                    </div>
+                    <div class="span4 viz-box">
+                        <h5>Lorem Ipsum</h5>
+                        <img src="/graphshim.jpg">
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top: 2em">
+                    <div class="span12 text-center">
+                        <a href="/dataset" class="btn btn-primary">Search Datasets</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="container">
+            <section id="community">
+                <div class="row">
+                    <div class="span12">
+                        <h3>Community</h3>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 14px;">
+                    <div class="span7" id="community-today">
+                        <div class="community-box">
+                            <h3>Today</h3>
+                            <p>Discover the updates, visualizations, and user experiences of the portal.</p>
+                            <a target="_blank" href="/about" class="btn btn-primary">Discover</a>
+                        </div>
+                    </div>
+                    <div class="span5" id="community-twitter">
+                        <a class="twitter-timeline" data-height="280" data-dnt="true" href="https://twitter.com/NRGInstitute">Tweets by NRGInstitute</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span4" id="community-club">
+                        <div class="community-box">
+                            <h3>
+                                <img src="/imgcom/userclub.png">
+                                <span>User's Club</span>
+                            </h3>
+                            <p>Join the NRGI's Open Data user's club and recieve information by e-mail</p>
+                            <a class="btn btn-primary inverted">Join Us</a>
+                        </div>
+                    </div>
+                    <div class="span8" id="community-rgi">
+                        <div class="community-box">
+                            <h3>Resource Governance Index (RGI)</h3>
+                            <p>The RGI measures the quality of governance in the oil, gas, and mining sectors of 58 countries.</p>
+                            <a class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 {% endblock %}
