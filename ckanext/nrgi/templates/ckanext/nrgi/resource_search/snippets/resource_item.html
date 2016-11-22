@@ -1,0 +1,35 @@
+{#
+Displays a single dataset of type 'resource'.
+
+resource        - A resource to display.
+item_class     - The class name to use on the list item.
+truncate       - The length to trucate the description to (default: 180)
+truncate_title - The length to truncate the title to (default: 80).
+show_remove    - If True, show the remove button to remove resource/dataset association.
+
+#}
+{% set truncate = truncate or 180 %}
+{% set truncate_title = truncate_title or 80 %}
+{% set title = resource.title or resource.name %}
+{% set notes = h.markdown_extract(resource.notes, extract_length=truncate) %}
+{% set image_display_url = h.get_from_flat_dict(resource.extras, 'image_url') %}
+
+{% block resource_item %}
+
+    <div class="row">
+        <div class="span12">
+            <div class="panel panel-default">
+                {% block item_inner %}
+                    <div class="panel-heading">
+                        {% block title %}
+                            <h3>{{resource.name}}</h3>
+                        {% endblock %}
+                    </div>
+
+                    <div class="panel-body">
+                    </div>
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

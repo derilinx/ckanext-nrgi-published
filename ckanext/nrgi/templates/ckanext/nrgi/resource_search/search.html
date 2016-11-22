@@ -1,0 +1,62 @@
+{% extends "package/search.html" %}
+{% import 'macros/form.html' as form %}
+
+{% block title %}{{_("Resource Search")}}{% endblock %}
+{% block subtitle %}{{ _("Resource Search") }}{% endblock %}
+
+{% block breadcrumb_content %}
+    <li class="active">{{ h.nav_link(_('Resource Search'), controller='ckanext.nrgi.controller:NrgiController', action='search') }}</li>
+{% endblock %}
+
+{% block primary %}
+    {% block page_pagination %}
+    {% endblock %}
+    {{ super() }}
+{%endblock%}
+
+{% block page_primary_action %}
+{% endblock %}
+
+{% block form %}
+    <div class="search-area">
+        <div class="clearfix dgu-equal-height" data-selector=".auto-height">
+            <div class="mini">
+                <div class="left-inner auto-height">
+                    <form class="form-search" action="/resource_search" method="GET">
+                        <div class="input-group">
+                            <input class="form-control" type="text" name="query" value="{{c.q}}" results="0" placeholder=" Search Resources..."/>
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-default">
+                                    <i class="icon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+
+{% block package_search_results_list %}
+    {{ h.snippet('ckanext/nrgi/resource_search/snippets/resource_search_list.html', resources=c.page.items) }}
+{% endblock %}
+
+{% block package_search_results_api %}
+{% endblock %}
+
+{% block secondary_content %}
+    <div class="hidden-xs hidden-sm">
+        <div class="module module-narrow module-shallow">
+            <h3 class="module-heading">
+                <i class="icon-info-sign"></i>
+                {{ _('Resource Search') }}
+            </h3>
+            <div class="module-content">
+                <p>
+                    Here, you can search across all of the resources (files) that CKAN knows about. Search using the form <pre>field:value</pre> For example, try <pre>answers:016</pre>
+                </p>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

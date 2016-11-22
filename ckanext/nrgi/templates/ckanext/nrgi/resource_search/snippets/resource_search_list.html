@@ -1,0 +1,24 @@
+{#
+Displays a list of showcases.
+
+resources       - A list of resources to display.
+list_class     - The class name for the list item.
+item_class     - The class name to use on each item.
+truncate       - The length to trucate the description to (default: 180)
+truncate_title - The length to truncate the title to (default: 80).
+show_remove    - If True, show the remove button to remove the showcase/dataset association.
+
+#}
+{% block resource_list %}
+    {% if resources %}
+        <ul class="media-grid" data-module="media-grid">
+            {% block resource_list_inner %}
+                {% for resource in resources %}
+                    {% snippet 'ckanext/nrgi/resource_search/snippets/resource_item.html', resource=resource, item_class=item_class, truncate=truncate, truncate_title=truncate_title %}
+                {% endfor %}
+            {% endblock %}
+        </ul>
+    {% else %}
+        <p class="lead">No results</p>
+    {% endif %}
+{% endblock %}

@@ -2,6 +2,7 @@
 body {
   font-family: "Open Sans";
   color: #000000;
+  background-color: #5b5d62;
 }
 h1,
 h2,
@@ -242,9 +243,6 @@ section#community .community-box h5 {
 }
 .site-footer small {
   color: #ffffff;
-}
-body {
-  background-color: #557288;
 }
 .btn {
   font-weight: 200;
