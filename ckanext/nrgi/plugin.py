@@ -1,6 +1,8 @@
 import copy
 import json
 
+from collections import OrderedDict
+
 import pylons.config as config
 
 import ckan.plugins as plugins
@@ -31,6 +33,7 @@ def extended_build_nav(*args):
 class NrgiPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
+    plugins.implements(plugins.IFacets, inherit=True)
 
     # IConfigurer
 
@@ -47,3 +50,17 @@ class NrgiPlugin(plugins.SingletonPlugin):
             # 'frontpage_sections_enabled': lambda: len(toolkit.aslist(config.get('derilinx.frontpage.sections', []))) > 0,
             'extended_build_nav': extended_build_nav,
         }
+
+    # IFacets
+
+    def dataset_facets(self, facets_dict, package_type):
+        if (package_type == 'dataset'):
+            facets_dict = OrderedDict([
+                ('country', toolkit._('Country')),
+                #('category', plugins.toolkit._('Categories')),
+                ('tags', toolkit._('Tags')),
+                ('res_format', toolkit._('Formats')),
+                ('license_id', toolkit._('Licenses')),
+                ('openness_score', toolkit._('Openness'))
+            ])
+        return facets_dict
