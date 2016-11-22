@@ -9,6 +9,13 @@
     </div>
 {% endmacro %}
 
+{% macro country_box(name, level) %}
+    <a href="/dataset?country={{name}}">
+        <div class="span2 country-box country-box-{{level}}">
+            <span>{{name}}</span>
+        </div>
+    </a>
+{% endmacro %}
 
 {% block content %}
     <div class="homepage layout-nrgi">
@@ -58,25 +65,121 @@
         <div class="container">
             <section id="categories">
                 <div class="row">
-                    {{ category_box('Strategy, Consultation, and Institutions', '/imgcat/agriculture.png') }}
-                    {{ category_box('Accountability and Transparency', '/imgcat/economy.png') }}
-                    {{ category_box('Exploration and License Allocation', '/imgcat/education.png') }}
-                    {{ category_box('Taxation', '/imgcat/energy.png') }}
-                    {{ category_box('Local Effects', '/imgcat/environment.png') }}
-                    {{ category_box('Nationally Owned Resource Companies', '/imgcat/government.png') }}
+                    {{ category_box('Strategy, Consultation, and Institutions', '/imgcat/strategy.png') }}
+                    {{ category_box('Accountability and Transparency', '/imgcat/accountability.png') }}
+                    {{ category_box('Exploration and License Allocation', '/imgcat/exploration.png') }}
+                    {{ category_box('Taxation', '/imgcat/tax.png') }}
+                    {{ category_box('Local Effects', '/imgcat/effects.png') }}
+                    {{ category_box('Nationally Owned Resource Companies', '/imgcat/nationalcompanies.png') }}
                 </div>
                 <div class="row">
-                    {{ category_box('Revenue Distribution', '/imgcat/health.png') }}
-                    {{ category_box('Revenue Volatility', '/imgcat/justice.png') }}
-                    {{ category_box('Government Spending', '/imgcat/population.png') }}
-                    {{ category_box('Private Sector Development', '/imgcat/science.png') }}
-                    {{ category_box('Roles of Multinational Companies', '/imgcat/transport.png') }}
-                    {{ category_box('Role of International Community', '/imgcat/housing.png') }}
+                    {{ category_box('Revenue Distribution', '/imgcat/revenuedist.png') }}
+                    {{ category_box('Revenue Volatility', '/imgcat/revenuevol.png') }}
+                    {{ category_box('Government Spending', '/imgcat/spending.png') }}
+                    {{ category_box('Private Sector Development', '/imgcat/privatesector.png') }}
+                    {{ category_box('Roles of Multinational Companies', '/imgcat/mnc.png') }}
+                    {{ category_box('Role of International Community', '/imgcat/intlcom.png') }}
                 </div>
             </section>
         </div>
 
         <div class="container">
+            <section id="countries">
+                <div class="row">
+                    <div class="span12">
+                        <h3>Countries</h3>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        {{country_box("Colombia", level=1)}}
+                        {{country_box("Dem. Rep. of Congo", level=1)}}
+                        {{country_box("Ghana", level=1)}}
+                        {{country_box("Guinea", level=1)}}
+                        {{country_box("Indonesia", level=1)}}
+                        {{country_box("Mexico", level=1)}}
+                        {{country_box("Mongolia", level=1)}}
+                        {{country_box("Myanmar", level=1)}}
+                        {{country_box("Nigeria", level=1)}}
+                        {{country_box("Tanzania", level=1)}}
+                        {{country_box("Tunisia", level=1)}}
+
+                    </div>
+                    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#otherlevels" style="margin-left: 3em;">See All</button>
+                    <hr/>
+
+
+                    <div id="otherlevels" class="collapse out">
+                        {{country_box("Azerbaijan", level=2)}}
+                        {{country_box("Bolivia", level=2)}}
+                        {{country_box("Iraq", level=2)}}
+                        {{country_box("Kyrgyzstan", level=2)}}
+                        {{country_box("Libya", level=2)}}
+                        {{country_box("Peru", level=2)}}
+                        {{country_box("Philippines", level=2)}}
+                        {{country_box("Uganda", level=2)}}
+                        {{country_box("Ukraine", level=2)}}
+                        {{country_box("Zambia", level=2)}}
+
+                        {{country_box("Afghanistan", level=3)}}
+                        {{country_box("Algeria", level=3)}}
+                        {{country_box("Angola", level=3)}}
+                        {{country_box("Australia", level=3)}}
+                        {{country_box("Bahrain", level=3)}}
+                        {{country_box("Bangladesh", level=3)}}
+                        {{country_box("Botswana", level=3)}}
+                        {{country_box("Brazil", level=3)}}
+                        {{country_box("Burkina Faso", level=3)}}
+                        {{country_box("Cambodia", level=3)}}
+                        {{country_box("Cameroon", level=3)}}
+                        {{country_box("Canada", level=3)}}
+                        {{country_box("Chile", level=3)}}
+                        {{country_box("China", level=3)}}
+                        {{country_box("Côte d'Ivoire", level=3)}}
+                        {{country_box("Ecuador", level=3)}}
+                        {{country_box("Egypt", level=3)}}
+                        {{country_box("Equatorial Guinea", level=3)}}
+                        {{country_box("Gabon", level=3)}}
+                        {{country_box("India", level=3)}}
+                        {{country_box("Iran", level=3)}}
+                        {{country_box("Kazakhstan", level=3)}}
+                        {{country_box("Kuwait", level=3)}}
+                        {{country_box("Laos", level=3)}}
+                        {{country_box("Liberia", level=3)}}
+                        {{country_box("Madagascar", level=3)}}
+                        {{country_box("Malaysia", level=3)}}
+                        {{country_box("Morocco", level=3)}}
+                        {{country_box("Mozambique", level=3)}}
+                        {{country_box("Niger", level=3)}}
+                        {{country_box("Norway", level=3)}}
+                        {{country_box("Oman", level=3)}}
+                        {{country_box("Papua New Guinea", level=3)}}
+                        {{country_box("Qatar", level=3)}}
+                        {{country_box("Russia", level=3)}}
+                        {{country_box("Saudi Arabia", level=3)}}
+                        {{country_box("Sierra Leone", level=3)}}
+                        {{country_box("South Africa", level=3)}}
+                        {{country_box("South Sudan", level=3)}}
+                        {{country_box("Sudan", level=3)}}
+                        {{country_box("Sudan", level=3)}}
+                        {{country_box("Timor-Leste", level=3)}}
+                        {{country_box("Trinidad and Tobago", level=3)}}
+                        {{country_box("Turkmenistan", level=3)}}
+                        {{country_box("United Arab Emirates", level=3)}}
+                        {{country_box("United Kingdom", level=3)}}
+                        {{country_box("United States", level=3)}}
+                        {{country_box("Uzbekistan", level=3)}}
+                        {{country_box("Venezuela", level=3)}}
+                        {{country_box("Vietnam", level=3)}}
+                        {{country_box("Yemen", level=3)}}
+                        {{country_box("Zimbabwe", level=3)}}
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="container hidden">
             <section id="viz">
                 <div class="row">
                     <div class="span4 viz-box">

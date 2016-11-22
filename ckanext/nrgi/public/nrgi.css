@@ -98,6 +98,25 @@ section#categories {
 section#categories .category-box {
   text-align: center;
 }
+section#countries {
+  margin-top: 2em;
+  margin-left: 30px;
+}
+section#countries .country-box {
+  text-align: center;
+  border: 1px #e2e2e2 solid;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+section#countries .country-box.country-box-1 {
+  box-shadow: #e2ffe2 1px 1px 2px 1px;
+}
+section#countries .country-box.country-box-2 {
+  box-shadow: #e2dde2 1px 1px 2px 1px;
+}
+section#countries .country-box.country-box-3 {
+  box-shadow: #e2e2e2 1px 1px 2px 1px;
+}
 section#viz {
   margin-bottom: 2em;
 }
