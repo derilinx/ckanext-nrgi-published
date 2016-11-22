@@ -7,6 +7,16 @@ import ckan.lib.helpers as h
 from webhelpers.html import literal
 
 
+def get_from_flat_dict(list_of_dicts, key, default=None):
+    '''Extract data from a list of dicts with keys 'key' and 'value'
+    e.g. pkg_dict['extras'] = [{'key': 'language', 'value': '"french"'}, ... ]
+    '''
+    for dict_ in list_of_dicts:
+        if dict_.get('key', '') == key:
+            return (dict_.get('value', default) or '').strip('"')
+    return default
+
+
 def extended_build_nav(*args):
     # we go through the args, add links for raw links,
     # and then pass the rest to core build_nav_main
@@ -45,6 +55,7 @@ class NrgiPlugin(plugins.SingletonPlugin):
 
     def get_helpers(self):
         return {
+            'get_from_flat_dict': get_from_flat_dict,
             'extended_build_nav': extended_build_nav,
         }
 
