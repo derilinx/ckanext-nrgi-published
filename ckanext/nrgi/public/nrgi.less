@@ -333,3 +333,61 @@ div[role=main] {
 .site-footer input[type="text"] {
     border-color: @white;
 }
+
+
+.media-grid {
+    border: none;
+    background-image: none;
+}
+
+.resource-search-item {
+    border: #e2e2e2 solid 1px;
+    border-left: none;
+    margin-bottom: 1em;
+
+    .heading {
+        font-size: 1.2em;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 200px;
+    }
+
+    .resource-extras {
+        width: 460px;
+        background-color: #e2e2e2;
+    }
+
+    .format-label {
+        top: 4px;
+    }
+
+
+    .btn-group {
+        top: 2px;
+
+        .btn {
+            border-radius: 0;
+
+            &:first-child {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                border-top-left-radius: 36px;
+                border-bottom-left-radius: 36px;
+            }
+
+            + .btn {
+                border-top-right-radius: 36px;
+                border-bottom-right-radius: 36px;
+            }
+
+            &.inverted {
+                background-color: @white;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+    }
+
+}

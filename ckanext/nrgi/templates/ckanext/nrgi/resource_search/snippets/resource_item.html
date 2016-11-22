@@ -9,7 +9,7 @@ show_remove    - If True, show the remove button to remove resource/dataset asso
 
 #}
 {% set truncate = truncate or 180 %}
-{% set truncate_title = truncate_title or 80 %}
+{% set truncate_title = truncate_title or 50 %}
 {% set title = resource.title or resource.name %}
 {% set notes = h.markdown_extract(resource.notes, extract_length=truncate) %}
 {% set image_display_url = h.get_from_flat_dict(resource.extras, 'image_url') %}
@@ -17,19 +17,50 @@ show_remove    - If True, show the remove button to remove resource/dataset asso
 {% block resource_item %}
 
     <div class="row">
-        <div class="span12">
-            <div class="panel panel-default">
-                {% block item_inner %}
-                    <div class="panel-heading">
-                        {% block title %}
-                            <h3>{{resource.name}}</h3>
-                        {% endblock %}
-                    </div>
+        <div class="span9">
+            <li class="resource-search-item resource-item" data-id="{{resource.id}}">
 
-                    <div class="panel-body">
-                    </div>
-                {% endblock %}
-            </div>
+                <a class="heading" href="/dataset/{{resource.package_id}}/resource/{{resource.id}}" title="{{resource.name}}">
+                    {{h.truncate(resource.name, truncate_title)}}<span class="format-label" property="dc:format" data-format="pdf">PDF</span>
+                </a>
+
+
+                {% if resource.description %}
+                    <p class="description">
+                        {{resource.description}}
+                    </p>
+                {% endif %}
+
+                <div class="resource-extras collapse out" id="resource-extras-{{resource.id}}">
+                    {% for field in ['answers', 'questions', 'assessments'] %}
+                        {% if field in resource %}
+                            <p>
+                                <strong>{{field}}: </strong> <code>{{resource[field].replace("u'", "'")}}</code>
+                            </p>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+
+                <div class="dropdown btn-group">
+                    <button class="btn btn-primary inverted" data-toggle="collapse" data-target="#resource-extras-{{resource.id}}">Details...</button>
+                    <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> <i class="icon-share-alt"></i> View <span class="caret"></span> </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="/dataset/{{resource.package_id}}"> <i class="icon-info-sign"></i> View Dataset </a>
+                        </li>
+
+                        <li>
+                            <a href="/dataset/{{resource.package_id}}/resource/{{resource.id}}"> <i class="icon-info-sign"></i> View Resource </a>
+                        </li>
+
+                        <li>
+                            <a href="{{resource.url}}" target="_blank"> <i class="icon-external-link"></i> Download </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
         </div>
     </div>
 {% endblock %}

@@ -54,6 +54,8 @@ class NrgiPlugin(plugins.SingletonPlugin):
         if (package_type == 'dataset'):
             facets_dict = OrderedDict([
                 ('country', toolkit._('Country')),
+                ('year', toolkit._('Year')),
+                ('assessment_type', toolkit._('Assessment Type')),
                 # ('category', plugins.toolkit._('Categories')),
                 ('tags', toolkit._('Tags')),
                 ('res_format', toolkit._('Formats')),

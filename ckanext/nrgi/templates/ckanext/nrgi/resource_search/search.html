@@ -38,7 +38,13 @@
 {% endblock %}
 
 {% block package_search_results_list %}
-    {{ h.snippet('ckanext/nrgi/resource_search/snippets/resource_search_list.html', resources=c.page.items) }}
+    {% if c.q %}
+        {{ h.snippet('ckanext/nrgi/resource_search/snippets/resource_search_list.html', resources=c.page.items) }}
+    {% else %}
+        <hr>
+        <h5>Need help?</h5>
+        <p class="">Try searching for all resources for assessments in the year 2016 with a query like <code>assessments:2016</code>, or for answers for question 18 with <code>answers:018</code>, or all files related to Ghana with <code>assessments:GHA</code>.</p>
+    {% endif %}
 {% endblock %}
 
 {% block package_search_results_api %}
@@ -53,7 +59,7 @@
             </h3>
             <div class="module-content">
                 <p>
-                    Here, you can search across all of the resources (files) that CKAN knows about. Search using the form <pre>field:value</pre> For example, try <pre>answers:016</pre>
+                    Here, you can search across all of the resources (files) that CKAN knows about. Search using the form <pre>field:value</pre> For example, try searches like <pre>answers:016</pre> <pre>assessments:GHA</pre> <pre>assessments:2016</pre>
                 </p>
             </div>
         </div>

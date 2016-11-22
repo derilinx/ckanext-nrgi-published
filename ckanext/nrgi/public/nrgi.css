@@ -277,3 +277,48 @@ div[role=main] {
 .site-footer input[type="text"] {
   border-color: #ffffff;
 }
+.media-grid {
+  border: none;
+  background-image: none;
+}
+.resource-search-item {
+  border: #e2e2e2 solid 1px;
+  border-left: none;
+  margin-bottom: 1em;
+}
+.resource-search-item .heading {
+  font-size: 1.2em;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+.resource-search-item .resource-extras {
+  width: 460px;
+  background-color: #e2e2e2;
+}
+.resource-search-item .format-label {
+  top: 4px;
+}
+.resource-search-item .btn-group {
+  top: 2px;
+}
+.resource-search-item .btn-group .btn {
+  border-radius: 0;
+}
+.resource-search-item .btn-group .btn:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 36px;
+  border-bottom-left-radius: 36px;
+}
+.resource-search-item .btn-group .btn + .btn {
+  border-top-right-radius: 36px;
+  border-bottom-right-radius: 36px;
+}
+.resource-search-item .btn-group .btn.inverted {
+  background-color: #ffffff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

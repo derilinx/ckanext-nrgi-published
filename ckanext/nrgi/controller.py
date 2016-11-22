@@ -9,6 +9,7 @@ import ckan.lib.helpers as h
 
 c = toolkit.c
 
+
 class NrgiController(BaseController):
     def search(self):
         context = {'model': ckan.model, 'session': ckan.model.Session,
@@ -16,7 +17,10 @@ class NrgiController(BaseController):
 
         q = c.q = toolkit.request.params.get('query', u'')
 
-        query = toolkit.get_action('resource_search')(context, {'query': q})
+        if q:
+            query = toolkit.get_action('resource_search')(context, {'query': q})
+        else:
+            query = {'results': [], 'count': 0}
 
         c.page = h.Page(
             collection=query['results'],
