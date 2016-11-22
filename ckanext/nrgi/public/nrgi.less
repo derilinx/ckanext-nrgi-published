@@ -1,9 +1,17 @@
-@white: #fafafa;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+@white: #FFFFFF;
 @black: #000;
 @nrgi-primary-blue: #557288;
-@nrgi-primary-orange: #FF6F4C;
-@font-header: "Lucida Grande";
-@font-body: "Palatino";
+@nrgi-primary-orange: #FD6F51;
+@nrgi-translucent-white: rgba(255,255,255,0.85);
+@nrgi-header-blue: #537386;
+@nrgi-header-grey: #5B5D62;
+@nrgi-header-red: #FD6F51;
+@nrgi-header-orange: @nrgi-header-red;
+@nrgi-text-blue: #5B5D62;
+@font-header: "Open Sans";
+@font-body: "Open Sans";
 
 .gradient (@startColor: #eee, @endColor: white) {
     background-color: @startColor;
@@ -28,6 +36,7 @@ body {
 }
 h1,h2,h3,h4,h5,h6,p[class=lead] {
     font-family: @font-header;
+    font-weight: 300;
 }
 
 .homepage {
@@ -43,7 +52,8 @@ h1,h2,h3,h4,h5,h6,p[class=lead] {
     background-image: url(/hero.jpg);
     background-size: cover;
     color: @white;
-    padding: 120px;
+    // padding: 120px;
+    padding-bottom: 0px;
     border-radius: initial;
 
     h1,h2,h3,h4,h5 {
@@ -54,13 +64,42 @@ h1,h2,h3,h4,h5,h6,p[class=lead] {
     }
     #front-page-search-input {
         padding: 14px 14px 14px 14px;
+        background-color: @nrgi-translucent-white;
+        color: @nrgi-text-blue;
+        margin-bottom: 30px;
     }
     .btn.btn-primary,#front-page-search-input-icon {
-        padding: 14px 14px 14px 14px;
+        padding: 14px 24px 14px 24px;
         font-family: @font-header;
+        font-weight: 300;
+        letter-spacing: 2px;
         background-color: @nrgi-primary-orange;
-        border-color: @nrgi-primary-orange;
-        color: @white;
+        border-color: @nrgi-translucent-white;
+        border-width: 1px;
+        color: @nrgi-translucent-white;
+    }
+}
+
+.count-box {
+    background-color: @nrgi-translucent-white;
+    width: 80px;
+    // display: table-cell;
+    margin-left: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+    h1,h2,h3,h4,h5 {
+        color: @nrgi-header-blue;
+        font-size: 1.6em;
+        margin-bottom: 4px;
+    }
+    small {
+        color: @nrgi-header-orange;
+        font-size: 0.7em;
+        float: right;
+        padding-right: 4px;
     }
 }
 
@@ -69,6 +108,108 @@ h1,h2,h3,h4,h5,h6,p[class=lead] {
     background-color: @white;
 }
 
+.btn.btn-primary {
+    border-radius: 36px;
+    background-color: @nrgi-header-orange;
+    color: @white;
+    text-transform: uppercase;
+    padding: 8px 24px 8px 24px;
+
+    &.inverted {
+        background-color: transparent;
+        color: @nrgi-header-orange;
+        border: 3px @nrgi-header-orange solid;
+    }
+}
+
+section#categories {
+    margin-top: 2em;
+
+    .category-box {
+        text-align: center;
+    }
+}
+
+section#countries {
+    margin-top: 2em;
+
+    .country-boxes {
+        margin-left: 16px;
+
+        .country-box {
+            text-align: center;
+            border: 1px #e2e2e2 solid;
+            padding: 8px;
+            margin-bottom: 12px;
+
+            &.country-box-1 {
+                box-shadow: #e2ffe2 1px 1px 2px 1px;
+            }
+            &.country-box-2 {
+                box-shadow: #e2dde2 1px 1px 2px 1px;
+            }
+            &.country-box-3 {
+                box-shadow: #e2e2e2 1px 1px 2px 1px;
+            }
+        }
+    }
+}
+
+section#viz {
+    margin-bottom: 2em;
+
+    .viz-box {
+        border: 1px #e2e2e2 solid;
+        margin: 8px;
+
+        h5 {
+            padding-left: 2em;
+            text-transform: uppercase;
+        }
+    }
+}
+
+section#community {
+    margin-bottom: 2em;
+
+    .btn.btn-primary {
+        background-color: @white;
+        color: @nrgi-header-orange;
+
+        &.inverted {
+            background-color: transparent;
+            color: @white;
+            border: 3px @white solid;
+        }
+    }
+
+    #community-today {
+        background-image: url('/imgcom/today.jpg');
+    }
+
+    #community-rgi{
+        background-image: url('/imgcom/rgi.jpg');
+    }
+
+    #community-club {
+        background-color: @nrgi-header-orange;
+
+        img {
+            width: 50%;
+        }
+    }
+
+    .community-box {
+        height: 240px;
+        padding: 20px 20px 20px 20px;
+        font-size: 1em;
+        color: @white;
+
+        h1,h2,h3,h4,h5 {
+            text-transform: uppercase;
+        }
+    }
+}
 
 .account-masthead {
     background-color: @white;
@@ -97,9 +238,12 @@ h1,h2,h3,h4,h5,h6,p[class=lead] {
     background-color: @white;
     padding-bottom: 20px;
     background-image: none;
+    height: 50px;
 }
 .masthead .navigation .nav-pills li a {
-    color: @nrgi-primary-blue;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    color: @nrgi-header-grey;
     padding-top: 20px;
     background-color: @white;
 }
@@ -132,15 +276,21 @@ h1,h2,h3,h4,h5,h6,p[class=lead] {
 .site-footer {
     font-family: @font-header;
 
-    background-color: @nrgi-primary-blue;
+    background-color: @nrgi-header-grey;
     background-image: none;
-    color: fade(@white, 80%);
+    color: @white;
 
     a {
         color: fade(@white, 80%);
     }
     label {
         color: fade(@white, 80%);
+    }
+    p {
+        color: @white;
+    }
+    small {
+        color: @white;
     }
 }
 
@@ -182,4 +332,8 @@ div[role=main] {
     border: none;
     border-radius: 0;
     box-shadow: none;
+}
+
+.site-footer input[type="text"] {
+    border-color: @white;
 }
