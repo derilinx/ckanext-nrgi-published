@@ -38,6 +38,16 @@ def extended_build_nav(*args):
     return output
 
 
+def dataset_count():
+    q = toolkit.get_action('package_search')({}, {})
+    return q.count
+
+
+def publisher_count():
+    q = toolkit.get_action('organization_list')({}, {})
+    return len(q.results)
+
+
 class NrgiPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
@@ -57,6 +67,8 @@ class NrgiPlugin(plugins.SingletonPlugin):
         return {
             'get_from_flat_dict': get_from_flat_dict,
             'extended_build_nav': extended_build_nav,
+            'dataset_count': dataset_count,
+            'publisher_count': publisher_count
         }
 
     # IFacets

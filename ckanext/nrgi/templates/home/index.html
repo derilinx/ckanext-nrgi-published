@@ -43,26 +43,26 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row hidden-phone">
                     <div class="span4 offset8">
                         <div class="span1 count-box">
-                            <h5>4,249</h5>
+                            <h5>{{h.publisher_count}}</h5>
                             <small>Sources</small>
+                        </div>
+                        <div class="span1 count-box">
+                            <h5>{{h.dataset_count}}</h5>
+                            <small>Datasets</small>
                         </div>
                         <div class="span1 count-box">
                             <h5>58</h5>
                             <small>Countries</small>
-                        </div>
-                        <div class="span1 count-box">
-                            <h5>3,249</h5>
-                            <small>Datasets</small>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container">
+        <div class="container hidden-phone">
             <section id="categories">
                 <div class="row">
                     {{ category_box('Strategy, Consultation, and Institutions', '/imgcat/strategy.png') }}
@@ -83,7 +83,7 @@
             </section>
         </div>
 
-        <div class="container">
+        <div class="container hidden-phone">
             <section id="countries">
                 <div class="row">
                     <div class="span12">
