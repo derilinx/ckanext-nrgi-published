@@ -39,13 +39,19 @@ def extended_build_nav(*args):
 
 
 def dataset_count():
-    q = toolkit.get_action('package_search')({}, {})
-    return q.count
+    try:
+        q = toolkit.get_action('package_search')({}, {})
+        return q.get('count')
+    except Exception:
+        return ''
 
 
 def publisher_count():
-    q = toolkit.get_action('organization_list')({}, {})
-    return len(q.results)
+    try:
+        q = toolkit.get_action('organization_list')({}, {})
+        return len(q)
+    except Exception:
+        return ''
 
 
 class NrgiPlugin(plugins.SingletonPlugin):
