@@ -63,7 +63,7 @@
       "label": "Author Email",
       "form_placeholder": "joe@example.com",
       "display_property": "dc:creator",
-      "display_snippet": "email.html",
+      "display_snippet": "email_nrgi.html",
       "display_email_name_field": "author"
     },
     {
@@ -77,7 +77,7 @@
       "label": "Maintainer Email",
       "form_placeholder": "joe@example.com",
       "display_property": "dc:contributor",
-      "display_snippet": "email.html",
+      "display_snippet": "email_nrgi.html",
       "display_email_name_field": "maintainer"
     }
   ],
