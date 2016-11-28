@@ -14,8 +14,11 @@ p[class=lead] {
   font-family: "Open Sans";
   font-weight: 300;
 }
+.header-image {
+  padding-bottom: 24px;
+}
 .homepage {
-  background-color: #ffffff;
+  background-color: #e2e2e2;
 }
 .hero-unit {
   margin-bottom: 0px;
@@ -23,7 +26,7 @@ p[class=lead] {
 #front-page-hero {
   background-image: url(/hero.jpg);
   background-size: cover;
-  color: #ffffff;
+  color: #e2e2e2;
   padding-bottom: 0px;
   border-radius: initial;
 }
@@ -79,12 +82,12 @@ p[class=lead] {
   padding-right: 4px;
 }
 #frontpage-sections {
-  background-color: #ffffff;
+  background-color: #e2e2e2;
 }
 .btn.btn-primary {
   border-radius: 36px;
   background-color: #fd6f51;
-  color: #ffffff;
+  color: #e2e2e2;
   text-transform: uppercase;
   padding: 8px 24px 8px 24px;
 }
@@ -135,13 +138,13 @@ section#community {
   margin-bottom: 2em;
 }
 section#community .btn.btn-primary {
-  background-color: #ffffff;
+  background-color: #e2e2e2;
   color: #fd6f51;
 }
 section#community .btn.btn-primary.inverted {
   background-color: transparent;
-  color: #ffffff;
-  border: 3px #ffffff solid;
+  color: #e2e2e2;
+  border: 3px #e2e2e2 solid;
 }
 section#community #community-today {
   background-image: url('/imgcom/today.jpg');
@@ -159,7 +162,7 @@ section#community .community-box {
   height: 240px;
   padding: 20px 20px 20px 20px;
   font-size: 1em;
-  color: #ffffff;
+  color: #e2e2e2;
 }
 section#community .community-box h1,
 section#community .community-box h2,
@@ -169,7 +172,7 @@ section#community .community-box h5 {
   text-transform: uppercase;
 }
 .account-masthead {
-  background-color: #ffffff;
+  background-color: #e2e2e2;
   background-image: none;
 }
 /* The "bubble" containing the number of new notifications. */
@@ -190,7 +193,7 @@ section#community .community-box h5 {
   background-color: black;
 }
 .masthead {
-  background-color: #ffffff;
+  background-color: #e2e2e2;
   padding-bottom: 20px;
   background-image: none;
   height: 50px;
@@ -200,15 +203,15 @@ section#community .community-box h5 {
   font-size: 0.9em;
   color: #5b5d62;
   padding-top: 20px;
-  background-color: #ffffff;
+  background-color: #e2e2e2;
 }
 .masthead .navigation .nav-pills li a:hover {
   color: #4a7493;
-  background-color: #ffffff;
+  background-color: #e2e2e2;
 }
 .masthead .navigation .nav-pills li.active a {
   color: #3f759e;
-  background-color: #ffffff;
+  background-color: #e2e2e2;
 }
 .masthead input[type="text"]:focus {
   -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
@@ -230,19 +233,19 @@ section#community .community-box h5 {
   font-family: "Open Sans";
   background-color: #5b5d62;
   background-image: none;
-  color: #ffffff;
+  color: #e2e2e2;
 }
 .site-footer a {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(226, 226, 226, 0.8);
 }
 .site-footer label {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(226, 226, 226, 0.8);
 }
 .site-footer p {
-  color: #ffffff;
+  color: #e2e2e2;
 }
 .site-footer small {
-  color: #ffffff;
+  color: #e2e2e2;
 }
 .btn {
   font-weight: 200;
@@ -264,10 +267,10 @@ div[role=main] {
   background-color: #557288;
   border-radius: 4px;
   padding: 4px;
-  color: #ffffff;
+  color: #e2e2e2;
 }
 .toolbar .breadcrumb a {
-  color: #ffffff;
+  color: #e2e2e2;
 }
 .wrapper {
   border: none;
@@ -275,7 +278,7 @@ div[role=main] {
   box-shadow: none;
 }
 .site-footer input[type="text"] {
-  border-color: #ffffff;
+  border-color: #e2e2e2;
 }
 .media-grid {
   border: none;
@@ -318,7 +321,7 @@ div[role=main] {
   border-bottom-right-radius: 36px;
 }
 .resource-search-item .btn-group .btn.inverted {
-  background-color: #ffffff;
+  background-color: #e2e2e2;
   padding-top: 5px;
   padding-bottom: 5px;
 }
