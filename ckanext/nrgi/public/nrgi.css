@@ -18,7 +18,7 @@ p[class=lead] {
   padding-bottom: 24px;
 }
 .homepage {
-  background-color: #e2e2e2;
+  background-color: #fcfcfc;
 }
 .hero-unit {
   margin-bottom: 0px;
@@ -26,7 +26,7 @@ p[class=lead] {
 #front-page-hero {
   background-image: url(/hero.jpg);
   background-size: cover;
-  color: #e2e2e2;
+  color: #fcfcfc;
   padding-bottom: 0px;
   border-radius: initial;
 }
@@ -82,12 +82,12 @@ p[class=lead] {
   padding-right: 4px;
 }
 #frontpage-sections {
-  background-color: #e2e2e2;
+  background-color: #fcfcfc;
 }
 .btn.btn-primary {
   border-radius: 36px;
   background-color: #fd6f51;
-  color: #e2e2e2;
+  color: #fcfcfc;
   text-transform: uppercase;
   padding: 8px 24px 8px 24px;
 }
@@ -138,13 +138,13 @@ section#community {
   margin-bottom: 2em;
 }
 section#community .btn.btn-primary {
-  background-color: #e2e2e2;
+  background-color: #fcfcfc;
   color: #fd6f51;
 }
 section#community .btn.btn-primary.inverted {
   background-color: transparent;
-  color: #e2e2e2;
-  border: 3px #e2e2e2 solid;
+  color: #fcfcfc;
+  border: 3px #fcfcfc solid;
 }
 section#community #community-today {
   background-image: url('/imgcom/today.jpg');
@@ -162,7 +162,7 @@ section#community .community-box {
   height: 240px;
   padding: 20px 20px 20px 20px;
   font-size: 1em;
-  color: #e2e2e2;
+  color: #fcfcfc;
 }
 section#community .community-box h1,
 section#community .community-box h2,
@@ -172,7 +172,7 @@ section#community .community-box h5 {
   text-transform: uppercase;
 }
 .account-masthead {
-  background-color: #e2e2e2;
+  background-color: #fcfcfc;
   background-image: none;
 }
 /* The "bubble" containing the number of new notifications. */
@@ -193,7 +193,7 @@ section#community .community-box h5 {
   background-color: black;
 }
 .masthead {
-  background-color: #e2e2e2;
+  background-color: #fcfcfc;
   padding-bottom: 20px;
   background-image: none;
   height: 50px;
@@ -203,15 +203,15 @@ section#community .community-box h5 {
   font-size: 0.9em;
   color: #5b5d62;
   padding-top: 20px;
-  background-color: #e2e2e2;
+  background-color: #fcfcfc;
 }
 .masthead .navigation .nav-pills li a:hover {
   color: #4a7493;
-  background-color: #e2e2e2;
+  background-color: #fcfcfc;
 }
 .masthead .navigation .nav-pills li.active a {
   color: #3f759e;
-  background-color: #e2e2e2;
+  background-color: #fcfcfc;
 }
 .masthead input[type="text"]:focus {
   -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
@@ -233,19 +233,19 @@ section#community .community-box h5 {
   font-family: "Open Sans";
   background-color: #5b5d62;
   background-image: none;
-  color: #e2e2e2;
+  color: #fcfcfc;
 }
 .site-footer a {
-  color: rgba(226, 226, 226, 0.8);
+  color: rgba(252, 252, 252, 0.8);
 }
 .site-footer label {
-  color: rgba(226, 226, 226, 0.8);
+  color: rgba(252, 252, 252, 0.8);
 }
 .site-footer p {
-  color: #e2e2e2;
+  color: #fcfcfc;
 }
 .site-footer small {
-  color: #e2e2e2;
+  color: #fcfcfc;
 }
 .btn {
   font-weight: 200;
@@ -267,10 +267,10 @@ div[role=main] {
   background-color: #557288;
   border-radius: 4px;
   padding: 4px;
-  color: #e2e2e2;
+  color: #fcfcfc;
 }
 .toolbar .breadcrumb a {
-  color: #e2e2e2;
+  color: #fcfcfc;
 }
 .wrapper {
   border: none;
@@ -278,7 +278,7 @@ div[role=main] {
   box-shadow: none;
 }
 .site-footer input[type="text"] {
-  border-color: #e2e2e2;
+  border-color: #fcfcfc;
 }
 .media-grid {
   border: none;
@@ -321,7 +321,7 @@ div[role=main] {
   border-bottom-right-radius: 36px;
 }
 .resource-search-item .btn-group .btn.inverted {
-  background-color: #e2e2e2;
+  background-color: #fcfcfc;
   padding-top: 5px;
   padding-bottom: 5px;
 }
