@@ -82,10 +82,11 @@ class NrgiPlugin(plugins.SingletonPlugin):
     def dataset_facets(self, facets_dict, package_type):
         if (package_type == 'dataset'):
             facets_dict = OrderedDict([
+                ('category', toolkit._('Categories')),
                 ('country', toolkit._('Country')),
                 ('year', toolkit._('Year')),
                 ('assessment_type', toolkit._('Assessment Type')),
-                # ('category', plugins.toolkit._('Categories')),
+                #('question', toolkit._('Question')),
                 ('tags', toolkit._('Tags')),
                 ('res_format', toolkit._('Formats')),
                 ('license_id', toolkit._('Licenses')),

@@ -29,6 +29,1247 @@
       "form_placeholder": "eg. economy, mental health, government"
     },
     {
+            "field_name": "assessment_type",
+            "label": "Assessment Type",
+            "preset": "select",
+            "choices": [
+{"value": "HY", "label": "HY"},
+{"value": "MI", "label": "MI"}
+            ]
+    },
+    {
+            "field_name": "question",
+            "label": "Question",
+            "preset": "multiple_select",
+            "choices": [
+    {
+        "value": "001",
+        "label": "001: How does the country legally define the ownership of subsoil extractive resources?"
+    },
+    {
+        "value": "002",
+        "label": "002: Does the government publicly disclose data on extractive resource reserves?"
+    },
+    {
+        "value": "003",
+        "label": "003: How up-to-date is the publicly disclosed data on extractive resource reserves?"
+    },
+    {
+        "value": "004",
+        "label": "004: Is the data disclosed on extractive resource reserves machine-readable?"
+    },
+    {
+        "value": "005",
+        "label": "005: Does the government publicly disclose data on the volume of extractive resource production?"
+    },
+    {
+        "value": "006",
+        "label": "006: How up-to-date is the publicly disclosed data on the volume of extractive resource production?"
+    },
+    {
+        "value": "007",
+        "label": "007: Is the data disclosed on the volume of extractive resource production machine-readable?"
+    },
+    {
+        "value": "008",
+        "label": "008: Does the government publicly disclose data on the value of extractive resource exports?"
+    },
+    {
+        "value": "009",
+        "label": "009: How up-to-date is the publicly disclosed data on the value of extractive resource exports?"
+    },
+    {
+        "value": "010",
+        "label": "010: Is the data disclosed on the value of extractive resource exports machine-readable?"
+    },
+    {
+        "value": "011",
+        "label": "011: Does the government have an online data portal containing publicly available data on reserves, production and exports?"
+    },
+    {
+        "value": "012",
+        "label": "012: Does the online data portal contain the most recent publicly available data on reserves, production and exports?"
+    },
+    {
+        "value": "013",
+        "label": "013: Is the data contained in the online data portal machine-readable?"
+    },
+    {
+        "value": "014",
+        "label": "014: Is the data contained in the online data portal available under an open license?"
+    },
+    {
+        "value": "015",
+        "label": "015: Is the government required to publicly disclose all signed licenses/contracts with extractive companies?"
+    },
+    {
+        "value": "016",
+        "label": "016: From 2015 onwards, has the government publicly disclosed signed licences/contracts?"
+    },
+    {
+        "value": "017",
+        "label": "017: Has the government publicly disclosed all active licenses/contracts, regardless of when they were signed?"
+    },
+    {
+        "value": "020",
+        "label": "020: Are senior public officials required to publicly disclose their financial holdings in extractive companies?"
+    },
+    {
+        "value": "021",
+        "label": "021: From 2015 onwards, have senior public officials publicly disclosed their financial holdings in extractive companies?"
+    },
+    {
+        "value": "022",
+        "label": "022: Do rules require public disclosure of beneficial owners of extractive companies?"
+    },
+    {
+        "value": "023",
+        "label": "023: From 2015 onwards, have the beneficial owners of extractive companies been disclosed?"
+    },
+    {
+        "value": "024",
+        "label": "024: Who is the licensing authority (i.e. who has the authority to grant exploration and extraction rights to companies)?"
+    },
+    {
+        "value": "025",
+        "label": "025: Is the licensing authority independent from the SOE?"
+    },
+    {
+        "value": "026",
+        "label": "026: What licensing process does the licensing authority follow?"
+    },
+    {
+        "value": "027",
+        "label": "027: Do rules require that licenses/contracts be allocated by competitive bidding?"
+    },
+    {
+        "value": "028",
+        "label": "028: Is the government required to set pre-defined criteria by which companies become qualified to participate in a licensing process?"
+    },
+    {
+        "value": "029",
+        "label": "029: From 2015 onwards, did the licensing authority set minimum pre-defined criteria by which companies become qualified to participate in licensing processes?"
+    },
+    {
+        "value": "030",
+        "label": "030: Prior to each licensing process, is the licensing authority or other government agency required to disclose the license duration, royalty, production share and tax terms?"
+    },
+    {
+        "value": "031",
+        "label": "031: From 2015 onwards, and prior to each licensing process, did the licensing authority or other government agency disclose the license duration, royalty, production share and tax terms?"
+    },
+    {
+        "value": "032",
+        "label": "032: Prior to each licensing process, is the licensing authority required to disclose a list of biddable terms or negotiable terms?"
+    },
+    {
+        "value": "033",
+        "label": "033: From 2015 onwards, and prior to each licensing process, did the licensing authority actually disclose a list of biddable or negotiable terms?"
+    },
+    {
+        "value": "034",
+        "label": "034: Prior to each license processes, is the licensing authority required to disclose the rules governing the licensing process, such as auction or negotiation rules?"
+    },
+    {
+        "value": "035",
+        "label": "035: From 2015 onwards, and prior to each licensing process, did the licensing authority actually disclose the rules governing the licensing process, such as auction or negotiation rules?"
+    },
+    {
+        "value": "036",
+        "label": "036: Who has the primary authority to monitor compliance with the operational aspects of licenses/contracts?"
+    },
+    {
+        "value": "037",
+        "label": "037: Following each licensing process, is the licensing authority required to disclose the list of companies that submitted license applications (in the case of a first-come, first served; or negotiation round) or bids (in the case of an auction)?"
+    },
+    {
+        "value": "038",
+        "label": "038: From 2015 onwards, and after each licensing process, did the licensing authority actually disclose the list of companies that submitted license applications (in the case of a first-come, first served; or negotiation round) or bids (in the case of an auction)?"
+    },
+    {
+        "value": "039",
+        "label": "039: Following each licensing process, is the licensing authority required to publicly disclose the identity of the winning bidder or applicant?"
+    },
+    {
+        "value": "040",
+        "label": "040: From 2015 onwards, and after each licensing process, did the licensing authority actually disclose the identity of the winning bidder/applicant?"
+    },
+    {
+        "value": "041",
+        "label": "041: Following the licensing process, is the licensing authority required to publicly disclose the list of areas or blocks allocated?"
+    },
+    {
+        "value": "042",
+        "label": "042: From 2015 onwards, and after each licensing process, did the licensing authority actually disclose the list of areas/blocks allocated?"
+    },
+    {
+        "value": "043",
+        "label": "043: Are there rules that companies can follow to appeal licensing decisions?"
+    },
+    {
+        "value": "044",
+        "label": "044: Is the legislature required to ratify licenses/contracts?"
+    },
+    {
+        "value": "045",
+        "label": "045: Does a government agency maintain a publicly available registry of rights and license details (i.e. a cadastre)?"
+    },
+    {
+        "value": "046",
+        "label": "046: Does the publicly available registry of licenses/contracts cover areas/blocks?"
+    },
+    {
+        "value": "047",
+        "label": "047: Does the publicly available registry of licenses/contracts give the names of companies that hold an interest in a given area/block?"
+    },
+    {
+        "value": "048",
+        "label": "048: What is the fiscal system for extractive resources?"
+    },
+    {
+        "value": "049",
+        "label": "049: When does the country's fiscal year start and end?"
+    },
+    {
+        "value": "050",
+        "label": "050: Do rules specify how income tax payments should be calculated?"
+    },
+    {
+        "value": "051",
+        "label": "051: Do rules specify how royalties payments should be calculated?"
+    },
+    {
+        "value": "052",
+        "label": "052: Do rules specify how payments of state equity (or options for state equity such as carried interest) should be calculated?"
+    },
+    {
+        "value": "053",
+        "label": "053: Do rules specify how withholding tax payments should be calculated?"
+    },
+    {
+        "value": "054",
+        "label": "054: Do rules specify how the company and government production shares should be calculated?"
+    },
+    {
+        "value": "055",
+        "label": "055: Who is the tax authority (i.e. who has the authority to collect taxes and payments from extractive companies)?"
+    },
+    {
+        "value": "056",
+        "label": "056: Is the government required to publicly disclose data on payments from extractive companies to the government (specifically, the value of the tax/payment base and the actual taxes/payments received)?"
+    },
+    {
+        "value": "057",
+        "label": "057: Does the government publicly disclose data on the value of the tax/payment base?"
+    },
+    {
+        "value": "058",
+        "label": "058: How up-to-date is government data on the value of the tax/payment base?"
+    },
+    {
+        "value": "059",
+        "label": "059: Does the government publicly disclose data on the value of tax/payment receipts?"
+    },
+    {
+        "value": "060",
+        "label": "060: How up-to-date is government data on the value of tax/payment receipts?"
+    },
+    {
+        "value": "061",
+        "label": "061: Is the most recent publicly available data on tax and payment receipts disaggregated by payment type?"
+    },
+    {
+        "value": "062",
+        "label": "062: Is the government required to make all payments to the national treasury or deposit them into a national resource account, aside from amounts legally retained by SOEs?"
+    },
+    {
+        "value": "063",
+        "label": "063: Is the national tax authority required to audit extractive companies?"
+    },
+    {
+        "value": "064",
+        "label": "064: Is the national tax authority required to periodically be audited by an external body?"
+    },
+    {
+        "value": "065",
+        "label": "065: Was the national tax authority audited over the most recently completed audit timeframe?"
+    },
+    {
+        "value": "066",
+        "label": "066: Are extractive companies required to prepare an EIA and/or SIA prior to development?"
+    },
+    {
+        "value": "067",
+        "label": "067: Is there a requirement for the EIA and/or SIA to be publicly disclosed?"
+    },
+    {
+        "value": "068",
+        "label": "068: From 2015 onwards, have EIAs and/or SIAs been publicly disclosed?"
+    },
+    {
+        "value": "069",
+        "label": "069: Are extractive companies required to prepare environmental mitigation management plans prior to development?"
+    },
+    {
+        "value": "070",
+        "label": "070: Is there a requirement for environmental mitigation management plans to be publicly disclosed?"
+    },
+    {
+        "value": "071",
+        "label": "071: From 2015 onwards, have environmental mitigation management plans been publicly disclosed?"
+    },
+    {
+        "value": "072",
+        "label": "072: Do rules require the government to set penalties (i.e. fines, license suspension or license revocation) for non-compliance with environmental mitigation management plans?"
+    },
+    {
+        "value": "073",
+        "label": "073: Are there rules governing compensation to landowners or land users when project development interferes with their access to or use of land?"
+    },
+    {
+        "value": "074",
+        "label": "074: From 2015 onwards, have the procedures governing compensation to landowners or land users when project development interferes with their access to or use of land been adhered to?"
+    },
+    {
+        "value": "075",
+        "label": "075: Are there specific procedures governing the resettlement of land users when project development interferes with their access to or use of land?"
+    },
+    {
+        "value": "076",
+        "label": "076: From 2015 onwards, have the procedures governing the resettlement of land users when project development interferes with their access to or use of land been adhered to?"
+    },
+    {
+        "value": "077",
+        "label": "077: Are there rules governing rehabilitation and closure of extractive projects?"
+    },
+    {
+        "value": "078",
+        "label": "078: From 2015 onwards, have the procedures governing rehabilitation and closure of extractive projects been adhered to?"
+    },
+    {
+        "value": "079",
+        "label": "079: What proportion of equity shares does the government own in extractive companies?"
+    },
+    {
+        "value": "080",
+        "label": "080: What is the name of the largest company in which the government has a controlling share (i.e. an SOE)?"
+    },
+    {
+        "value": "081",
+        "label": "081: How is the largest extractive company in which the government has a controlling share (i.e. an SOE) funded?"
+    },
+    {
+        "value": "082",
+        "label": "082: Are there rules governing fiscal transfers between the government and the SOE?"
+    },
+    {
+        "value": "083",
+        "label": "083: Over the most recently completed fiscal year, has the government followed the rules governing fiscal transfers between itself and the SOE?"
+    },
+    {
+        "value": "084",
+        "label": "084: Does the government publicly disclose how much revenue it receives from the SOE?"
+    },
+    {
+        "value": "085",
+        "label": "085: Does the SOE publicly disclose how much revenue it transfers to the government?"
+    },
+    {
+        "value": "086",
+        "label": "086: Is the SOE required to publicly disclose annual reports containing information on its finances and operations?"
+    },
+    {
+        "value": "087",
+        "label": "087: Has the SOE publicly disclosed annual reports on its finances and operations?"
+    },
+    {
+        "value": "088",
+        "label": "088: Does the SOE's most recent public annual report include a balance sheet statement?"
+    },
+    {
+        "value": "089",
+        "label": "089: Does the SOE's most recent public annual report include a cash flow statement?"
+    },
+    {
+        "value": "090",
+        "label": "090: Does the SOE's most recent public annual report include an income statement?"
+    },
+    {
+        "value": "091",
+        "label": "091: Does the SOE publicly disclose its participation in joint ventures?"
+    },
+    {
+        "value": "092",
+        "label": "092: Does the SOE publicly disclose its levels of ownership in joint ventures?"
+    },
+    {
+        "value": "093",
+        "label": "093: Does the SOE publicly disclose the costs and revenues deriving from its participation in joint ventures?"
+    },
+    {
+        "value": "094",
+        "label": "094: Does the SOE publicly disclose a list of its subsidiaries?"
+    },
+    {
+        "value": "095",
+        "label": "095: Does the SOE publicly disclose the costs and revenues deriving from its subsidiaries?"
+    },
+    {
+        "value": "096",
+        "label": "096: Does the SOE publicly disclose its aggregate production volume?"
+    },
+    {
+        "value": "097",
+        "label": "097: Does the SOE publicly disclose its aggregate sales volume?"
+    },
+    {
+        "value": "098",
+        "label": "098: Do rules require a periodic audit of the SOE's financial statements by an external body?"
+    },
+    {
+        "value": "099",
+        "label": "099: Did an external body audit the SOE's annual financial statements over the most recently completed audit timeframe?"
+    },
+    {
+        "value": "100",
+        "label": "100: From 2015 onwards, did the SOE engage in non-operational activities (e.g. payments for social services, public infrastructure, fuel subsidies, national debt servicing)?"
+    },
+    {
+        "value": "101",
+        "label": "101: Has the SOE publicly disclosed the amount spent on non-operational activities?"
+    },
+    {
+        "value": "102",
+        "label": "102: Does the SOE receive a production share or in-kind payments from extractive companies?"
+    },
+    {
+        "value": "103",
+        "label": "103: How does the SOE market physical commodities?"
+    },
+    {
+        "value": "104",
+        "label": "104: Do rules specify how the SOE must sell its share of production?"
+    },
+    {
+        "value": "105",
+        "label": "105: Are there rules governing how the SOE must select buyers of its share of production?"
+    },
+    {
+        "value": "106",
+        "label": "106: Are there rules determining the prices at which the SOE's share of production should be sold?"
+    },
+    {
+        "value": "107",
+        "label": "107: Are there rules governing how the proceeds from the sale of the SOE's production share should be transferred to the government?"
+    },
+    {
+        "value": "108",
+        "label": "108: Over the most recently completed fiscal year, has the SOE adhered to the rules governing the sale of its share of production?"
+    },
+    {
+        "value": "109",
+        "label": "109: Is the SOE required to publicly disclose information on the sale of the government's share of production?"
+    },
+    {
+        "value": "110",
+        "label": "110: Does the SOE or government publicly disclose the sale volume of the government's share of production?"
+    },
+    {
+        "value": "111",
+        "label": "111: Does the SOE or government publicly disclose the sale value of the government's share of production?"
+    },
+    {
+        "value": "112",
+        "label": "112: Does the SOE or government publicly disclose the sale date of the government's share of production?"
+    },
+    {
+        "value": "113",
+        "label": "113: Does the SOE or government publicly disclose the names of those who have bought the government's share of production?"
+    },
+    {
+        "value": "114",
+        "label": "114: Is the majority of the SOE's board of directors independent of the government (i.e. at least half of all board members do not hold positions in the current central government)?"
+    },
+    {
+        "value": "115",
+        "label": "115: Does the SOE have a publicly available code of conduct?"
+    },
+    {
+        "value": "116",
+        "label": "116: Is the SOE required to submit annual reports to the legislature on its commercial, non-commercial (i.e. regulatory) and non-operational activities (i.e. activities not related to resource extraction)?"
+    },
+    {
+        "value": "117",
+        "label": "117: Does the country have a numerical fiscal rule?"
+    },
+    {
+        "value": "118",
+        "label": "118: Over the most recently completed fiscal year, did the government adhere to the numerical fiscal rule?"
+    },
+    {
+        "value": "119",
+        "label": "119: Do rules require that an external body periodically audit the government's adherence to the numerical fiscal rule?"
+    },
+    {
+        "value": "120",
+        "label": "120: Was the government's adherence to the fiscal rule audited over the most recently completed audit timeframe?"
+    },
+    {
+        "value": "121",
+        "label": "121: Does the government publicly disclose projections of extractive resource revenues?"
+    },
+    {
+        "value": "122",
+        "label": "122: Has the government publicly disclosed a national budget that has been enacted for the current fiscal year?"
+    },
+    {
+        "value": "123",
+        "label": "123: Does the most recent enacted budget include projections (i.e. forecasts) of extractive resource revenues?"
+    },
+    {
+        "value": "124",
+        "label": "124: For the most recently completed fiscal year, did the government publicly disclose the total resource revenue received?"
+    },
+    {
+        "value": "125",
+        "label": "125: For the most recently completed fiscal year, did the government publicly disclose total government expenditures?"
+    },
+    {
+        "value": "126",
+        "label": "126: Does the government publicly disclose the level of national debt?"
+    },
+    {
+        "value": "127",
+        "label": "127: Is the most recent publicly available information on the national debt disaggregated by currency denomination (i.e. foreign or domestic)?"
+    },
+    {
+        "value": "128",
+        "label": "128: Does the central government transfer extractive resource revenues to subnational governments?"
+    },
+    {
+        "value": "129",
+        "label": "129: Are there specific rules governing the transfer of extractive resource revenues (i.e. are these rules distinct from those governing other types of transfers)?"
+    },
+    {
+        "value": "130",
+        "label": "130: Do rules specify that subnational governments of producing areas should receive a higher share of extractive resource revenues than those of non-producing areas?"
+    },
+    {
+        "value": "131",
+        "label": "131: Do rules specify which agencies are responsible for transferring extractive resource revenues to subnational governments?"
+    },
+    {
+        "value": "132",
+        "label": "132: Do rules specify which subnational agencies receive the extractive resource revenues transferred from the central government?"
+    },
+    {
+        "value": "133",
+        "label": "133: Do rules specify a formula governing the transfer of extractive resource revenues between the central government and subnational governments?"
+    },
+    {
+        "value": "134",
+        "label": "134: If there is a formula governing the transfer of extractive resource revenue between the central government and subnational governments, does this formula specify the amount of revenue received by each subnational government?"
+    },
+    {
+        "value": "135",
+        "label": "135: From 2015 onwards, did the central government disclose the amount of revenues transferred to subnational governments?"
+    },
+    {
+        "value": "136",
+        "label": "136: How up-to-date is the information publicly disclosed by the central government on the amount of revenues transferred to subnational governments?"
+    },
+    {
+        "value": "137",
+        "label": "137: Do rules specify different arrangements for the sharing of extractive resource revenues by revenue stream (i.e. if there are different arrangements for different taxes)?"
+    },
+    {
+        "value": "138",
+        "label": "138: From 2015 onwards, has the central government publicly disclosed the amount of revenue transferred by revenue stream?"
+    },
+    {
+        "value": "139",
+        "label": "139: Do rules specify arrangements for the sharing of extractive resource revenues by commodity?"
+    },
+    {
+        "value": "140",
+        "label": "140: From 2015 onwards, has the central government publicly disclosed the amount of revenue transferred by commodity?"
+    },
+    {
+        "value": "141",
+        "label": "141: From 2015 onwards, has the central government adhered to formulas governing the transfer of resource revenues to subnational governments?"
+    },
+    {
+        "value": "142",
+        "label": "142: Do rules require that an external body periodically audit the transfers of extractive resource revenues to subnational governments?"
+    },
+    {
+        "value": "143",
+        "label": "143: Were transfers of extractive resource revenues to subnational governments externally audited over the most recently completed audit timeframe?"
+    },
+    {
+        "value": "144",
+        "label": "144: Does the country have a natural resource fund which is funded by extractive resource revenues?"
+    },
+    {
+        "value": "145",
+        "label": "145: If there are multiple natural resource funds, which is the largest?"
+    },
+    {
+        "value": "146",
+        "label": "146: Are there numeric rules governing the size of withdrawals from the natural resource fund?"
+    },
+    {
+        "value": "147",
+        "label": "147: From 2015 onwards, has the government adhered to the numeric rules governing the size of withdrawals from natural resource funds?"
+    },
+    {
+        "value": "148",
+        "label": "148: Do rules require that withdrawals and spending from the natural resource fund pass through the national budget?"
+    },
+    {
+        "value": "149",
+        "label": "149: From 2015 onwards, have withdrawals and spending from the natural resource fund actually passed through the national budget?"
+    },
+    {
+        "value": "150",
+        "label": "150: Are there numeric rules governing the size of deposits into the natural resource fund?"
+    },
+    {
+        "value": "151",
+        "label": "151: From 2015 onwards, has the government adhered to the numeric rules governing the size of deposits into the natural resource fund?"
+    },
+    {
+        "value": "152",
+        "label": "152: Are there numeric rules governing deposits into the natural resource fund by revenue stream?"
+    },
+    {
+        "value": "153",
+        "label": "153: From 2015 onwards, has the government adhered to the numeric rules governing deposits into the natural resource fund by revenue stream?"
+    },
+    {
+        "value": "154",
+        "label": "154: Is the natural resource fund prohibited from investing in domestic assets without budgetary approval?"
+    },
+    {
+        "value": "155",
+        "label": "155: Is the natural resource fund prohibited from investing in certain asset classes or investment types?"
+    },
+    {
+        "value": "156",
+        "label": "156: From 2015 onwards, has the natural resource fund adhered to rules limiting asset class or investment types?"
+    },
+    {
+        "value": "157",
+        "label": "157: Is the natural resource fund required to produce annual financial reports?"
+    },
+    {
+        "value": "158",
+        "label": "158: Is the natural resource fund required to publicly disclose these annual financial reports?"
+    },
+    {
+        "value": "159",
+        "label": "159: Does the natural resource fund publicly disclose its annual financial reports?"
+    },
+    {
+        "value": "160",
+        "label": "160: Does the natural resource fund's most recent publicly available annual financial report specify the size of the fund?"
+    },
+    {
+        "value": "161",
+        "label": "161: Does the natural resource fund's most recent publicly available annual financial report disclose deposit and withdrawal amounts?"
+    },
+    {
+        "value": "162",
+        "label": "162: Does the natural resource fund's most recent publicly available annual financial report specify the rate of return made on its investments?"
+    },
+    {
+        "value": "163",
+        "label": "163: Does the natural resource fund's most recent publicly available annual financial report include a list of assets held?"
+    },
+    {
+        "value": "164",
+        "label": "164: Does the natural resource fund's most recent publicly available annual financial report specify the fund's asset allocation by asset class?"
+    },
+    {
+        "value": "165",
+        "label": "165: Do rules require an external body to periodically audit the natural resource fund's annual financial reports?"
+    },
+    {
+        "value": "166",
+        "label": "166: Were these annual financial reports audited over the most recently completed audit timeframe?"
+    },
+    {
+        "value": "167",
+        "label": "167: Is the legislature required to review the natural resource fund's annual financial reports?"
+    },
+    {
+        "value": "168",
+        "label": "168: From 2015 onwards, has the legislature reviewed the natural resource fund's annual financial reports?"
+    }
+]
+    },
+    {
+            "field_name": "year",
+            "label": "Year",
+            "help_text": "The Year relevant to your dataset",
+            "help_inline": true,
+            "preset": "select",
+            "choices": [
+{"value": "2017", "label": "2017"},
+{"value": "2016", "label": "2016"},
+{"value": "2015", "label": "2015"},
+{"value": "2014", "label": "2014"},
+{"value": "2013", "label": "2013"},
+{"value": "2012", "label": "2012"},
+{"value": "2011", "label": "2011"},
+{"value": "2010", "label": "2010"},
+{"value": "2009", "label": "2009"},
+{"value": "2008", "label": "2008"},
+{"value": "2007", "label": "2007"}
+            ]
+    },
+    {
+            "field_name": "category",
+            "label": "Category",
+            "help_text": "The Category, or Theme, of your dataset",
+            "help_inline": true,
+            "preset": "select",
+            "choices": [
+{"value":"Licensing", "label":"Licensing"},
+{"value":"Taxation", "label":"Taxation"},
+{"value":"Local impact", "label":"Local impact"},
+{"value":"State-owned enterprises", "label":"State-owned enterprises"},
+{"value":"Revenue management", "label":"Revenue management"},
+{"value":"Revenue sharing", "label":"Revenue sharing"},
+{"value":"Sovereign wealth funds", "label":"Sovereign wealth funds"},
+
+{"value":"Strategy, Consultation, and Institutions", "label":"Strategy, Consultation, and Institutions"},
+{"value":"Accountability and Transparency", "label":"Accountability and Transparency"},
+{"value":"Exploration and License Allocation", "label":"Exploration and License Allocation"},
+{"value":"Taxation", "label":"Taxation"},
+{"value":"Local Effects", "label":"Local Effects"},
+{"value":"Nationally Owned Resource Companies", "label":"Nationally Owned Resource Companies"},
+{"value":"Revenue Distribution", "label":"Revenue Distribution"},
+{"value":"Revenue Volatility", "label":"Revenue Volatility"},
+{"value":"Government Spending", "label":"Government Spending"},
+{"value":"Private Sector Development", "label":"Private Sector Development"},
+{"value":"Roles of Multinational Companies", "label":"Roles of Multinational Companies"},
+{"value":"Role of International Community", "label":"Role of International Community"}
+            ]
+    },
+    {
+            "field_name": "country",
+            "label": "Country",
+            "help_text": "The Country relating to your dataset",
+            "help_inline": true,
+            "preset": "select",
+            "choices": [
+{"value":"Aruba", "label":"Aruba"},
+{"value":"Afghanistan", "label":"Afghanistan"},
+{"value":"Angola", "label":"Angola"},
+{"value":"Anguilla", "label":"Anguilla"},
+{"value":"Åland Islands", "label":"Åland Islands"},
+{"value":"Albania", "label":"Albania"},
+{"value":"Andorra", "label":"Andorra"},
+{"value":"Netherlands Antilles", "label":"Netherlands Antilles"},
+{"value":"United Arab Emirates", "label":"United Arab Emirates"},
+{"value":"Argentina", "label":"Argentina"},
+{"value":"Armenia", "label":"Armenia"},
+{"value":"American Samoa", "label":"American Samoa"},
+{"value":"Antarctica", "label":"Antarctica"},
+{"value":"French Southern Territories", "label":"French Southern Territories"},
+{"value":"Antigua and Barbuda", "label":"Antigua and Barbuda"},
+{"value":"Australia", "label":"Australia"},
+{"value":"Austria", "label":"Austria"},
+{"value":"Azerbaijan", "label":"Azerbaijan"},
+{"value":"Burundi", "label":"Burundi"},
+{"value":"Belgium", "label":"Belgium"},
+{"value":"Benin", "label":"Benin"},
+{"value":"Burkina Faso", "label":"Burkina Faso"},
+{"value":"Bangladesh", "label":"Bangladesh"},
+{"value":"Bulgaria", "label":"Bulgaria"},
+{"value":"Bahrain", "label":"Bahrain"},
+{"value":"Bahamas", "label":"Bahamas"},
+{"value":"Bosnia and Herzegovina", "label":"Bosnia and Herzegovina"},
+{"value":"Saint Barthélemy", "label":"Saint Barthélemy"},
+{"value":"Belarus", "label":"Belarus"},
+{"value":"Belize", "label":"Belize"},
+{"value":"Bermuda", "label":"Bermuda"},
+{"value":"Bolivia, Plurinational State of", "label":"Bolivia, Plurinational State of"},
+{"value":"Brazil", "label":"Brazil"},
+{"value":"Barbados", "label":"Barbados"},
+{"value":"Brunei Darussalam", "label":"Brunei Darussalam"},
+{"value":"Bhutan", "label":"Bhutan"},
+{"value":"Bouvet Island", "label":"Bouvet Island"},
+{"value":"Botswana", "label":"Botswana"},
+{"value":"Central African Republic", "label":"Central African Republic"},
+{"value":"Canada", "label":"Canada"},
+{"value":"Cocos (Keeling) Islands", "label":"Cocos (Keeling) Islands"},
+{"value":"Switzerland", "label":"Switzerland"},
+{"value":"Chile", "label":"Chile"},
+{"value":"China", "label":"China"},
+{"value":"Côte d'Ivoire", "label":"Côte d'Ivoire"},
+{"value":"Cameroon", "label":"Cameroon"},
+{"value":"Congo, the Democratic Republic of the", "label":"Congo, the Democratic Republic of the"},
+{"value":"Congo", "label":"Congo"},
+{"value":"Cook Islands", "label":"Cook Islands"},
+{"value":"Colombia", "label":"Colombia"},
+{"value":"Comoros", "label":"Comoros"},
+{"value":"Cape Verde", "label":"Cape Verde"},
+{"value":"Costa Rica", "label":"Costa Rica"},
+{"value":"Cuba", "label":"Cuba"},
+{"value":"Christmas Island", "label":"Christmas Island"},
+{"value":"Cayman Islands", "label":"Cayman Islands"},
+{"value":"Cyprus", "label":"Cyprus"},
+{"value":"Czech Republic", "label":"Czech Republic"},
+{"value":"Germany", "label":"Germany"},
+{"value":"Djibouti", "label":"Djibouti"},
+{"value":"Dominica", "label":"Dominica"},
+{"value":"Denmark", "label":"Denmark"},
+{"value":"Dominican Republic", "label":"Dominican Republic"},
+{"value":"Algeria", "label":"Algeria"},
+{"value":"Ecuador", "label":"Ecuador"},
+{"value":"Egypt", "label":"Egypt"},
+{"value":"Eritrea", "label":"Eritrea"},
+{"value":"Western Sahara", "label":"Western Sahara"},
+{"value":"Spain", "label":"Spain"},
+{"value":"Estonia", "label":"Estonia"},
+{"value":"Ethiopia", "label":"Ethiopia"},
+{"value":"Finland", "label":"Finland"},
+{"value":"Fiji", "label":"Fiji"},
+{"value":"Falkland Islands (Malvinas)", "label":"Falkland Islands (Malvinas)"},
+{"value":"France", "label":"France"},
+{"value":"Faroe Islands", "label":"Faroe Islands"},
+{"value":"Micronesia, Federated States of", "label":"Micronesia, Federated States of"},
+{"value":"Gabon", "label":"Gabon"},
+{"value":"United Kingdom", "label":"United Kingdom"},
+{"value":"Georgia", "label":"Georgia"},
+{"value":"Guernsey", "label":"Guernsey"},
+{"value":"Ghana", "label":"Ghana"},
+{"value":"Gibraltar", "label":"Gibraltar"},
+{"value":"Guinea", "label":"Guinea"},
+{"value":"Guadeloupe", "label":"Guadeloupe"},
+{"value":"Gambia", "label":"Gambia"},
+{"value":"Guinea-Bissau", "label":"Guinea-Bissau"},
+{"value":"Equatorial Guinea", "label":"Equatorial Guinea"},
+{"value":"Greece", "label":"Greece"},
+{"value":"Grenada", "label":"Grenada"},
+{"value":"Greenland", "label":"Greenland"},
+{"value":"Guatemala", "label":"Guatemala"},
+{"value":"French Guiana", "label":"French Guiana"},
+{"value":"Guam", "label":"Guam"},
+{"value":"Guyana", "label":"Guyana"},
+{"value":"Hong Kong", "label":"Hong Kong"},
+{"value":"Heard Island and McDonald Islands", "label":"Heard Island and McDonald Islands"},
+{"value":"Honduras", "label":"Honduras"},
+{"value":"Croatia", "label":"Croatia"},
+{"value":"Haiti", "label":"Haiti"},
+{"value":"Hungary", "label":"Hungary"},
+{"value":"Indonesia", "label":"Indonesia"},
+{"value":"Isle of Man", "label":"Isle of Man"},
+{"value":"India", "label":"India"},
+{"value":"British Indian Ocean Territory", "label":"British Indian Ocean Territory"},
+{"value":"Ireland", "label":"Ireland"},
+{"value":"Iran, Islamic Republic of", "label":"Iran, Islamic Republic of"},
+{"value":"Iraq", "label":"Iraq"},
+{"value":"Iceland", "label":"Iceland"},
+{"value":"Israel", "label":"Israel"},
+{"value":"Italy", "label":"Italy"},
+{"value":"Jamaica", "label":"Jamaica"},
+{"value":"Jersey", "label":"Jersey"},
+{"value":"Jordan", "label":"Jordan"},
+{"value":"Japan", "label":"Japan"},
+{"value":"Kazakhstan", "label":"Kazakhstan"},
+{"value":"Kenya", "label":"Kenya"},
+{"value":"Kyrgyzstan", "label":"Kyrgyzstan"},
+{"value":"Cambodia", "label":"Cambodia"},
+{"value":"Kiribati", "label":"Kiribati"},
+{"value":"Saint Kitts and Nevis", "label":"Saint Kitts and Nevis"},
+{"value":"Korea, Republic of", "label":"Korea, Republic of"},
+{"value":"Kuwait", "label":"Kuwait"},
+{"value":"Lao People's Democratic Republic", "label":"Lao People's Democratic Republic"},
+{"value":"Lebanon", "label":"Lebanon"},
+{"value":"Liberia", "label":"Liberia"},
+{"value":"Libyan Arab Jamahiriya", "label":"Libyan Arab Jamahiriya"},
+{"value":"Saint Lucia", "label":"Saint Lucia"},
+{"value":"Liechtenstein", "label":"Liechtenstein"},
+{"value":"Sri Lanka", "label":"Sri Lanka"},
+{"value":"Lesotho", "label":"Lesotho"},
+{"value":"Lithuania", "label":"Lithuania"},
+{"value":"Luxembourg", "label":"Luxembourg"},
+{"value":"Latvia", "label":"Latvia"},
+{"value":"Macao", "label":"Macao"},
+{"value":"Saint Martin (French part)", "label":"Saint Martin (French part)"},
+{"value":"Morocco", "label":"Morocco"},
+{"value":"Monaco", "label":"Monaco"},
+{"value":"Moldova, Republic of", "label":"Moldova, Republic of"},
+{"value":"Madagascar", "label":"Madagascar"},
+{"value":"Maldives", "label":"Maldives"},
+{"value":"Mexico", "label":"Mexico"},
+{"value":"Marshall Islands", "label":"Marshall Islands"},
+{"value":"Macedonia, the former Yugoslav Republic of", "label":"Macedonia, the former Yugoslav Republic of"},
+{"value":"Mali", "label":"Mali"},
+{"value":"Malta", "label":"Malta"},
+{"value":"Myanmar", "label":"Myanmar"},
+{"value":"Montenegro", "label":"Montenegro"},
+{"value":"Mongolia", "label":"Mongolia"},
+{"value":"Northern Mariana Islands", "label":"Northern Mariana Islands"},
+{"value":"Mozambique", "label":"Mozambique"},
+{"value":"Mauritania", "label":"Mauritania"},
+{"value":"Montserrat", "label":"Montserrat"},
+{"value":"Martinique", "label":"Martinique"},
+{"value":"Mauritius", "label":"Mauritius"},
+{"value":"Malawi", "label":"Malawi"},
+{"value":"Malaysia", "label":"Malaysia"},
+{"value":"Mayotte", "label":"Mayotte"},
+{"value":"Namibia", "label":"Namibia"},
+{"value":"New Caledonia", "label":"New Caledonia"},
+{"value":"Niger", "label":"Niger"},
+{"value":"Norfolk Island", "label":"Norfolk Island"},
+{"value":"Nigeria", "label":"Nigeria"},
+{"value":"Nicaragua", "label":"Nicaragua"},
+{"value":"Niue", "label":"Niue"},
+{"value":"Netherlands", "label":"Netherlands"},
+{"value":"Norway", "label":"Norway"},
+{"value":"Nepal", "label":"Nepal"},
+{"value":"Nauru", "label":"Nauru"},
+{"value":"New Zealand", "label":"New Zealand"},
+{"value":"Oman", "label":"Oman"},
+{"value":"Pakistan", "label":"Pakistan"},
+{"value":"Panama", "label":"Panama"},
+{"value":"Pitcairn", "label":"Pitcairn"},
+{"value":"Peru", "label":"Peru"},
+{"value":"Philippines", "label":"Philippines"},
+{"value":"Palau", "label":"Palau"},
+{"value":"Papua New Guinea", "label":"Papua New Guinea"},
+{"value":"Poland", "label":"Poland"},
+{"value":"Puerto Rico", "label":"Puerto Rico"},
+{"value":"Korea, Democratic People's Republic of", "label":"Korea, Democratic People's Republic of"},
+{"value":"Portugal", "label":"Portugal"},
+{"value":"Paraguay", "label":"Paraguay"},
+{"value":"Palestinian Territory, Occupied", "label":"Palestinian Territory, Occupied"},
+{"value":"French Polynesia", "label":"French Polynesia"},
+{"value":"Qatar", "label":"Qatar"},
+{"value":"Réunion", "label":"Réunion"},
+{"value":"Romania", "label":"Romania"},
+{"value":"Russian Federation", "label":"Russian Federation"},
+{"value":"Rwanda", "label":"Rwanda"},
+{"value":"Saudi Arabia", "label":"Saudi Arabia"},
+{"value":"Sudan", "label":"Sudan"},
+{"value":"Senegal", "label":"Senegal"},
+{"value":"Singapore", "label":"Singapore"},
+{"value":"South Georgia and the South Sandwich Islands", "label":"South Georgia and the South Sandwich Islands"},
+{"value":"Saint Helena, Ascension and Tristan da Cunha", "label":"Saint Helena, Ascension and Tristan da Cunha"},
+{"value":"Svalbard and Jan Mayen", "label":"Svalbard and Jan Mayen"},
+{"value":"Solomon Islands", "label":"Solomon Islands"},
+{"value":"Sierra Leone", "label":"Sierra Leone"},
+{"value":"El Salvador", "label":"El Salvador"},
+{"value":"San Marino", "label":"San Marino"},
+{"value":"Somalia", "label":"Somalia"},
+{"value":"Saint Pierre and Miquelon", "label":"Saint Pierre and Miquelon"},
+{"value":"Serbia", "label":"Serbia"},
+{"value":"Sao Tome and Principe", "label":"Sao Tome and Principe"},
+{"value":"Suriname", "label":"Suriname"},
+{"value":"Slovakia", "label":"Slovakia"},
+{"value":"Slovenia", "label":"Slovenia"},
+{"value":"Sweden", "label":"Sweden"},
+{"value":"Swaziland", "label":"Swaziland"},
+{"value":"Seychelles", "label":"Seychelles"},
+{"value":"Syrian Arab Republic", "label":"Syrian Arab Republic"},
+{"value":"Turks and Caicos Islands", "label":"Turks and Caicos Islands"},
+{"value":"Chad", "label":"Chad"},
+{"value":"Togo", "label":"Togo"},
+{"value":"Thailand", "label":"Thailand"},
+{"value":"Tajikistan", "label":"Tajikistan"},
+{"value":"Tokelau", "label":"Tokelau"},
+{"value":"Turkmenistan", "label":"Turkmenistan"},
+{"value":"Timor-Leste", "label":"Timor-Leste"},
+{"value":"Tonga", "label":"Tonga"},
+{"value":"Trinidad and Tobago", "label":"Trinidad and Tobago"},
+{"value":"Tunisia", "label":"Tunisia"},
+{"value":"Turkey", "label":"Turkey"},
+{"value":"Tuvalu", "label":"Tuvalu"},
+{"value":"Taiwan, Province of China", "label":"Taiwan, Province of China"},
+{"value":"Tanzania, United Republic of", "label":"Tanzania, United Republic of"},
+{"value":"Uganda", "label":"Uganda"},
+{"value":"Ukraine", "label":"Ukraine"},
+{"value":"United States Minor Outlying Islands", "label":"United States Minor Outlying Islands"},
+{"value":"Uruguay", "label":"Uruguay"},
+{"value":"United States", "label":"United States"},
+{"value":"Uzbekistan", "label":"Uzbekistan"},
+{"value":"Holy See (Vatican City State)", "label":"Holy See (Vatican City State)"},
+{"value":"Saint Vincent and the Grenadines", "label":"Saint Vincent and the Grenadines"},
+{"value":"Venezuela, Bolivarian Republic of", "label":"Venezuela, Bolivarian Republic of"},
+{"value":"Virgin Islands, British", "label":"Virgin Islands, British"},
+{"value":"Virgin Islands, U.S.", "label":"Virgin Islands, U.S."},
+{"value":"Viet Nam", "label":"Viet Nam"},
+{"value":"Vanuatu", "label":"Vanuatu"},
+{"value":"Wallis and Futuna", "label":"Wallis and Futuna"},
+{"value":"Samoa", "label":"Samoa"},
+{"value":"Yemen", "label":"Yemen"},
+{"value":"South Africa", "label":"South Africa"},
+{"value":"Zambia", "label":"Zambia"},
+{"value":"Zimbabwe", "label":"Zimbabwe"},
+{"value":"South Sudan", "label":"South Sudan"}
+            ]
+    },
+    {
+            "field_name": "country_iso3",
+            "label": "Country (ISO 3-letter code)",
+            "help_text": "The ISO 3-letter code of the country relating to your dataset",
+            "help_inline": true,
+            "preset": "select",
+            "choices": [
+{"value":"ABW", "label":"ABW"},
+{"value":"AFG", "label":"AFG"},
+{"value":"AGO", "label":"AGO"},
+{"value":"AIA", "label":"AIA"},
+{"value":"ALA", "label":"ALA"},
+{"value":"ALB", "label":"ALB"},
+{"value":"AND", "label":"AND"},
+{"value":"ANT", "label":"ANT"},
+{"value":"ARE", "label":"ARE"},
+{"value":"ARG", "label":"ARG"},
+{"value":"ARM", "label":"ARM"},
+{"value":"ASM", "label":"ASM"},
+{"value":"ATA", "label":"ATA"},
+{"value":"ATF", "label":"ATF"},
+{"value":"ATG", "label":"ATG"},
+{"value":"AUS", "label":"AUS"},
+{"value":"AUT", "label":"AUT"},
+{"value":"AZE", "label":"AZE"},
+{"value":"BDI", "label":"BDI"},
+{"value":"BEL", "label":"BEL"},
+{"value":"BEN", "label":"BEN"},
+{"value":"BFA", "label":"BFA"},
+{"value":"BGD", "label":"BGD"},
+{"value":"BGR", "label":"BGR"},
+{"value":"BHR", "label":"BHR"},
+{"value":"BHS", "label":"BHS"},
+{"value":"BIH", "label":"BIH"},
+{"value":"BLM", "label":"BLM"},
+{"value":"BLR", "label":"BLR"},
+{"value":"BLZ", "label":"BLZ"},
+{"value":"BMU", "label":"BMU"},
+{"value":"BOL", "label":"BOL"},
+{"value":"BRA", "label":"BRA"},
+{"value":"BRB", "label":"BRB"},
+{"value":"BRN", "label":"BRN"},
+{"value":"BTN", "label":"BTN"},
+{"value":"BVT", "label":"BVT"},
+{"value":"BWA", "label":"BWA"},
+{"value":"CAF", "label":"CAF"},
+{"value":"CAN", "label":"CAN"},
+{"value":"CCK", "label":"CCK"},
+{"value":"CHE", "label":"CHE"},
+{"value":"CHL", "label":"CHL"},
+{"value":"CHN", "label":"CHN"},
+{"value":"CIV", "label":"CIV"},
+{"value":"CMR", "label":"CMR"},
+{"value":"COD", "label":"COD"},
+{"value":"COG", "label":"COG"},
+{"value":"COK", "label":"COK"},
+{"value":"COL", "label":"COL"},
+{"value":"COM", "label":"COM"},
+{"value":"CPV", "label":"CPV"},
+{"value":"CRI", "label":"CRI"},
+{"value":"CUB", "label":"CUB"},
+{"value":"CXR", "label":"CXR"},
+{"value":"CYM", "label":"CYM"},
+{"value":"CYP", "label":"CYP"},
+{"value":"CZE", "label":"CZE"},
+{"value":"DEU", "label":"DEU"},
+{"value":"DJI", "label":"DJI"},
+{"value":"DMA", "label":"DMA"},
+{"value":"DNK", "label":"DNK"},
+{"value":"DOM", "label":"DOM"},
+{"value":"DZA", "label":"DZA"},
+{"value":"ECU", "label":"ECU"},
+{"value":"EGY", "label":"EGY"},
+{"value":"ERI", "label":"ERI"},
+{"value":"ESH", "label":"ESH"},
+{"value":"ESP", "label":"ESP"},
+{"value":"EST", "label":"EST"},
+{"value":"ETH", "label":"ETH"},
+{"value":"FIN", "label":"FIN"},
+{"value":"FJI", "label":"FJI"},
+{"value":"FLK", "label":"FLK"},
+{"value":"FRA", "label":"FRA"},
+{"value":"FRO", "label":"FRO"},
+{"value":"FSM", "label":"FSM"},
+{"value":"GAB", "label":"GAB"},
+{"value":"GBR", "label":"GBR"},
+{"value":"GEO", "label":"GEO"},
+{"value":"GGY", "label":"GGY"},
+{"value":"GHA", "label":"GHA"},
+{"value":"GIB", "label":"GIB"},
+{"value":"GIN", "label":"GIN"},
+{"value":"GLP", "label":"GLP"},
+{"value":"GMB", "label":"GMB"},
+{"value":"GNB", "label":"GNB"},
+{"value":"GNQ", "label":"GNQ"},
+{"value":"GRC", "label":"GRC"},
+{"value":"GRD", "label":"GRD"},
+{"value":"GRL", "label":"GRL"},
+{"value":"GTM", "label":"GTM"},
+{"value":"GUF", "label":"GUF"},
+{"value":"GUM", "label":"GUM"},
+{"value":"GUY", "label":"GUY"},
+{"value":"HKG", "label":"HKG"},
+{"value":"HMD", "label":"HMD"},
+{"value":"HND", "label":"HND"},
+{"value":"HRV", "label":"HRV"},
+{"value":"HTI", "label":"HTI"},
+{"value":"HUN", "label":"HUN"},
+{"value":"IDN", "label":"IDN"},
+{"value":"IMN", "label":"IMN"},
+{"value":"IND", "label":"IND"},
+{"value":"IOT", "label":"IOT"},
+{"value":"IRL", "label":"IRL"},
+{"value":"IRN", "label":"IRN"},
+{"value":"IRQ", "label":"IRQ"},
+{"value":"ISL", "label":"ISL"},
+{"value":"ISR", "label":"ISR"},
+{"value":"ITA", "label":"ITA"},
+{"value":"JAM", "label":"JAM"},
+{"value":"JEY", "label":"JEY"},
+{"value":"JOR", "label":"JOR"},
+{"value":"JPN", "label":"JPN"},
+{"value":"KAZ", "label":"KAZ"},
+{"value":"KEN", "label":"KEN"},
+{"value":"KGZ", "label":"KGZ"},
+{"value":"KHM", "label":"KHM"},
+{"value":"KIR", "label":"KIR"},
+{"value":"KNA", "label":"KNA"},
+{"value":"KOR", "label":"KOR"},
+{"value":"KWT", "label":"KWT"},
+{"value":"LAO", "label":"LAO"},
+{"value":"LBN", "label":"LBN"},
+{"value":"LBR", "label":"LBR"},
+{"value":"LBY", "label":"LBY"},
+{"value":"LCA", "label":"LCA"},
+{"value":"LIE", "label":"LIE"},
+{"value":"LKA", "label":"LKA"},
+{"value":"LSO", "label":"LSO"},
+{"value":"LTU", "label":"LTU"},
+{"value":"LUX", "label":"LUX"},
+{"value":"LVA", "label":"LVA"},
+{"value":"MAC", "label":"MAC"},
+{"value":"MAF", "label":"MAF"},
+{"value":"MAR", "label":"MAR"},
+{"value":"MCO", "label":"MCO"},
+{"value":"MDA", "label":"MDA"},
+{"value":"MDG", "label":"MDG"},
+{"value":"MDV", "label":"MDV"},
+{"value":"MEX", "label":"MEX"},
+{"value":"MHL", "label":"MHL"},
+{"value":"MKD", "label":"MKD"},
+{"value":"MLI", "label":"MLI"},
+{"value":"MLT", "label":"MLT"},
+{"value":"MMR", "label":"MMR"},
+{"value":"MNE", "label":"MNE"},
+{"value":"MNG", "label":"MNG"},
+{"value":"MNP", "label":"MNP"},
+{"value":"MOZ", "label":"MOZ"},
+{"value":"MRT", "label":"MRT"},
+{"value":"MSR", "label":"MSR"},
+{"value":"MTQ", "label":"MTQ"},
+{"value":"MUS", "label":"MUS"},
+{"value":"MWI", "label":"MWI"},
+{"value":"MYS", "label":"MYS"},
+{"value":"MYT", "label":"MYT"},
+{"value":"NAM", "label":"NAM"},
+{"value":"NCL", "label":"NCL"},
+{"value":"NER", "label":"NER"},
+{"value":"NFK", "label":"NFK"},
+{"value":"NGA", "label":"NGA"},
+{"value":"NIC", "label":"NIC"},
+{"value":"NIU", "label":"NIU"},
+{"value":"NLD", "label":"NLD"},
+{"value":"NOR", "label":"NOR"},
+{"value":"NPL", "label":"NPL"},
+{"value":"NRU", "label":"NRU"},
+{"value":"NZL", "label":"NZL"},
+{"value":"OMN", "label":"OMN"},
+{"value":"PAK", "label":"PAK"},
+{"value":"PAN", "label":"PAN"},
+{"value":"PCN", "label":"PCN"},
+{"value":"PER", "label":"PER"},
+{"value":"PHL", "label":"PHL"},
+{"value":"PLW", "label":"PLW"},
+{"value":"PNG", "label":"PNG"},
+{"value":"POL", "label":"POL"},
+{"value":"PRI", "label":"PRI"},
+{"value":"PRK", "label":"PRK"},
+{"value":"PRT", "label":"PRT"},
+{"value":"PRY", "label":"PRY"},
+{"value":"PSE", "label":"PSE"},
+{"value":"PYF", "label":"PYF"},
+{"value":"QAT", "label":"QAT"},
+{"value":"REU", "label":"REU"},
+{"value":"ROU", "label":"ROU"},
+{"value":"RUS", "label":"RUS"},
+{"value":"RWA", "label":"RWA"},
+{"value":"SAU", "label":"SAU"},
+{"value":"SDN", "label":"SDN"},
+{"value":"SEN", "label":"SEN"},
+{"value":"SGP", "label":"SGP"},
+{"value":"SGS", "label":"SGS"},
+{"value":"SHN", "label":"SHN"},
+{"value":"SJM", "label":"SJM"},
+{"value":"SLB", "label":"SLB"},
+{"value":"SLE", "label":"SLE"},
+{"value":"SLV", "label":"SLV"},
+{"value":"SMR", "label":"SMR"},
+{"value":"SOM", "label":"SOM"},
+{"value":"SPM", "label":"SPM"},
+{"value":"SRB", "label":"SRB"},
+{"value":"STP", "label":"STP"},
+{"value":"SUR", "label":"SUR"},
+{"value":"SVK", "label":"SVK"},
+{"value":"SVN", "label":"SVN"},
+{"value":"SWE", "label":"SWE"},
+{"value":"SWZ", "label":"SWZ"},
+{"value":"SYC", "label":"SYC"},
+{"value":"SYR", "label":"SYR"},
+{"value":"TCA", "label":"TCA"},
+{"value":"TCD", "label":"TCD"},
+{"value":"TGO", "label":"TGO"},
+{"value":"THA", "label":"THA"},
+{"value":"TJK", "label":"TJK"},
+{"value":"TKL", "label":"TKL"},
+{"value":"TKM", "label":"TKM"},
+{"value":"TLS", "label":"TLS"},
+{"value":"TON", "label":"TON"},
+{"value":"TTO", "label":"TTO"},
+{"value":"TUN", "label":"TUN"},
+{"value":"TUR", "label":"TUR"},
+{"value":"TUV", "label":"TUV"},
+{"value":"TWN", "label":"TWN"},
+{"value":"TZA", "label":"TZA"},
+{"value":"UGA", "label":"UGA"},
+{"value":"UKR", "label":"UKR"},
+{"value":"UMI", "label":"UMI"},
+{"value":"URY", "label":"URY"},
+{"value":"USA", "label":"USA"},
+{"value":"UZB", "label":"UZB"},
+{"value":"VAT", "label":"VAT"},
+{"value":"VCT", "label":"VCT"},
+{"value":"VEN", "label":"VEN"},
+{"value":"VGB", "label":"VGB"},
+{"value":"VIR", "label":"VIR"},
+{"value":"VNM", "label":"VNM"},
+{"value":"VUT", "label":"VUT"},
+{"value":"WLF", "label":"WLF"},
+{"value":"WSM", "label":"WSM"},
+{"value":"YEM", "label":"YEM"},
+{"value":"ZAF", "label":"ZAF"},
+{"value":"ZMB", "label":"ZMB"},
+{"value":"ZWE", "label":"ZWE"},
+{"value":"SSD", "label":"SSD"}
+            ]
+    },
+    {
       "field_name": "license_id",
       "label": "License",
       "form_snippet": "license.html",
