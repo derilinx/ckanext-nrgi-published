@@ -94,6 +94,10 @@ class NrgiPlugin(plugins.SingletonPlugin):
             ])
         return facets_dict
 
+    def organization_facets(self, facets_dict, organization_type, package_type):
+        facets_dict['country'] = toolkit._('Country')
+        return facets_dict
+
     # IRoutes
 
     def after_map(self, map):
