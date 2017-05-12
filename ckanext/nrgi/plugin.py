@@ -83,19 +83,30 @@ class NrgiPlugin(plugins.SingletonPlugin):
         if (package_type == 'dataset'):
             facets_dict = OrderedDict([
                 ('category', toolkit._('Categories')),
-                ('country', toolkit._('Country')),
+                ('country', toolkit._('Countries')),
                 ('year', toolkit._('Year')),
                 ('assessment_type', toolkit._('Assessment Type')),
-                #('question', toolkit._('Question')),
-                ('tags', toolkit._('Tags')),
+                #Note, in theory there is a way to get Solr etc. to only list single values and not all combinations, but I can't get it to work
+                ('question', toolkit._('Question')),
                 ('res_format', toolkit._('Formats')),
-                ('license_id', toolkit._('Licenses')),
                 ('openness_score', toolkit._('Openness'))
             ])
         return facets_dict
 
     def organization_facets(self, facets_dict, organization_type, package_type):
-        facets_dict['country'] = toolkit._('Country')
+        #Why so convoluted? I'll tell you why, here's why: https://github.com/ckan/ckan/issues/2713
+        for key in facets_dict:
+            del facets_dict[key]
+        g_facets_dict = OrderedDict([
+                ('category', toolkit._('Categories')),
+                ('country', toolkit._('Countries')),
+                ('year', toolkit._('Year')),
+                ('assessment_type', toolkit._('Assessment Type')),
+                ('question', toolkit._('Question')), #See above
+                ('res_format', toolkit._('Formats')),
+                ('openness_score', toolkit._('Openness'))
+            ])
+        facets_dict.update(g_facets_dict)
         return facets_dict
 
     # IRoutes
