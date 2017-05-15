@@ -1,3 +1,3 @@
 {% for choice in field.choices if choice.value in data[field.field_name] %}
-<a href="/dataset?{{field.field_name}}={{choice.value}}">{{choice.label}}</a>{% if not loop.last %},<br>{% endif %}
+<a href='/dataset?q={{field.field_name}}:"[\"{{choice.value}}\"]"'>{{choice.label}}</a>{% if not loop.last %},<br>{% endif %}
 {% endfor %}
