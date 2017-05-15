@@ -6,6 +6,18 @@ import ckan.lib.helpers as h
 
 from webhelpers.html import literal
 
+import os
+import json
+
+qchoices = {}
+
+with open(os.path.dirname(os.path.realpath(__file__)) + '/schema.json') as jsonfile:    
+    schema = json.load(jsonfile)
+    for field in schema['dataset_fields']:
+        if field['field_name'] == 'question':
+            for item in field['choices']:
+                qchoices[item['value']] = item['label']
+            break
 
 def get_from_flat_dict(list_of_dicts, key, default=None):
     '''Extract data from a list of dicts with keys 'key' and 'value'
@@ -53,6 +65,53 @@ def publisher_count():
     except Exception:
         return ''
 
+def get_facet_items_dict_questions(facet, limit=None, exclude_active=False):
+    if facet != 'question':
+        return []
+    
+    facets = h.get_facet_items_dict(facet, limit=None, exclude_active=False)
+
+    newfacets = []
+    facet_counts = {}
+
+    for facet in facets:
+        newfacet = facet
+        #Clean up
+        num = newfacet['display_name'].replace('[', '').replace(']', '').replace('"', '').replace(' ', '')
+        #Handle multiple questions; should actually be doable in SOLR
+        if ',' in num:
+            parts = num.split(',')
+            #For counts of items having both, add the total to both counts
+            for part in parts:
+                if part in facet_counts:
+                    facet_counts[part] = facet_counts[part] + newfacet['count']
+                else:
+                    facet_counts[part] = newfacet['count']
+            #And now don't show it
+            continue
+        if num in facet_counts:
+            facet_counts[num] = facet_counts[num] + newfacet['count']
+        else:
+            facet_counts[num] = newfacet['count']
+
+        newfacet['display_name'] = qchoices[num] 
+        newfacet['num'] = num
+        newfacet['name'] = '"[\\"' + num  + '\\"]"'
+        newfacets.append(newfacet)
+
+    for facet in newfacets:
+       facet['count'] = facet_counts[facet['num']]
+       del facet_counts[facet['num']]
+    
+    #The remaining ones don't have a facet to update, create new ones
+    for count in facet_counts:
+       cfacet = {'count': facet_counts[count], 'active': False, 'display_name': qchoices[count], 'name': '"[\\"' + count  + '\\"]"'}
+       newfacets.append(cfacet)
+   
+    #Now we have to resort
+    sortedfacets = sorted(newfacets, key=lambda k: k['count'], reverse=True)     
+ 
+    return sortedfacets
 
 class NrgiPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
@@ -74,7 +133,8 @@ class NrgiPlugin(plugins.SingletonPlugin):
             'get_from_flat_dict': get_from_flat_dict,
             'extended_build_nav': extended_build_nav,
             'dataset_count': dataset_count,
-            'publisher_count': publisher_count
+            'publisher_count': publisher_count,
+            'get_facet_items_dict_questions': get_facet_items_dict_questions
         }
 
     # IFacets

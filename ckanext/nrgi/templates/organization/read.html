@@ -1,0 +1,11 @@
+{% ckan_extends %}
+
+{% block organization_facets %}
+  {% for facet in c.facet_titles %}
+    {% if facet == 'question' %}
+      {{ h.snippet('snippets/alt_facet_list.html', title=c.facet_titles[facet], items=h.get_facet_items_dict_questions(facet), name=facet, extras={'id':c.group_dict.id}) }}
+    {% else %}
+      {{ h.snippet('snippets/facet_list.html', title=c.facet_titles[facet], name=facet, extras={'id':c.group_dict.id}) }}
+    {% endif %}
+  {% endfor %}
+{% endblock %}
