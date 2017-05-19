@@ -1,0 +1,29 @@
+language: python
+
+branches:
+  only:
+    - staging
+    - master
+
+env:
+  global:
+    # Shippable API token used to trigger deploy
+    - secure: hq0YdHBgaFCg1ENbtsj1MyuaEaRPhvZRaPVnnrnpn0iDbmvw6R5/YK3jBZS6Mc/bRaC4cOmxhqjuQbPtQErRgQhD7XfH6W5xccFgsC6mr8CTV7SS1ohBGqB/9LBX0XYHewhw79ZHDYHTSkb7sRk0xgf1KhcOXC8JB5oqBOhwWd3hS0pOAgNEHyo25I1gbv9/yLAZz+z872LmWUmjUAv4001Oig5yBuUoPA97VN2OdzCHZEu2TuGoiy/m3vibfkZC1iwfZiOYn36C/o/lQoHDhVGtLfG5oihnGoxYfGSoKDvm/Wj+EXZk34I0k+kN7lLle353sHoikcBKjSTVfkbb7A==
+
+build:
+  ci:
+    # Trigger build of the root CKAN repo
+    - ./shippable-deploy.sh
+
+integrations:
+  notifications:
+    - integrationName: email
+      type: email
+      recipients:
+        - nrgi@vitaminsoftware.com
+      branches:
+        only:
+          - master
+          - staging
+      on_success: change
+      on_failure: always
