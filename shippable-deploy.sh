@@ -25,6 +25,13 @@ fi
 # Id of the Shippable project containing the deploy script.
 CKAN_ROOT_PROJECT_ID=591d863568194107000b6287
 
+# Accomodate for non-standard branch naming on triggered project
+if [ "$BRANCH" == "master" ]
+then
+  BRANCH="nrgi"
+fi
+
+
 # Trigger Shippable to run the deploy project and pass the current project name, branch and latest commit
 STATUS=$(
   curl -s\
