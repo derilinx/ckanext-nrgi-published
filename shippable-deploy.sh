@@ -26,10 +26,13 @@ fi
 CKAN_ROOT_PROJECT_ID=591d863568194107000b6287
 
 # Trigger Shippable to run the deploy project and pass the current project name, branch and latest commit
-STATUS=$(curl -s\
+STATUS=$(
+  curl -s\
   -H "Authorization: apiToken $API_TOKEN"\
   -H "Content-Type: application/json"\
-  -d "{\"branchName\":\"$BRANCH\",\"https://api.shippable.com/projects/$CKAN_ROOT_PROJECT_ID/newBuild")
+  -d "{\"branchName\":\"$BRANCH\"}"\
+  "https://api.shippable.com/projects/$CKAN_ROOT_PROJECT_ID/newBuild"
+)
 echo "$STATUS"
 
 if [[ "$STATUS" == *"runId"* ]]
