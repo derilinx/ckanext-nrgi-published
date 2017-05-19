@@ -144,7 +144,7 @@ class NrgiPlugin(plugins.SingletonPlugin):
             facets_dict = OrderedDict([
                 ('category', toolkit._('Categories')),
                 ('country', toolkit._('Countries')),
-                ('year', toolkit._('Year')),
+                #('year', toolkit._('Year')),
                 ('assessment_type', toolkit._('Assessment Type')),
                 #Note, in theory there is a way to get Solr etc. to only list single values and not all combinations, but I can't get it to work
                 ('question', toolkit._('Question')),
@@ -160,7 +160,7 @@ class NrgiPlugin(plugins.SingletonPlugin):
         g_facets_dict = OrderedDict([
                 ('category', toolkit._('Categories')),
                 ('country', toolkit._('Countries')),
-                ('year', toolkit._('Year')),
+                #('year', toolkit._('Year')),
                 ('assessment_type', toolkit._('Assessment Type')),
                 ('question', toolkit._('Question')), #See above
                 ('res_format', toolkit._('Formats')),
