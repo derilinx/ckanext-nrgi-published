@@ -6,6 +6,8 @@ import ckan.lib.helpers as h
 
 from webhelpers.html import literal
 
+from ckan.common import request
+
 import os
 import json
 
@@ -96,21 +98,33 @@ def get_facet_items_dict_questions(facet, limit=None, exclude_active=False):
 
         newfacet['display_name'] = qchoices[num] 
         newfacet['num'] = num
-        newfacet['name'] = '"[\\"' + num  + '\\"]"'
+        newfacet['name'] = '[\\"' + num  + '\\"]'
         newfacets.append(newfacet)
 
     for facet in newfacets:
        facet['count'] = facet_counts[facet['num']]
        del facet_counts[facet['num']]
-    
+
     #The remaining ones don't have a facet to update, create new ones
     for count in facet_counts:
-       cfacet = {'count': facet_counts[count], 'active': False, 'display_name': qchoices[count], 'name': '"[\\"' + count  + '\\"]"'}
+       name = '[\\"' + count  + '\\"]'
+       cfacet = {'count': facet_counts[count], 'display_name': qchoices[count], 'name': name}
        newfacets.append(cfacet)
-   
+
     #Now we have to resort
-    sortedfacets = sorted(newfacets, key=lambda k: k['count'], reverse=True)     
- 
+    sortedfacets = sorted(newfacets, key=lambda k: k['count'], reverse=True)
+
+    #Mark selected
+    selectedfacet = None
+    for item in request.params.items():
+        if item[0] == "question":
+            selectedfacet = item[1]
+
+    for facet in sortedfacets:
+        if facet["name"] == selectedfacet:
+            facet["active"] = True
+
+    #sortedfacets[0]['display_name'] = facet["name"] + " - " + selectedfacet
     return sortedfacets
 
 class NrgiPlugin(plugins.SingletonPlugin):

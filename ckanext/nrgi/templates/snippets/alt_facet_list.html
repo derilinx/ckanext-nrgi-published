@@ -23,14 +23,14 @@
               <nav>
                 <ul class="{{ nav_class or 'unstyled nav nav-simple nav-facet' }}">
                   {% for item in items %}
-                    {# Force a search link instead of filter link #}
-                    {% set href = h.remove_url_param('q', 'question:' + item.name, extras=extras, alternative_url=alternative_url) if item.active else h.add_url_param(new_params={'q': 'question:' + item.name}, extras=extras, alternative_url=alternative_url) %}
+                    {# Note, there may be no need for this template override at all; we use facet link now, and we could override label function #}
+                    {% set href = h.remove_url_param('question', item.name, extras=extras, alternative_url=alternative_url) if item.active else h.add_url_param(new_params={'question': item.name}, extras=extras, alternative_url=alternative_url) %}
                     {% set label = label_function(item) if label_function else item.display_name %}
-                    {% set label_truncated = h.truncate(label, 22) if not label_function else label %}
+                    {# {% set label_truncated = h.truncate(label, 22) if not label_function else label %} #}
                     {% set count = count_label(item['count']) if count_label else ('(%d)' % item['count']) %}
                       <li class="{{ nav_item_class or 'nav-item' }}{% if item.active %} active{% endif %}">
                         <a href="{{ href }}" title="{{ label if label != label_truncated else '' }}">
-                          <span>{{ label_truncated }} {{ count }}</span>
+                          <span>{{ label }} {{ count }}</span>
                         </a>
                       </li>
                   {% endfor %}
