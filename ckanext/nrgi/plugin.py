@@ -77,6 +77,8 @@ def get_facet_items_dict_questions(facet, limit=None, exclude_active=False):
     facet_counts = {}
 
     for facet in facets:
+        if not facet or len(facet) == 0:
+            continue
         newfacet = facet
         #Clean up
         num = newfacet['display_name'].replace('[', '').replace(']', '').replace('"', '').replace(' ', '')
@@ -124,7 +126,6 @@ def get_facet_items_dict_questions(facet, limit=None, exclude_active=False):
         if facet["name"] == selectedfacet:
             facet["active"] = True
 
-    #sortedfacets[0]['display_name'] = facet["name"] + " - " + selectedfacet
     return sortedfacets
 
 class NrgiPlugin(plugins.SingletonPlugin):
