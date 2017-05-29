@@ -51,19 +51,24 @@ def extended_build_nav(*args):
             output += h._make_menu_item(menu_item, title)
     return output
 
-
 def dataset_count():
     try:
-        q = toolkit.get_action('package_search')({}, {})
+        q = toolkit.get_action('package_search')({}, {'q': 'type:dataset'})
         return q.get('count')
     except Exception:
         return ''
 
-
-def publisher_count():
+def document_count():
     try:
-        q = toolkit.get_action('organization_list')({}, {})
-        return len(q)
+        q = toolkit.get_action('package_search')({}, {'q': 'type:document'})
+        return q.get('count')
+    except Exception:
+        return ''
+
+def country_count():
+    try:
+        q = toolkit.get_action('package_search')({}, {'facet.field': ['country'], 'facet.limit': -1})
+        return len(q.get('facets').get('country').keys())
     except Exception:
         return ''
 
@@ -148,7 +153,8 @@ class NrgiPlugin(plugins.SingletonPlugin):
             'get_from_flat_dict': get_from_flat_dict,
             'extended_build_nav': extended_build_nav,
             'dataset_count': dataset_count,
-            'publisher_count': publisher_count,
+            'document_count': document_count,
+            'country_count': country_count,
             'get_facet_items_dict_questions': get_facet_items_dict_questions
         }
 
