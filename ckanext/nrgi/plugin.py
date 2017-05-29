@@ -87,6 +87,8 @@ def get_facet_items_dict_questions(facet, limit=None, exclude_active=False):
         newfacet = facet
         #Clean up
         num = newfacet['display_name'].replace('[', '').replace(']', '').replace('"', '').replace(' ', '')
+        if num == '':
+            continue
         #Handle multiple questions; should actually be doable in SOLR
         if ',' in num:
             parts = num.split(',')
@@ -103,11 +105,10 @@ def get_facet_items_dict_questions(facet, limit=None, exclude_active=False):
         else:
             facet_counts[num] = newfacet['count']
 
-        if (num != ''):
-            newfacet['display_name'] = qchoices[num] 
-            newfacet['num'] = num
-            newfacet['name'] = '[\\"' + num  + '\\"]'
-            newfacets.append(newfacet)
+        newfacet['display_name'] = qchoices[num] 
+        newfacet['num'] = num
+        newfacet['name'] = '[\\"' + num  + '\\"]'
+        newfacets.append(newfacet)
 
     for facet in newfacets:
        facet['count'] = facet_counts[facet['num']]
