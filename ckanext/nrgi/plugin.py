@@ -163,32 +163,50 @@ class NrgiPlugin(plugins.SingletonPlugin):
     # IFacets
 
     def dataset_facets(self, facets_dict, package_type):
-        if (package_type == 'dataset'):
+        if package_type == 'dataset':
+            facets_dict = OrderedDict([
+                ('country', toolkit._('Countries')),
+                #('year', toolkit._('Year')),
+                ('res_format', toolkit._('Formats')),
+                ('openness_score', toolkit._('Openness'))
+            ])
+            
+        elif package_type == 'document':
             facets_dict = OrderedDict([
                 ('category', toolkit._('Sub-components')),
                 ('country', toolkit._('Countries')),
                 #('year', toolkit._('Year')),
                 ('assessment_type', toolkit._('Assessment Type')),
-                #Note, in theory there is a way to get Solr etc. to only list single values and not all combinations, but I can't get it to work
                 ('question', toolkit._('Questions')),
-                ('res_format', toolkit._('Formats')),
-                ('openness_score', toolkit._('Openness'))
+                ('scoring_question', toolkit._('Question Usage')),
+                ('law_practice_question', toolkit._('Law/Practice Question'))
             ])
+
         return facets_dict
+        
+        
 
     def organization_facets(self, facets_dict, organization_type, package_type):
         #Why so convoluted? I'll tell you why, here's why: https://github.com/ckan/ckan/issues/2713
         for key in facets_dict:
             del facets_dict[key]
-        g_facets_dict = OrderedDict([
-                ('category', toolkit._('Sub-components')),
-                ('country', toolkit._('Countries')),
-                #('year', toolkit._('Year')),
-                ('assessment_type', toolkit._('Assessment Type')),
-                ('question', toolkit._('Questions')), #See above
-                ('res_format', toolkit._('Formats')),
-                ('openness_score', toolkit._('Openness'))
-            ])
+        if package_type == 'dataset':   
+          g_facets_dict = OrderedDict([
+                  ('country', toolkit._('Countries')),
+                  #('year', toolkit._('Year')),
+                  ('res_format', toolkit._('Formats')),
+                  ('openness_score', toolkit._('Openness'))
+              ])
+        elif package_type == 'document': 
+          g_facets_dict = OrderedDict([
+                  ('category', toolkit._('Sub-components')),
+                  ('country', toolkit._('Countries')),
+                  #('year', toolkit._('Year')),
+                  ('assessment_type', toolkit._('Assessment Type')),
+                  ('question', toolkit._('Questions')), #See above
+                  ('scoring_question', toolkit._('Question Usage')),
+                  ('law_practice_question', toolkit._('Law/Practice Question'))
+              ])
         facets_dict.update(g_facets_dict)
         return facets_dict
 
