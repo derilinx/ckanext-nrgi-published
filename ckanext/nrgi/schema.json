@@ -1,6 +1,6 @@
 {
   "scheming_version": 1,
-  "dataset_type": "dataset",
+  "dataset_type": "document",
   "about": "A reimplementation of the default CKAN dataset schema",
   "about_url": "http://github.com/ckan/ckanext-scheming",
   "dataset_fields": [
