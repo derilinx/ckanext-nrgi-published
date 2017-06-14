@@ -5,9 +5,9 @@
   <div>
     {% for facet in c.facet_titles %}
       {% if facet == 'question' %}
-        {{ h.snippet('snippets/alt_facet_list.html', title=c.facet_titles[facet], items=h.get_facet_items_dict_questions(facet), name=facet) }}
+        {{ h.snippet('snippets/alt_facet_list.html', title=c.facet_titles[facet], items=h.get_facet_items_dict_questions(facet), name=facet, hide_empty=True) }}
       {% else %}
-        {{ h.snippet('snippets/facet_list.html', title=c.facet_titles[facet], name=facet) }}
+        {{ h.snippet('snippets/facet_list.html', title=c.facet_titles[facet], name=facet, hide_empty=True) }}
       {% endif %}
     {% endfor %}
   </div>
