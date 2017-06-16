@@ -200,18 +200,14 @@ class NrgiPlugin(plugins.SingletonPlugin):
         #Why so convoluted? I'll tell you why, here's why: https://github.com/ckan/ckan/issues/2713
         for key in facets_dict:
             del facets_dict[key]
-        if package_type == 'dataset':   
-          g_facets_dict = OrderedDict([
+
+        g_facets_dict = OrderedDict([
                   ('country', toolkit._('Countries')),
                   #('year', toolkit._('Year')),
                   ('res_format', toolkit._('Formats')),
-                  ('openness_score', toolkit._('Openness'))
-              ])
-        elif package_type == 'document': 
-          g_facets_dict = OrderedDict([
+                  ('openness_score', toolkit._('Openness')),
                   ('category', toolkit._('Sub-components')),
                   ('country', toolkit._('Countries')),
-                  #('year', toolkit._('Year')),
                   ('assessment_type', toolkit._('Assessment Type')),
                   ('question', toolkit._('Questions'))#,
                   #Removed until we sort multivalued facets properly ('law_practice_question', toolkit._('Law/Practice Question'))
