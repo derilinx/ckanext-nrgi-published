@@ -57,7 +57,7 @@
     {
             "field_name": "law_practice_question",
             "label": "Are the questions here tagged with law and/or practice",
-            "display_snippet": "multiple_link_with_labels_nrgi.html",
+            "display_snippet": "law_practice_nrgi.html",
             "preset": "multiple_select",
             "choices": [
                 {
@@ -67,10 +67,6 @@
                 {
                     "label": "Practice",
                     "value": "practice"
-                },
-                {
-                    "label": "Neither",
-                    "value": "neither"
                 }
             ]
     },
