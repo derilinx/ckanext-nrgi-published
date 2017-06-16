@@ -40,7 +40,7 @@
     },
     {
             "field_name": "scoring_question",
-            "label": "Are the questions here scoring and/or non-scoring",
+            "label": "Did this document contribute to scoring?",
             "display_snippet": "scoring_nrgi.html",
             "preset": "multiple_select",
             "choices": [

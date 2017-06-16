@@ -140,6 +140,17 @@ class NrgiPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IFacets, inherit=True)
     plugins.implements(plugins.IRoutes, inherit=True)
+    #plugins.implements(plugins.IPackageController, inherit=True)
+    
+    #def before_index(self, pkg_dict):
+        ###IN PROGRESS!
+        # JSON Strings to lists
+        #questions = []
+        #for value in pkg_dict.get('question', '').replace('[', '').replace(']', '').replace('"', '').replace(' ', '').split(','):
+        #    questions.append(value)
+        #pkg_dict['question'] = questions
+        ####Same for scoring, law/practice
+        #return pkg_dict
 
     # IConfigurer
 
@@ -177,9 +188,8 @@ class NrgiPlugin(plugins.SingletonPlugin):
                 ('country', toolkit._('Countries')),
                 #('year', toolkit._('Year')),
                 ('assessment_type', toolkit._('Assessment Type')),
-                ('question', toolkit._('Questions')),
-                ('scoring_question', toolkit._('Question Usage')),
-                ('law_practice_question', toolkit._('Law/Practice Question'))
+                ('question', toolkit._('Questions'))#,
+                #Removed until we sort multivalued facets properly ('law_practice_question', toolkit._('Law/Practice Question'))
             ])
 
         return facets_dict
@@ -203,9 +213,8 @@ class NrgiPlugin(plugins.SingletonPlugin):
                   ('country', toolkit._('Countries')),
                   #('year', toolkit._('Year')),
                   ('assessment_type', toolkit._('Assessment Type')),
-                  ('question', toolkit._('Questions')), #See above
-                  ('scoring_question', toolkit._('Question Usage')),
-                  ('law_practice_question', toolkit._('Law/Practice Question'))
+                  ('question', toolkit._('Questions'))#,
+                  #Removed until we sort multivalued facets properly ('law_practice_question', toolkit._('Law/Practice Question'))
               ])
         facets_dict.update(g_facets_dict)
         return facets_dict
