@@ -41,7 +41,7 @@
     {
             "field_name": "scoring_question",
             "label": "Are the questions here scoring and/or non-scoring",
-            "display_snippet": "multiple_link_with_labels_nrgi.html",
+            "display_snippet": "scoring_nrgi.html",
             "preset": "multiple_select",
             "choices": [
                 {

@@ -1,0 +1,6 @@
+{% if "scoring" in data[field.field_name] %}{# I.e. don't mention case scoring AND non-scoring #}
+{# NOTE! This "in" is a text search, not an array search. CKAN stores the value as stringified array #}
+Used for scoring
+{% else %}
+Not used for scoring
+{% endif %}
