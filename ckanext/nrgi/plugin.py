@@ -104,11 +104,13 @@ def get_facet_items_dict_questions(facet, limit=None, exclude_active=False):
             facet_counts[num] = facet_counts[num] + newfacet['count']
         else:
             facet_counts[num] = newfacet['count']
-
-        newfacet['display_name'] = qchoices[num] 
-        newfacet['num'] = num
-        newfacet['name'] = '[\\"' + num  + '\\"]'
-        newfacets.append(newfacet)
+        
+        #Questions can get deleted from the schema, workaround
+        if num in qchoices:
+            newfacet['display_name'] = qchoices[num] 
+            newfacet['num'] = num
+            newfacet['name'] = '[\\"' + num  + '\\"]'
+            newfacets.append(newfacet)
 
     for facet in newfacets:
        facet['count'] = facet_counts[facet['num']]
