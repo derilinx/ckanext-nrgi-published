@@ -118,9 +118,11 @@ def get_facet_items_dict_questions(facet, limit=None, exclude_active=False):
 
     #The remaining ones don't have a facet to update, create new ones
     for count in facet_counts:
-       name = '[\\"' + count  + '\\"]'
-       cfacet = {'count': facet_counts[count], 'display_name': qchoices[count], 'name': name}
-       newfacets.append(cfacet)
+       #Questions can get deleted from the schema, workaround
+       if count in qchoices:
+           name = '[\\"' + count  + '\\"]'
+           cfacet = {'count': facet_counts[count], 'display_name': qchoices[count], 'name': name}
+           newfacets.append(cfacet)
 
     #Now we have to resort
     sortedfacets = sorted(newfacets, key=lambda k: k['count'], reverse=True)
