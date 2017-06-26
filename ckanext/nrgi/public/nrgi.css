@@ -210,7 +210,8 @@ section#community .community-box h5 {
   background-color: #fcfcfc;
 }
 .masthead .navigation .nav-pills li.active a {
-  color: #3f759e;
+  /* TODO color: #3f759e; */
+  color: #5b5d62;
   background-color: #fcfcfc;
 }
 .masthead input[type="text"]:focus {
@@ -221,7 +222,7 @@ section#community .community-box h5 {
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
   box-shadow: none;
-  text-decoration: underline;
+  text-decoration: none; /* TODO underline; */
 }
 .breadcrumb {
   font-family: "Open Sans";

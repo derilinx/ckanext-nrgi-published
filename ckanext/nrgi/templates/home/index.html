@@ -51,18 +51,18 @@
                         </div>
                         <div class="span1 count-box">
                             <h5>{{h.dataset_count()}}</h5>
-                            <small>Datasets</small>
+                            <small><a href="/dataset/">Datasets</a></small>
                         </div>
                         <div class="span1 count-box">
                             <h5>{{h.document_count()}}</h5>
-                            <small>Documents</small>
+                            <small><a href="/document/">Documents</a></small>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container hidden-phone">
+        {# <div class="container hidden-phone">
             <section id="categories">
                 <div class="row">
                     {{ category_box('Strategy, Consultation, and Institutions', '/imgcat/strategy.png') }}
@@ -178,6 +178,7 @@
                 </div>
             </section>
         </div>
+        #}
 
         <div class="container hidden">
             <section id="viz">
@@ -208,19 +209,19 @@
             <section id="community">
                 <div class="row hidden-phone">
                     <div class="span12">
-                        <h3>Community</h3>
+                        <h3>Learn more</h3>
                         <hr>
                     </div>
                 </div>
                 <div class="row" style="margin-bottom: 14px;">
-                    <div class="span7" id="community-today">
+                    <div class="span8" id="community-today">
                         <div class="community-box">
-                            <h3>Today</h3>
-                            <p>Discover the updates, visualizations, and user experiences of the portal.</p>
-                            <a target="_blank" href="/about" class="btn btn-primary">Discover</a>
+                            <h3>2017 Resource Governance Index</h3>
+                            <p>The Resource Governance Index measures the quality of resource governance in 81 countries. Explore the nearly 10,000 source documents used for the country assessments.</p>
+                            <a class="btn btn-primary" href="/organization/rgi">More info</a>
                         </div>
                     </div>
-                    <div class="span5" id="community-twitter">
+                    <div class="span4" id="community-twitter">
                         <a class="twitter-timeline" data-height="280" data-dnt="true" href="https://twitter.com/NRGInstitute">Tweets by NRGInstitute</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
@@ -229,17 +230,17 @@
                         <div class="community-box">
                             <h3>
                                 <img src="/imgcom/userclub.png">
-                                <span>Receive updates from NRGI</span>
+                                <span>EITI Datasets</span>
                             </h3>
-                            <p>Sign up to receive updates from NRGI.</p>
-                            <a class="btn btn-primary inverted" href="http://resourcegovernance.us2.list-manage1.com/subscribe?u=586ab656ca1263b8776b1f081&id=81af06e868">Join</a>
+                            <p>The global standard for the good governance of oil, gas and mineral resources.</p>
+                            <a class="btn btn-primary inverted" href="/organization/eiti">More info</a>
                         </div>
                     </div>
                     <div class="span8" id="community-rgi">
                         <div class="community-box">
-                            <h3>2017 Resource Governance Index</h3>
-                            <p>The Resource Governance Index measures the quality of resource governance in 81 countries. Explore the nearly 10,000 source documents used for the country assessments.</p>
-                            <a class="btn btn-primary" href="http://www.resourcedata.org/organization/rgi">More info</a>
+                            <h3>Analysis</h3>
+                            <p>Discover updates and visualizations about the portal's data.</p>
+                            <a class="btn btn-primary" href="/pages/analysis-landing-page">More info</a>
                         </div>
                     </div>
                 </div>

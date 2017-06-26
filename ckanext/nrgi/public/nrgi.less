@@ -257,7 +257,8 @@ section#community {
     background-color: @white;
 }
 .masthead .navigation .nav-pills li.active a {
-    color: saturate(@nrgi-primary-blue, 20%);
+    /* TODO color: saturate(@nrgi-primary-blue, 20%); */
+    color: @nrgi-header-grey;
     background-color: @white;
 }
 .masthead input[type="text"]:focus {
@@ -267,7 +268,7 @@ section#community {
 
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
     box-shadow: none;
-    text-decoration: underline;
+    text-decoration: none; /* underline; */
 }
 
 .breadcrumb {
