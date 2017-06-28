@@ -153,10 +153,13 @@ section#community #community-rgi {
   background-image: url('/imgcom/rgi.jpg');
 }
 section#community #community-club {
-  background-color: #fd6f51;
+  background-color: #557386;
 }
 section#community #community-club img {
   width: 50%;
+}
+section#community #community-club h3 span {
+  margin-right: 30px;
 }
 section#community .community-box {
   height: 240px;
