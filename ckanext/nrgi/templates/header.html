@@ -8,11 +8,11 @@
 
 {% block header_site_navigation_tabs %}
     {{ h.extended_build_nav(
-        ('search', _('Datasets')),
+        ('/dataset', _('Datasets')),
         ('/document', _('Documents')),
-        ('organizations_index', _('Organizations')),
+        ('/organization', _('Organizations')),
         ('/pages/analysis-landing-page', _('Analysis')),
-        ('about', _('About')),
+        ('/about', _('About')),
     ) }}
 {% endblock %}
 

@@ -33,22 +33,19 @@ def get_from_flat_dict(list_of_dicts, key, default=None):
 
 def extended_build_nav(*args):
     # we go through the args, add links for raw links,
-    # and then pass the rest to core build_nav_main
+    
     output = ''
     for item in args:
         menu_item, title = item[:2]
 
-        if len(item) == 3 and not toolkit.check_access(item[2]):
-            continue
+        active = ""
+        for keyword in ('pages', 'dataset', 'document', 'organization', 'data', 'about'):          
+            if keyword in menu_item and keyword in h.current_url():
+                active = "active" 
 
-        if menu_item.startswith('http') or menu_item.startswith('/'):
-            # it's a link
-            output += literal(
-                '<li><a href="%s">%s</a></li>' % (menu_item, title)
-            )
-        else:
-            # give it to the core helper for this
-            output += h._make_menu_item(menu_item, title)
+        output += literal(
+            '<li><a href="%s" class="%s">%s</a></li>' % (menu_item, active, title)
+        )
     return output
 
 def dataset_count():

@@ -213,20 +213,19 @@ section#community .community-box h5 {
   color: #4a7493;
   background-color: #fcfcfc;
 }
-.masthead .navigation .nav-pills li.active a {
-  /* TODO color: #3f759e; */
-  color: #5b5d62;
+.masthead .navigation .nav-pills li a.active {
+  color: #3f759e;
   background-color: #fcfcfc;
 }
 .masthead input[type="text"]:focus {
   -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
   box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
 }
-.navbar .nav > .active > a,
-.navbar .nav > .active > a:hover,
-.navbar .nav > .active > a:focus {
+.navbar .nav > li > a.active,
+.navbar .nav > li > a.active:hover,
+.navbar .nav > li > a.active:focus {
   box-shadow: none;
-  text-decoration: none; /* TODO underline; */
+  text-decoration: underline;
 }
 .breadcrumb {
   font-family: "Open Sans";
