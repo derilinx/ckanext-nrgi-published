@@ -1,0 +1,14 @@
+{% ckan_extends %}
+
+{% block resource_actions_inner %}
+            {% if h.check_access('package_update', {'id':pkg.id }) %}
+              <li>{% link_for _('Manage'), controller='package', action='resource_edit', id=pkg.name, resource_id=res.id, class_='btn', icon='wrench' %}</li>
+            {% endif %}
+            {% if res.url and h.is_url(res.url) %}
+              <li>
+                <a class="btn btn-primary resource-url-analytics resource-type-{{ res.resource_type }}" href="{{ res.url }}">
+                  <i class="fa fa-arrow-circle-o-down"></i> {{ _('Download') }}
+                </a>
+              </li>
+            {% endif %}
+{% endblock %}
