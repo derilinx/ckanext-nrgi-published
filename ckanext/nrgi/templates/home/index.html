@@ -1,7 +1,8 @@
+
 {% ckan_extends %}
 
 {% macro category_box(text, imgsrc) %}
-    <div class="span2 category-box">
+    <div class="col-md-2 category-box">
         <a href="/dataset?category={{text}}">
             <img src="{{imgsrc}}">
             <p>{{text}}</p>
@@ -11,7 +12,7 @@
 
 {% macro country_box(name, level) %}
     <a href="/document?country={{name}}">
-        <div class="span2 country-box country-box-{{level}}">
+        <div class="col-md-2 country-box country-box-{{level}}">
             <span>{{name}}</span>
         </div>
     </a>
@@ -24,7 +25,7 @@
         <div id="front-page-hero" class="hero-unit" style="margin-bottom: 0px;">
             <div class="container">
                 <div class="row">
-                    <div class="span8 offset2 text-center">
+                    <div class="col-md-8 offset2 text-center">
                         <div class="row">
                             <div id="header-wrapper">
                                 <h1>Open Data</h1>
@@ -44,16 +45,16 @@
                 </div>
 
                 <div class="row hidden-phone">
-                    <div class="span4 offset8">
-                        <div class="span1 count-box">
+                    <div class="col-md-4 offset8">
+                        <div class="col-md-1 count-box">
                             <h5>{{h.country_count()}}</h5>
                             <small>Countries</small>
                         </div>
-                        <div class="span1 count-box">
+                        <div class="col-md-1 count-box">
                             <h5>{{h.dataset_count()}}</h5>
                             <small><a href="/dataset/">Datasets</a></small>
                         </div>
-                        <div class="span1 count-box">
+                        <div class="col-md-1 count-box">
                             <h5>{{h.document_count()}}</h5>
                             <small><a href="/document/">Documents</a></small>
                         </div>
@@ -86,7 +87,7 @@
         <div class="container hidden-phone">
             <section id="countries">
                 <div class="row">
-                    <div class="span12">
+                    <div class="col-md-12">
                         <h3>Countries</h3>
                         <hr>
                     </div>
@@ -182,22 +183,22 @@
         <div class="container hidden">
             <section id="viz">
                 <div class="row">
-                    <div class="span4 viz-box">
+                    <div class="col-md-4 viz-box">
                         <h5>Lorem Ipsum</h5>
                         <img src="/graphshim.jpg">
                     </div>
-                    <div class="span4 viz-box">
+                    <div class="col-md-4 viz-box">
                         <h5>Lorem Ipsum</h5>
                         <img src="/graphshim.jpg">
                     </div>
-                    <div class="span4 viz-box">
+                    <div class="col-md-4 viz-box">
                         <h5>Lorem Ipsum</h5>
                         <img src="/graphshim.jpg">
                     </div>
                 </div>
 
                 <div class="row" style="margin-top: 2em">
-                    <div class="span12 text-center">
+                    <div class="col-md-12 text-center">
                         <a href="/dataset" class="btn btn-primary">Search Datasets</a>
                     </div>
                 </div>
@@ -207,25 +208,25 @@
         <div class="container">
             <section id="community">
                 <div class="row hidden-phone">
-                    <div class="span12">
+                    <div class="col-md-12">
                         <h3>Learn more</h3>
                         <hr>
                     </div>
                 </div>
                 <div class="row" style="margin-bottom: 14px;">
-                    <div class="span8" id="community-today">
+                    <div class="col-md-8" id="community-today">
                         <div class="community-box">
                             <h3>2017 RGI Source Library</h3>
                             <p>The Resource Governance Index (RGI) Source Library contains almost 10,000 source documents which were used to verify the information from the 149 conducted survey questions across 89 assessments. The documents can be searched by question, assessment type, country and subcomponent.</p>
                             <a class="btn btn-primary" href="/organization/resource-governance-index">More info</a>
                         </div>
                     </div>
-                    <div class="span4" id="community-twitter">
+                    <div class="col-md-4" id="community-twitter">
                         <a class="twitter-timeline" data-height="280" data-dnt="true" href="https://twitter.com/NRGInstitute">Tweets by NRGInstitute</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="span4" id="community-club">
+                    <div class="col-md-4" id="community-club">
                         <div class="community-box">
                             <h3>
                                 <img src="/imgcom/eiti.png">
@@ -235,7 +236,7 @@
                             <br><a class="btn btn-primary inverted" href="/organization/eiti">More info</a>
                         </div>
                     </div>
-                    <div class="span8" id="community-rgi">
+                    <div class="col-md-8" id="community-rgi">
                         <div class="community-box">
                             <h3>Analysis</h3>
                             <p>Discover updates and visualizations about the portal's data.</p>
