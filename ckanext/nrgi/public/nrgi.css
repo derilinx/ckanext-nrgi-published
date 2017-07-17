@@ -16,7 +16,6 @@ p[class=lead] {
 }
 .header-image {
   padding-top: 16px;
-  padding-bottom: 45px;
 }
 .homepage {
   background-color: #fcfcfc;
@@ -198,7 +197,8 @@ section#community .community-box h5 {
 }
 .masthead {
   background-color: #fcfcfc;
-  padding-bottom: 20px;
+  padding-bottom: 60px;
+  padding-top: 30px;
   background-image: none;
   height: 50px;
 }
