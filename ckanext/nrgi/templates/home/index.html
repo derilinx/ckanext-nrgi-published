@@ -1,241 +1,252 @@
-
 {% ckan_extends %}
 
 {% macro category_box(text, imgsrc) %}
-    <div class="col-md-2 category-box">
-        <a href="/dataset?category={{text}}">
-            <img src="{{imgsrc}}">
-            <p>{{text}}</p>
-        </a>
-    </div>
+<div class="col-md-2 category-box">
+    <a href="/dataset?category={{text}}">
+        <img src="{{imgsrc}}">
+        <p>{{text}}</p>
+    </a>
+</div>
 {% endmacro %}
 
 {% macro country_box(name, level) %}
-    <a href="/document?country={{name}}">
-        <div class="col-md-2 country-box country-box-{{level}}">
-            <span>{{name}}</span>
-        </div>
-    </a>
+<a href="/document?country={{name}}">
+    <div class="col-md-2 country-box country-box-{{level}}">
+        <span>{{name}}</span>
+    </div>
+</a>
 {% endmacro %}
 
 {% block content %}
-    <div class="homepage layout-nrgi">
-        <div class="container">{{self.flash()}}</div>
+<div class="homepage layout-nrgi">
+    <div class="container">{{self.flash()}}</div>
 
-        <div id="front-page-hero" class="hero-unit" style="margin-bottom: 0px;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <div class="row text-center">
-                            <div id="header-wrapper">
-                                <h1>{{g.site_title}}</h1>
-                            </div>
-                            <p>Helping people to realize the benefits of their countries' endowments of oil, gas, and minerals.</p>
-                            <div class="row text-center">
-                                <form action="dataset" method="get">
-                                    <div class="input-group" id="front-page-search-input-wrapper">
-                                        <input name="q" id="front-page-search-input" type="search" placeholder="Search for datasets...">
-                                        <button type="submit" style="height:inherit;" id="front-page-search-input-icon" class="input-group-addon">SEARCH</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- <a href="/dataset" class="btn btn-primary">Explore Datasets</a> -->
+    <div id="front-page-hero" class="hero-unit" style="margin-bottom: 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="row text-center">
+                        <div id="header-wrapper">
+                            <h1>{{g.site_title}}</h1>
                         </div>
+                        <p>Helping people to realize the benefits of their countries' endowments of oil, gas, and
+                            minerals.</p>
+                        <div class="text-center col-md-6 col-md-offset-3">
+                            <form action="dataset" method="get">
+                                <div class="input-group" id="front-page-search-input-wrapper">
+                                    <input name="q" id="front-page-search-input" type="search"
+                                           placeholder="Search for datasets...">
+                                    <button type="submit" style="height:inherit;" id="front-page-search-input-icon"
+                                            class="input-group-addon">SEARCH
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- <a href="/dataset" class="btn btn-primary">Explore Datasets</a> -->
                     </div>
                 </div>
+            </div>
 
-                <div class="row hidden-phone">
-                    <div class="col-md-4 col-md-offset-7 ">
-                        <div class="col-md-1 count-box">
-                            <h5>{{h.country_count()}}</h5>
-                            <small>Countries</small>
-                        </div>
-                        <div class="col-md-1 count-box">
-                            <h5>{{h.dataset_count()}}</h5>
-                            <small><a href="/dataset/">Datasets</a></small>
-                        </div>
-                        <div class="col-md-1 count-box">
-                            <h5>{{h.document_count()}}</h5>
-                            <small><a href="/document/">Documents</a></small>
-                        </div>
+            <div class="row hidden-phone">
+                <div class="col-md-4 col-md-offset-7 ">
+                    <div class="col-md-1 count-box">
+                        <h5>{{h.country_count()}}</h5>
+                        <small>Countries</small>
+                    </div>
+                    <div class="col-md-1 count-box">
+                        <h5>{{h.dataset_count()}}</h5>
+                        <small><a href="/dataset/">Datasets</a></small>
+                    </div>
+                    <div class="col-md-1 count-box">
+                        <h5>{{h.document_count()}}</h5>
+                        <small><a href="/document/">Documents</a></small>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="container hidden-phone">
-            <section id="categories">
-                <div class="row">
-                    {{ category_box('Strategy, Consultation, and Institutions', '/imgcat/strategy.png') }}
-                    {{ category_box('Accountability and Transparency', '/imgcat/accountability.png') }}
-                    {{ category_box('Exploration and License Allocation', '/imgcat/exploration.png') }}
-                    {{ category_box('Taxation', '/imgcat/tax.png') }}
-                    {{ category_box('Local Effects', '/imgcat/effects.png') }}
-                    {{ category_box('Nationally Owned Resource Companies', '/imgcat/nationalcompanies.png') }}
+    <div class="container hidden-phone">
+        <section id="categories">
+            <div class="row">
+                {{ category_box('Strategy, Consultation, and Institutions', '/imgcat/strategy.png') }}
+                {{ category_box('Accountability and Transparency', '/imgcat/accountability.png') }}
+                {{ category_box('Exploration and License Allocation', '/imgcat/exploration.png') }}
+                {{ category_box('Taxation', '/imgcat/tax.png') }}
+                {{ category_box('Local Effects', '/imgcat/effects.png') }}
+                {{ category_box('Nationally Owned Resource Companies', '/imgcat/nationalcompanies.png') }}
+            </div>
+            <div class="row">
+                {{ category_box('Revenue Distribution', '/imgcat/revenuedist.png') }}
+                {{ category_box('Revenue Volatility', '/imgcat/revenuevol.png') }}
+                {{ category_box('Government Spending', '/imgcat/spending.png') }}
+                {{ category_box('Private Sector Development', '/imgcat/privatesector.png') }}
+                {{ category_box('Roles of Multinational Companies', '/imgcat/mnc.png') }}
+                {{ category_box('Role of International Community', '/imgcat/intlcom.png') }}
+            </div>
+        </section>
+    </div>
+
+    <div class="container hidden-phone">
+        <section id="countries">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Countries</h3>
+                    <hr>
                 </div>
-                <div class="row">
-                    {{ category_box('Revenue Distribution', '/imgcat/revenuedist.png') }}
-                    {{ category_box('Revenue Volatility', '/imgcat/revenuevol.png') }}
-                    {{ category_box('Government Spending', '/imgcat/spending.png') }}
-                    {{ category_box('Private Sector Development', '/imgcat/privatesector.png') }}
-                    {{ category_box('Roles of Multinational Companies', '/imgcat/mnc.png') }}
-                    {{ category_box('Role of International Community', '/imgcat/intlcom.png') }}
+            </div>
+            <div class="row country-boxes">
+                <div>
+                    {{country_box("Colombia", level=1)}}
+                    {{country_box("Congo, the Democratic Republic of the", level=1)}}
+                    {{country_box("Ghana", level=1)}}
+                    {{country_box("Guinea", level=1)}}
+                    {{country_box("Indonesia", level=1)}}
+                    {{country_box("Mexico", level=1)}}
+                    {{country_box("Mongolia", level=1)}}
+                    {{country_box("Myanmar", level=1)}}
+                    {{country_box("Nigeria", level=1)}}
+                    {{country_box("Tanzania", level=1)}}
+                    {{country_box("Tunisia", level=1)}}
+
                 </div>
-            </section>
-        </div>
+                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#otherlevels"
+                        style="margin-left: 3em;">See All
+                </button>
+                <hr/>
 
-        <div class="container hidden-phone">
-            <section id="countries">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3>Countries</h3>
-                        <hr>
-                    </div>
+
+                <div id="otherlevels" class="collapse out">
+                    {{country_box("Azerbaijan", level=2)}}
+                    {{country_box("Bolivia", level=2)}}
+                    {{country_box("Iraq", level=2)}}
+                    {{country_box("Kyrgyzstan", level=2)}}
+                    {{country_box("Libya", level=2)}}
+                    {{country_box("Peru", level=2)}}
+                    {{country_box("Philippines", level=2)}}
+                    {{country_box("Uganda", level=2)}}
+                    {{country_box("Ukraine", level=2)}}
+                    {{country_box("Zambia", level=2)}}
+
+                    {{country_box("Afghanistan", level=3)}}
+                    {{country_box("Algeria", level=3)}}
+                    {{country_box("Angola", level=3)}}
+                    {{country_box("Australia", level=3)}}
+                    {{country_box("Bahrain", level=3)}}
+                    {{country_box("Bangladesh", level=3)}}
+                    {{country_box("Botswana", level=3)}}
+                    {{country_box("Brazil", level=3)}}
+                    {{country_box("Burkina Faso", level=3)}}
+                    {{country_box("Cambodia", level=3)}}
+                    {{country_box("Cameroon", level=3)}}
+                    {{country_box("Canada", level=3)}}
+                    {{country_box("Chile", level=3)}}
+                    {{country_box("China", level=3)}}
+                    {{country_box("Côte d'Ivoire", level=3)}}
+                    {{country_box("Ecuador", level=3)}}
+                    {{country_box("Egypt", level=3)}}
+                    {{country_box("Equatorial Guinea", level=3)}}
+                    {{country_box("Gabon", level=3)}}
+                    {{country_box("India", level=3)}}
+                    {{country_box("Iran", level=3)}}
+                    {{country_box("Kazakhstan", level=3)}}
+                    {{country_box("Kuwait", level=3)}}
+                    {{country_box("Laos", level=3)}}
+                    {{country_box("Liberia", level=3)}}
+                    {{country_box("Madagascar", level=3)}}
+                    {{country_box("Malaysia", level=3)}}
+                    {{country_box("Morocco", level=3)}}
+                    {{country_box("Mozambique", level=3)}}
+                    {{country_box("Niger", level=3)}}
+                    {{country_box("Norway", level=3)}}
+                    {{country_box("Oman", level=3)}}
+                    {{country_box("Papua New Guinea", level=3)}}
+                    {{country_box("Qatar", level=3)}}
+                    {{country_box("Russia", level=3)}}
+                    {{country_box("Saudi Arabia", level=3)}}
+                    {{country_box("Sierra Leone", level=3)}}
+                    {{country_box("South Africa", level=3)}}
+                    {{country_box("South Sudan", level=3)}}
+                    {{country_box("Sudan", level=3)}}
+                    {{country_box("Sudan", level=3)}}
+                    {{country_box("Timor-Leste", level=3)}}
+                    {{country_box("Trinidad and Tobago", level=3)}}
+                    {{country_box("Turkmenistan", level=3)}}
+                    {{country_box("United Arab Emirates", level=3)}}
+                    {{country_box("United Kingdom", level=3)}}
+                    {{country_box("United States", level=3)}}
+                    {{country_box("Uzbekistan", level=3)}}
+                    {{country_box("Venezuela", level=3)}}
+                    {{country_box("Vietnam", level=3)}}
+                    {{country_box("Yemen", level=3)}}
+                    {{country_box("Zimbabwe", level=3)}}
                 </div>
-                <div class="row country-boxes">
-                    <div>
-                        {{country_box("Colombia", level=1)}}
-                        {{country_box("Congo, the Democratic Republic of the", level=1)}}
-                        {{country_box("Ghana", level=1)}}
-                        {{country_box("Guinea", level=1)}}
-                        {{country_box("Indonesia", level=1)}}
-                        {{country_box("Mexico", level=1)}}
-                        {{country_box("Mongolia", level=1)}}
-                        {{country_box("Myanmar", level=1)}}
-                        {{country_box("Nigeria", level=1)}}
-                        {{country_box("Tanzania", level=1)}}
-                        {{country_box("Tunisia", level=1)}}
+            </div>
+        </section>
+    </div>
 
-                    </div>
-                    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#otherlevels" style="margin-left: 3em;">See All</button>
-                    <hr/>
-
-
-                    <div id="otherlevels" class="collapse out">
-                        {{country_box("Azerbaijan", level=2)}}
-                        {{country_box("Bolivia", level=2)}}
-                        {{country_box("Iraq", level=2)}}
-                        {{country_box("Kyrgyzstan", level=2)}}
-                        {{country_box("Libya", level=2)}}
-                        {{country_box("Peru", level=2)}}
-                        {{country_box("Philippines", level=2)}}
-                        {{country_box("Uganda", level=2)}}
-                        {{country_box("Ukraine", level=2)}}
-                        {{country_box("Zambia", level=2)}}
-
-                        {{country_box("Afghanistan", level=3)}}
-                        {{country_box("Algeria", level=3)}}
-                        {{country_box("Angola", level=3)}}
-                        {{country_box("Australia", level=3)}}
-                        {{country_box("Bahrain", level=3)}}
-                        {{country_box("Bangladesh", level=3)}}
-                        {{country_box("Botswana", level=3)}}
-                        {{country_box("Brazil", level=3)}}
-                        {{country_box("Burkina Faso", level=3)}}
-                        {{country_box("Cambodia", level=3)}}
-                        {{country_box("Cameroon", level=3)}}
-                        {{country_box("Canada", level=3)}}
-                        {{country_box("Chile", level=3)}}
-                        {{country_box("China", level=3)}}
-                        {{country_box("Côte d'Ivoire", level=3)}}
-                        {{country_box("Ecuador", level=3)}}
-                        {{country_box("Egypt", level=3)}}
-                        {{country_box("Equatorial Guinea", level=3)}}
-                        {{country_box("Gabon", level=3)}}
-                        {{country_box("India", level=3)}}
-                        {{country_box("Iran", level=3)}}
-                        {{country_box("Kazakhstan", level=3)}}
-                        {{country_box("Kuwait", level=3)}}
-                        {{country_box("Laos", level=3)}}
-                        {{country_box("Liberia", level=3)}}
-                        {{country_box("Madagascar", level=3)}}
-                        {{country_box("Malaysia", level=3)}}
-                        {{country_box("Morocco", level=3)}}
-                        {{country_box("Mozambique", level=3)}}
-                        {{country_box("Niger", level=3)}}
-                        {{country_box("Norway", level=3)}}
-                        {{country_box("Oman", level=3)}}
-                        {{country_box("Papua New Guinea", level=3)}}
-                        {{country_box("Qatar", level=3)}}
-                        {{country_box("Russia", level=3)}}
-                        {{country_box("Saudi Arabia", level=3)}}
-                        {{country_box("Sierra Leone", level=3)}}
-                        {{country_box("South Africa", level=3)}}
-                        {{country_box("South Sudan", level=3)}}
-                        {{country_box("Sudan", level=3)}}
-                        {{country_box("Sudan", level=3)}}
-                        {{country_box("Timor-Leste", level=3)}}
-                        {{country_box("Trinidad and Tobago", level=3)}}
-                        {{country_box("Turkmenistan", level=3)}}
-                        {{country_box("United Arab Emirates", level=3)}}
-                        {{country_box("United Kingdom", level=3)}}
-                        {{country_box("United States", level=3)}}
-                        {{country_box("Uzbekistan", level=3)}}
-                        {{country_box("Venezuela", level=3)}}
-                        {{country_box("Vietnam", level=3)}}
-                        {{country_box("Yemen", level=3)}}
-                        {{country_box("Zimbabwe", level=3)}}
-                    </div>
+    <div class="container hidden">
+        <section id="viz">
+            <div class="row">
+                <div class="col-md-4 viz-box">
+                    <h5>Lorem Ipsum</h5>
+                    <img src="/graphshim.jpg">
                 </div>
-            </section>
-        </div>
-
-        <div class="container hidden">
-            <section id="viz">
-                <div class="row">
-                    <div class="col-md-4 viz-box">
-                        <h5>Lorem Ipsum</h5>
-                        <img src="/graphshim.jpg">
-                    </div>
-                    <div class="col-md-4 viz-box">
-                        <h5>Lorem Ipsum</h5>
-                        <img src="/graphshim.jpg">
-                    </div>
-                    <div class="col-md-4 viz-box">
-                        <h5>Lorem Ipsum</h5>
-                        <img src="/graphshim.jpg">
-                    </div>
+                <div class="col-md-4 viz-box">
+                    <h5>Lorem Ipsum</h5>
+                    <img src="/graphshim.jpg">
                 </div>
-
-                <div class="row" style="margin-top: 2em">
-                    <div class="col-md-12 text-center">
-                        <a href="/dataset" class="btn btn-primary">Search Datasets</a>
-                    </div>
+                <div class="col-md-4 viz-box">
+                    <h5>Lorem Ipsum</h5>
+                    <img src="/graphshim.jpg">
                 </div>
-            </section>
-        </div>
+            </div>
 
-        <div class="container">
-            <section id="community">
-                <div class="row hidden-phone">
-                    <div class="col-md-12">
-                        <h3>Learn more</h3>
-                        <hr>
-                    </div>
+            <div class="row" style="margin-top: 2em">
+                <div class="col-md-12 text-center">
+                    <a href="/dataset" class="btn btn-primary">Search Datasets</a>
                 </div>
-                <div class="row" style="margin-bottom: 14px;">
-                    <div class="col-md-12">
+            </div>
+        </section>
+    </div>
+
+    <div class="container">
+        <section id="community">
+            <div class="row hidden-phone">
+                <div class="col-md-12">
+                    <h3>Learn more</h3>
+                    <hr>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 14px;">
+                <div class="col-md-12">
                     <div class="col-md-8" id="community-today">
                         <div class="community-box">
                             <h3>2017 RGI Source Library</h3>
-                            <p>The Resource Governance Index (RGI) Source Library contains almost 10,000 source documents which were used to verify the information from the 149 conducted survey questions across 89 assessments. The documents can be searched by question, assessment type, country and subcomponent.</p>
+                            <p>The Resource Governance Index (RGI) Source Library contains almost 10,000 source
+                                documents which were used to verify the information from the 149 conducted survey
+                                questions across 89 assessments. The documents can be searched by question, assessment
+                                type, country and subcomponent.</p>
                             <a class="btn btn-primary" href="/organization/resource-governance-index">More info</a>
                         </div>
                     </div>
                     <div class="col-md-4" id="community-twitter">
-                        <a class="twitter-timeline" data-height="280" data-dnt="true" href="https://twitter.com/NRGInstitute">Tweets by NRGInstitute</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    </div>
+                        <a class="twitter-timeline" data-height="280" data-dnt="true"
+                           href="https://twitter.com/NRGInstitute">Tweets by NRGInstitute</a>
+                        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12"
+            </div>
+            <div class="row">
+                <div class="col-md-12">
                     <div class="col-md-4" id="community-club">
                         <div class="community-box">
                             <h3>
                                 <img src="/imgcom/eiti.png">
                                 <span class="pull-right">EITI<br>Datasets</span>
                             </h3>
-                            <br><p>The global standard for the good governance of oil, gas and mineral resources.</p>
+                            <br>
+                            <p>The global standard for the good governance of oil, gas and mineral resources.</p>
                             <br><a class="btn btn-primary inverted" href="/organization/eiti">More info</a>
                             <br>
                         </div>
@@ -248,8 +259,8 @@
                         </div>
                     </div>
                 </div>
-                </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </div>
+</div>
 {% endblock %}
