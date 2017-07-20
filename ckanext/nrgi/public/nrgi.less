@@ -70,13 +70,10 @@ h1,h2,h3,h4,h5,h6,p[class=lead] {
         font-size: 60px;
     }
     #front-page-search-input {
-        padding: 14px 14px 14px 14px;
         background-color: @nrgi-translucent-white;
         color: @nrgi-text-blue;
-        margin-bottom: 30px;
     }
     .btn.btn-primary,#front-page-search-input-icon {
-        padding: 14px 24px 14px 24px;
         font-family: @font-header;
         font-weight: 300;
         letter-spacing: 2px;
@@ -84,18 +81,17 @@ h1,h2,h3,h4,h5,h6,p[class=lead] {
         border-color: @nrgi-translucent-white;
         border-width: 1px;
         color: @nrgi-translucent-white;
-        width: 60px;
-        height: 56px;
     }
 }
 
 .count-box {
     background-color: @nrgi-translucent-white;
-    width: 80px;
+    width: 100px;
     // display: table-cell;
     margin-left: 4px;
     padding-left: 8px;
     padding-right: 8px;
+    padding-bottom: 10px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 
@@ -193,15 +189,23 @@ section#community {
     }
 
     #community-today {
+        padding-left: 0px;
+        min-height: 280px;
+        background-size: cover;
         background-image: url('/imgcom/today.jpg');
     }
 
     #community-rgi{
+        padding-left: 0px;
+        min-height: 280px;
+        background-size: cover;
         background-image: url('/imgcom/rgi.jpg');
     }
 
     #community-club {
-        background-color: @nrgi-header-orange;
+        padding-left: 0px;
+        min-height: 280px;
+        background-color: @nrgi-primary-blue;
 
         img {
             width: 50%;
@@ -209,7 +213,6 @@ section#community {
     }
 
     .community-box {
-        height: 240px;
         padding: 20px 20px 20px 20px;
         font-size: 1em;
         color: @white;

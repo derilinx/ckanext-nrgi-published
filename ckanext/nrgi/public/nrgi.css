@@ -43,14 +43,11 @@ p[class=lead] {
   font-size: 60px;
 }
 #front-page-hero #front-page-search-input {
-  padding: 14px 14px 14px 14px;
   background-color: rgba(255, 255, 255, 0.85);
   color: #5B5D62;
-  margin-bottom: 30px;
 }
 #front-page-hero .btn.btn-primary,
 #front-page-hero #front-page-search-input-icon {
-  padding: 14px 24px 14px 24px;
   font-family: "Open Sans";
   font-weight: 300;
   letter-spacing: 2px;
@@ -58,15 +55,14 @@ p[class=lead] {
   border-color: rgba(255, 255, 255, 0.85);
   border-width: 1px;
   color: rgba(255, 255, 255, 0.85);
-  width: 60px;
-  height: 56px;
 }
 .count-box {
   background-color: rgba(255, 255, 255, 0.85);
-  width: 80px;
+  width: 100px;
   margin-left: 4px;
   padding-left: 8px;
   padding-right: 8px;
+  padding-bottom: 10px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
@@ -151,19 +147,26 @@ section#community .btn.btn-primary.inverted {
   border: 3px #FCFCFC solid;
 }
 section#community #community-today {
+  padding-left: 0px;
+  min-height: 280px;
+  background-size: cover;
   background-image: url('/imgcom/today.jpg');
 }
 section#community #community-rgi {
+  padding-left: 0px;
+  min-height: 280px;
+  background-size: cover;
   background-image: url('/imgcom/rgi.jpg');
 }
 section#community #community-club {
-  background-color: #FD6F51;
+  padding-left: 0px;
+  min-height: 280px;
+  background-color: #557288;
 }
 section#community #community-club img {
   width: 50%;
 }
 section#community .community-box {
-  height: 240px;
   padding: 20px 20px 20px 20px;
   font-size: 1em;
   color: #FCFCFC;

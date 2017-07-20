@@ -9,7 +9,10 @@
 </div>
 {% endmacro %}
 
-{% macro country_box(name, level) %}
+{% macro country_box(name, level, alttext) %}
+{% if alttext %}
+  {% set name=alttext %}
+{% endif %}
 <a href="/document?country={{name}}">
     <div class="col-md-2 country-box country-box-{{level}}">
         <span>{{name}}</span>
@@ -33,14 +36,15 @@
                             minerals.</p>
                         <div class="text-center col-md-6 col-md-offset-3">
                             <form action="dataset" method="get">
-                                <div class="input-group" id="front-page-search-input-wrapper">
-                                    <input name="q" id="front-page-search-input" type="search"
-                                           placeholder="Search for datasets...">
-                                    <button type="submit" style="height:inherit;" id="front-page-search-input-icon"
-                                            class="input-group-addon">SEARCH
-                                    </button>
+                                
+                                
+                            <div class="input-group" id="f">
+                                    <input name="q" placeholder="Search for datasets..." id="front-page-search-input" class="form-control" type="search">
+                                    <span class="input-group-btn"><button id="front-page-search-input-icon" type="submit" class="btn btn-search">SEARCH</button>
+                                    </span>
                                 </div>
                             </form>
+                            <br>
                         </div>
                         <!-- <a href="/dataset" class="btn btn-primary">Explore Datasets</a> -->
                     </div>
@@ -98,7 +102,7 @@
             <div class="row country-boxes">
                 <div>
                     {{country_box("Colombia", level=1)}}
-                    {{country_box("Congo, the Democratic Republic of the", level=1)}}
+                    {{country_box("Congo, the Democratic Republic of the", level=1, alttext="Congo (DRC)")}}
                     {{country_box("Ghana", level=1)}}
                     {{country_box("Guinea", level=1)}}
                     {{country_box("Indonesia", level=1)}}
@@ -219,7 +223,6 @@
                 </div>
             </div>
             <div class="row" style="margin-bottom: 14px;">
-                <div class="col-md-12">
                     <div class="col-md-8" id="community-today">
                         <div class="community-box">
                             <h3>2017 RGI Source Library</h3>
@@ -227,6 +230,7 @@
                                 documents which were used to verify the information from the 149 conducted survey
                                 questions across 89 assessments. The documents can be searched by question, assessment
                                 type, country and subcomponent.</p>
+                            <br>
                             <a class="btn btn-primary" href="/organization/resource-governance-index">More info</a>
                         </div>
                     </div>
@@ -235,11 +239,9 @@
                            href="https://twitter.com/NRGInstitute">Tweets by NRGInstitute</a>
                         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
-                </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
-                    <div class="col-md-4" id="community-club">
+                    <div class="col-md-3" id="community-club">
                         <div class="community-box">
                             <h3>
                                 <img src="/imgcom/eiti.png">
@@ -248,17 +250,16 @@
                             <br>
                             <p>The global standard for the good governance of oil, gas and mineral resources.</p>
                             <br><a class="btn btn-primary inverted" href="/organization/eiti">More info</a>
-                            <br>
                         </div>
                     </div>
-                    <div class="col-md-8" id="community-rgi">
+                    <div class="col-md-9" id="community-rgi">
                         <div class="community-box">
                             <h3>Analysis</h3>
                             <p>Discover updates and visualizations about the portal's data.</p>
+                            <br>
                             <a class="btn btn-primary" href="/pages/analysis-landing-page">More info</a>
                         </div>
                     </div>
-                </div>
             </div>
         </section>
     </div>
