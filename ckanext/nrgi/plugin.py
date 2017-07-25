@@ -99,13 +99,13 @@ class NrgiPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IPackageController, inherit=True)
     
     def before_index(self, pkg_dict):
-        ###IN PROGRESS!
         # JSON Strings to lists
         questions = []
-        for value in pkg_dict.get('question', '').replace('[', '').replace(']', '').replace('"', '').replace(' ', '').split(','):
-            questions.append(value)
-        pkg_dict['question'] = questions
-        ####Same for scoring, law/practice
+        for element in ('scoring_question', 'law_practice_question', 'question', 'country', 'country_iso3', 'year'):
+            newlist = []
+            for value in pkg_dict.get('question', '').replace('[', '').replace(']', '').replace('"', '').replace(' ', '').split(','):
+                newlist.append(value)
+            pkg_dict[element] = newlist
         return pkg_dict
 
     # IConfigurer
