@@ -69,6 +69,7 @@ def country_count():
     except Exception:
         return ''
 
+#Change the display of question numbers from their index representation (int) to a text label used in the schema
 def get_facet_items_dict_questions(facet, limit=None, exclude_active=False):
     if facet != 'question':
         return []
@@ -76,82 +77,36 @@ def get_facet_items_dict_questions(facet, limit=None, exclude_active=False):
     facets = h.get_facet_items_dict(facet, limit=None, exclude_active=False)
 
     newfacets = []
-    facet_counts = {}
 
     for facet in facets:
         if not facet or len(facet) == 0:
             continue
         newfacet = facet
-        #Clean up
-        num = newfacet['display_name'].replace('[', '').replace(']', '').replace('"', '').replace(' ', '')
-        if num == '':
-            continue
-        #Handle multiple questions; should actually be doable in SOLR
-        if ',' in num:
-            parts = num.split(',')
-            #For counts of items having both, add the total to both counts
-            for part in parts:
-                if part in facet_counts:
-                    facet_counts[part] = facet_counts[part] + newfacet['count']
-                else:
-                    facet_counts[part] = newfacet['count']
-            #And now don't show it
-            continue
-        if num in facet_counts:
-            facet_counts[num] = facet_counts[num] + newfacet['count']
-        else:
-            facet_counts[num] = newfacet['count']
         
-        #Questions can get deleted from the schema, workaround
-        if num in qchoices:
-            newfacet['display_name'] = qchoices[num] 
-            newfacet['num'] = num
-            newfacet['name'] = '[\\"' + num  + '\\"]'
+        #Questions can get deleted from the schema, then we have no label
+        txt_name = "%03d" % int(facet['name'])
+        if txt_name in qchoices:
+            newfacet['display_name'] = qchoices[txt_name] 
             newfacets.append(newfacet)
-
-    for facet in newfacets:
-       facet['count'] = facet_counts[facet['num']]
-       del facet_counts[facet['num']]
-
-    #The remaining ones don't have a facet to update, create new ones
-    for count in facet_counts:
-       #Questions can get deleted from the schema, workaround
-       if count in qchoices:
-           name = '[\\"' + count  + '\\"]'
-           cfacet = {'count': facet_counts[count], 'display_name': qchoices[count], 'name': name}
-           newfacets.append(cfacet)
-
-    #Now we have to resort
-    sortedfacets = sorted(newfacets, key=lambda k: k['count'], reverse=True)
-
-    #Mark selected
-    selectedfacet = None
-    for item in request.params.items():
-        if item[0] == "question":
-            selectedfacet = item[1]
-
-    for facet in sortedfacets:
-        if facet["name"] == selectedfacet:
-            facet["active"] = True
-
-    return sortedfacets
+    
+    return newfacets
 
 class NrgiPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IFacets, inherit=True)
     plugins.implements(plugins.IRoutes, inherit=True)
-    #plugins.implements(plugins.IPackageController, inherit=True)
+    plugins.implements(plugins.IPackageController, inherit=True)
     
-    #def before_index(self, pkg_dict):
+    def before_index(self, pkg_dict):
         ###IN PROGRESS!
         # JSON Strings to lists
-        #questions = []
-        #for value in pkg_dict.get('question', '').replace('[', '').replace(']', '').replace('"', '').replace(' ', '').split(','):
-        #    questions.append(value)
-        #pkg_dict['question'] = questions
+        questions = []
+        for value in pkg_dict.get('question', '').replace('[', '').replace(']', '').replace('"', '').replace(' ', '').split(','):
+            questions.append(value)
+        pkg_dict['question'] = questions
         ####Same for scoring, law/practice
-        #return pkg_dict
+        return pkg_dict
 
     # IConfigurer
 
