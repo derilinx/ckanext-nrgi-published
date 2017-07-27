@@ -84,10 +84,8 @@ def get_facet_items_dict_questions(facet, limit=None, exclude_active=False):
         newfacet = facet
         
         #Questions can get deleted from the schema, then we have no label
-        txt_name = "%03d" % int(facet['name'])
-        if txt_name in qchoices:
-            newfacet['display_name'] = qchoices[txt_name] 
-            newfacets.append(newfacet)
+        newfacet['display_name'] = qchoices.get(facet['name'], facet['name'])
+        newfacets.append(newfacet)
     
     return newfacets
 
