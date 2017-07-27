@@ -677,10 +677,10 @@
     {
             "field_name": "year",
             "label": "Year",
-            "display_snippet": "search_link_nrgi.html",
+            "display_snippet": "multiple_link_nrgi.html",
+            "preset": "multiple_select",
             "help_text": "The Year relevant to your dataset",
             "help_inline": true,
-            "preset": "select",
             "choices": [
 {"value": "2017", "label": "2017"},
 {"value": "2016", "label": "2016"},
@@ -722,10 +722,10 @@
     {
             "field_name": "country",
             "label": "Country",
-            "display_snippet": "search_link_nrgi.html",            
+            "display_snippet": "multiple_link_nrgi.html",
+            "preset": "multiple_select",
             "help_text": "The Country relating to your dataset",
             "help_inline": true,
-            "preset": "select",
             "choices": [
 {"value":"Aruba", "label":"Aruba"},
 {"value":"Afghanistan", "label":"Afghanistan"},
@@ -979,10 +979,10 @@
     {
             "field_name": "country_iso3",
             "label": "Country (ISO 3-letter code)",
-            "display_snippet": "search_link_nrgi.html",
+            "display_snippet": "multiple_link_nrgi.html",
+            "preset": "multiple_select",
             "help_text": "The ISO 3-letter code of the country relating to your dataset",
             "help_inline": true,
-            "preset": "select",
             "choices": [
 {"value":"ABW", "label":"ABW"},
 {"value":"AFG", "label":"AFG"},
