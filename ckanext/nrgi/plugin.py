@@ -144,8 +144,8 @@ class NrgiPlugin(plugins.SingletonPlugin):
                 ('country', toolkit._('Countries')),
                 #('year', toolkit._('Year')),
                 ('assessment_type', toolkit._('Assessment Type')),
-                ('question', toolkit._('Questions'))#,
-                #Removed until we sort multivalued facets properly ('law_practice_question', toolkit._('Law/Practice Question'))
+                ('law_practice_question', toolkit._('Law/Practice Question')),
+                ('question', toolkit._('Questions'))
             ])
 
         return facets_dict
