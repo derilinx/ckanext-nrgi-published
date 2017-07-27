@@ -57,21 +57,18 @@
             "help_inline": true,
             "preset": "select",
             "choices": [
+            {"value":"Strategy, Consultation, and Institutions", "label":"Strategy, Consultation, and Institutions"},
 {"value":"Accountability and Transparency", "label":"Accountability and Transparency"},
-{"value":"Subnational resource revenue sharing", "label":"Subnational resource revenue sharing"},
-{"value":"Political stability and absence of violence", "label":"Political stability and absence of violence"},
-{"value":"Sovereign wealth funds", "label":"Sovereign wealth funds"},
-{"value":"Voice and accountability", "label":"Voice and accountability"},
-{"value":"Control of corruption", "label":"Control of corruption"},
+{"value":"Exploration and License Allocation", "label":"Exploration and License Allocation"},
 {"value":"Taxation", "label":"Taxation"},
-{"value":"Government effectiveness", "label":"Government effectiveness"},
-{"value":"State-owned enterprises", "label":"State-owned enterprises"},
-{"value":"Local impact", "label":"Local impact"},
-{"value":"Rule of law", "label":"Rule of law"},
-{"value":"National budgeting", "label":"National budgeting"},
-{"value":"Regulatory quality", "label":"Regulatory quality"},
-{"value":"Open data ", "label":"Open data "},
-{"value":"Licensing", "label":"Licensing"}
+{"value":"Local Effects", "label":"Local Effects"},
+{"value":"Nationally Owned Resource Companies", "label":"Nationally Owned Resource Companies"},
+{"value":"Revenue Distribution", "label":"Revenue Distribution"},
+{"value":"Revenue Volatility", "label":"Revenue Volatility"},
+{"value":"Government Spending", "label":"Government Spending"},
+{"value":"Private Sector Development", "label":"Private Sector Development"},
+{"value":"Roles of Multinational Companies", "label":"Roles of Multinational Companies"},
+{"value":"Role of International Community", "label":"Role of International Community"}
             ]
     },
     {
@@ -601,7 +598,7 @@
     },
     {
       "field_name": "url",
-      "label": "Source",
+      "label": "Source or API link",
       "form_placeholder": "http://example.com/dataset.json",
       "display_property": "foaf:homepage",
       "display_snippet": "link.html"

@@ -7,6 +7,5 @@
 {% if data[field.field_name]|length == maxlength %}
 {# For this reason we make this snippet field specific rather than coercing to JSON just to make #}
 {# the snippet reusable for other potential 2-option fields #}
- (<a href='/document?q={{field.field_name}}:"[\"law\", \"practice\"]"'>Both</a>)
-{# NOTE! Important that the import ensures Law always comes before practice so that this string works! #}
+ (<a href='/document?{{field.field_name}}=law&{{field.field_name}}=practice'>Both</a>)
 {% endif %}
