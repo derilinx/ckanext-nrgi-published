@@ -1,6 +1,6 @@
 {% for choice in field.choices if choice.value in data[field.field_name] %}
 {# NOTE! This "in" is a text search, not an array search. CKAN stores the value as stringified array #}
-<a href='/document?q={{field.field_name}}:"[\"{{choice.value}}\"]"'>{{choice.label}}</a>{% if not loop.last %} and <br>{% endif %}
+<a href='/document?{{field.field_name}}={{choice.value}}'>{{choice.label}}</a>{% if not loop.last %} and <br>{% endif %}
 {% endfor %}
 
 {% set maxlength=2 %}
