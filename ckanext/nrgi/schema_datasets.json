@@ -34,7 +34,7 @@
             "display_snippet": "search_link_nrgi.html",
             "help_text": "The Year relevant to your dataset",
             "help_inline": true,
-            "preset": "select",
+            "preset": "multiple_select",
             "choices": [
 {"value": "2017", "label": "2017"},
 {"value": "2016", "label": "2016"},
@@ -77,7 +77,7 @@
             "display_snippet": "search_link_nrgi.html",            
             "help_text": "The Country relating to your dataset",
             "help_inline": true,
-            "preset": "select",
+            "preset": "multiple_select",
             "choices": [
 {"value":"Aruba", "label":"Aruba"},
 {"value":"Afghanistan", "label":"Afghanistan"},
@@ -334,7 +334,7 @@
             "display_snippet": "search_link_nrgi.html",
             "help_text": "The ISO 3-letter code of the country relating to your dataset",
             "help_inline": true,
-            "preset": "select",
+            "preset": "multiple_select",
             "choices": [
 {"value":"ABW", "label":"ABW"},
 {"value":"AFG", "label":"AFG"},
