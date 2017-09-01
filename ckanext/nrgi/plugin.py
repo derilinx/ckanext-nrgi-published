@@ -101,7 +101,8 @@ class NrgiPlugin(plugins.SingletonPlugin):
         questions = []
         for element in ('scoring_question', 'law_practice_question', 'question', 'country', 'country_iso3', 'year'):
             newlist = []
-            for value in pkg_dict.get(element, '').replace('[', '').replace(']', '').replace('"', '').replace(' ', '').split(','):
+            for value in pkg_dict.get(element, '').replace('[', '').replace(']', '').split('", "'):
+                value = value.replace('"', '') #Needed for 1st & last values
                 newlist.append(value)
             pkg_dict[element] = newlist
         return pkg_dict
