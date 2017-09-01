@@ -87,7 +87,7 @@ def get_facet_items_dict_questions(facet, limit=None, exclude_active=False):
         newfacet['display_name'] = qchoices.get(facet['name'], facet['name'])
         newfacets.append(newfacet)
     
-    return newfacets
+    return sorted(newfacets, key=lambda x: x['display_name'])
 
 class NrgiPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
