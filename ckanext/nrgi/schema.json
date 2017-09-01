@@ -739,7 +739,7 @@
             "help_inline": true,
             "preset": "select",
             "choices": [
-            {"value":"Strategy, Consultation, and Institutions", "label":"Strategy, Consultation, and Institutions"},
+            {"value":"Strategy, Consultation and Institutions", "label":"Strategy, Consultation and Institutions"},
 {"value":"Accountability and Transparency", "label":"Accountability and Transparency"},
 {"value":"Exploration and License Allocation", "label":"Exploration and License Allocation"},
 {"value":"Taxation", "label":"Taxation"},
