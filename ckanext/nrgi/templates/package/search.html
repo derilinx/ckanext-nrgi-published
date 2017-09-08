@@ -1,20 +1,16 @@
 {% ckan_extends %}
 
+{# TODO:REMOVE_AFTER_PR #}
 {% block page_primary_action %}
         {% if h.check_access('package_create') %}
           <div class="page_primary_action">
-            {% set add_type_text = 'Add ' + dataset_type.title() %}
-            {% set add_link = h.url_for(controller='package', action='new') | replace('dataset', dataset_type) %}
-            <a href="{{ add_link }}" class="btn btn-primary"><i class="fa fa-plus-square"></i>  {{ _(add_type_text) }}</a>
+            {{ h.snippet ('snippets/add_dataset.html', dataset_type=dataset_type) }}
           </div>
         {% endif %}
-      {% endblock %}
+{% endblock %}
 
 {% block breadcrumb_content %}
-  {% set type_text = dataset_type.title() ~ 's' %}
-  {# {% set action = 'document' ~ '_search' %} #}
-  <li class="active"><a href="{{ dataset_type }}">{{ _(type_text) }}</a></li>
-  {# <li class="active">{{ h.nav_link(_(type_text), controller='package', action=action, highlight_actions = 'new index') }}</li> #}
+  <li class="active">{{ h.nav_link(_(dataset_type.title() ~ 's'), controller='package', action='search', named_route=dataset_type ~ '_search', highlight_actions = 'new index') }}</li>
 {% endblock %}
 
 {% block secondary_content %}
@@ -32,6 +28,7 @@
 </div>
 {% endblock %}
 
+{# TODO:REMOVE_AFTER_PR #}
 {# This is all just to pass in "document" instead of "dataset" #}
 {% block form %}
         {% set facets = {
@@ -48,6 +45,7 @@
           (_('Last Modified'), 'metadata_modified desc'),
           (_('Popular'), 'views_recent desc') if g.tracking_enabled else (false, false) ]
         %}
-{% snippet 'snippets/search_form.html', form_id='dataset-search-form', type=dataset_type, query=c.q, sorting=sorting, sorting_selected=c.sort_by_selected, count=c.page.item_count, placeholder=_('Search') + ' ' + dataset_type + 's' + '...', facets=facets, show_empty=request.params, error=c.query_error, fields=c.fields %}
+
+        {% snippet 'snippets/search_form.html', form_id='dataset-search-form', type=dataset_type, query=c.q, sorting=sorting, sorting_selected=c.sort_by_selected, count=c.page.item_count, placeholder=_('Search ' ~ dataset_type ~ 's') ~ '...', facets=facets, show_empty=request.params, error=c.query_error, fields=c.fields %}
 {% endblock %}
 
