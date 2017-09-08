@@ -11,8 +11,10 @@
       {% endblock %}
 
 {% block breadcrumb_content %}
-  {% set type_text = dataset_type.title() %}
+  {% set type_text = dataset_type.title() ~ 's' %}
+  {# {% set action = 'document' ~ '_search' %} #}
   <li class="active"><a href="{{ dataset_type }}">{{ _(type_text) }}</a></li>
+  {# <li class="active">{{ h.nav_link(_(type_text), controller='package', action=action, highlight_actions = 'new index') }}</li> #}
 {% endblock %}
 
 {% block secondary_content %}
