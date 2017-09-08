@@ -39,7 +39,7 @@ def extended_build_nav(*args):
         menu_item, title = item[:2]
 
         active = ""
-        for keyword in ('pages', 'dataset', 'document', 'organization', 'data', 'about'):          
+        for keyword in ('/pages', '/dataset', '/document', '/organization', '/data', '/about'):          
             if keyword in menu_item and keyword in h.current_url():
                 active = "active" 
 
