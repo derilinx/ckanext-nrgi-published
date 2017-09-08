@@ -2,7 +2,7 @@
 
 {% macro category_box(text, imgsrc) %}
 <div class="col-md-2 category-box">
-    <a href="/dataset?category={{text}}">
+    <a href="/dataset?_show_all_types=True&category={{text}}">
         <img src="{{imgsrc}}">
         <p>{{text}}</p>
     </a>
@@ -13,7 +13,7 @@
 {% if alttext %}
   {% set name=alttext %}
 {% endif %}
-<a href="/document?country={{name}}">
+<a href="/dataset?_show_all_types=True&country={{name}}">
     <div class="col-md-2 country-box country-box-{{level}}">
         <span>{{name}}</span>
     </div>
@@ -36,7 +36,7 @@
                             minerals.</p>
                         <div class="text-center col-md-6 col-md-offset-3">
                             <form action="dataset" method="get">
-                                
+                            <input type="hidden" name="_show_all_types" value="True">   
                                 
                             <div class="input-group" id="f">
                                     <input name="q" placeholder="Search for datasets..." id="front-page-search-input" class="form-control" type="search">
@@ -189,31 +189,6 @@
                     {{country_box("Vietnam", level=3)}}
                     {{country_box("Yemen", level=3)}}
                     {{country_box("Zimbabwe", level=3)}}
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div class="container hidden">
-        <section id="viz">
-            <div class="row">
-                <div class="col-md-4 viz-box">
-                    <h5>Lorem Ipsum</h5>
-                    <img src="/graphshim.jpg">
-                </div>
-                <div class="col-md-4 viz-box">
-                    <h5>Lorem Ipsum</h5>
-                    <img src="/graphshim.jpg">
-                </div>
-                <div class="col-md-4 viz-box">
-                    <h5>Lorem Ipsum</h5>
-                    <img src="/graphshim.jpg">
-                </div>
-            </div>
-
-            <div class="row" style="margin-top: 2em">
-                <div class="col-md-12 text-center">
-                    <a href="/dataset" class="btn btn-primary">Search Datasets</a>
                 </div>
             </div>
         </section>

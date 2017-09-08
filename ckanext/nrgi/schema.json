@@ -31,7 +31,7 @@
     {
             "field_name": "assessment_type",
             "label": "Assessment Type",
-            "display_snippet": "search_link_nrgi.html",
+            "display_snippet": "search_link_type_specific_nrgi.html",
             "preset": "select",
             "choices": [
 {"value": "Oil and Gas", "label": "Oil and Gas"},
@@ -710,7 +710,7 @@
     {
             "field_name": "subcomponent",
             "label": "Sub-component",
-            "display_snippet": "search_link_nrgi.html",
+            "display_snippet": "search_link_type_specific_nrgi.html",
             "help_text": "The RGI sub-component",
             "help_inline": true,
             "preset": "select",
