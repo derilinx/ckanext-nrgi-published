@@ -69,6 +69,13 @@ def country_count():
     except Exception:
         return ''
 
+def theme_counts():
+    try:
+        q = toolkit.get_action('package_search')({}, {'facet.field': ['category'], 'facet.limit': -1})
+        return q.get('facets').get('category', {})
+    except Exception:
+        return {}
+
 #Change the display of question numbers from their index representation (int) to a text label used in the schema
 def get_facet_items_dict_questions(facet, limit=None, exclude_active=False):
     if facet != 'question':
@@ -125,6 +132,7 @@ class NrgiPlugin(plugins.SingletonPlugin):
             'dataset_count': dataset_count,
             'document_count': document_count,
             'country_count': country_count,
+            'theme_counts': theme_counts,
             'get_facet_items_dict_questions': get_facet_items_dict_questions
         }
 
