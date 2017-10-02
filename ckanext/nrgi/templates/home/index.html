@@ -108,8 +108,8 @@
                 </div>
             </div>
             <div class="row country-boxes">
-                <div><h3>NRGI Priority Countries</h3></div>
-                <div>
+                <div class="row"><h3>NRGI Priority Countries</h3></div>
+                <div class="row">
                     {{country_box("Colombia", level=1)}}
                     {{country_box("Congo, the Democratic Republic of the", level=1, alttext="Congo (DRC)")}}
                     {{country_box("Ghana", level=1)}}
@@ -122,15 +122,16 @@
                     {{country_box("Tanzania", level=1)}}
                     {{country_box("Tunisia", level=1)}}
 
-                </div>
                 <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#otherlevels"
                         style="margin-left: 3em;">See All
                 </button>
+                </div>
                 <hr/>
 
 
                 <div id="otherlevels" class="collapse out">
                     <div class="row"><h3>NRGI Limited Engagement Countries</h3></div>
+                    <div class="row">
                     {{country_box("Azerbaijan", level=2)}}
                     {{country_box("Bolivia", level=2)}}
                     {{country_box("Kyrgyzstan", level=2)}}
@@ -140,10 +141,10 @@
                     {{country_box("Uganda", level=2)}}
                     {{country_box("Ukraine", level=2)}}
                     {{country_box("Zambia", level=2)}}
+                    </div>
                     <hr />
-
                     <div class="row"><h3>All other countries</h3></div>
-
+                    <div class="row">
                     {{country_box("Afghanistan", level=3)}}
                     {{country_box("Algeria", level=3)}}
                     {{country_box("Angola", level=3)}}
@@ -197,7 +198,8 @@
                     {{country_box("Vietnam", level=3)}}
                     {{country_box("Yemen", level=3)}}
                     {{country_box("Zimbabwe", level=3)}}
-                </div>
+                </div>  
+              </div>
             </div>
         </section>
     </div>
