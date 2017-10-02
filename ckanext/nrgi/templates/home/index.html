@@ -3,11 +3,16 @@
 {% set theme_counts = h.theme_counts() %}
 
 {% macro category_box(text, imgsrc) %}
+{% if theme_counts[text] is defined %}
+  {% set theme_count = theme_counts[text] %}
+{% else %}
+  {% set theme_count = 0 %}
+{% endif %}
 <div class="col-md-2 category-box">
+    <span class="pull-right" style="height: 20px; width: 20px; background-color: #FD6F51; color:white; position: absolute; left: 134px; border-radius: 3px; box-shadow: 1px 1px 5px #888888;">{{ theme_count }}</span>
     <a href="/dataset?_show_all_types=True&category={{text}}">
         <img src="{{imgsrc}}">
         <p>{{text}}</p>
-        <p>This should look nicer: {{ theme_counts[text] }}</p>
     </a>
 </div>
 {% endmacro %}
