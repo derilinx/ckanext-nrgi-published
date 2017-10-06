@@ -10,7 +10,7 @@
 {% endif %}
 <div class="col-md-2 category-box">
     <span class="pull-right" style="height: 20px; width: 20px; background-color: #FD6F51; color:white; position: absolute; left: 134px; border-radius: 3px; box-shadow: 1px 1px 5px #888888;">{{ theme_count }}</span>
-    <a href="/dataset?_show_all_types=True&category={{text}}">
+    <a href="/record?category={{text}}">
         <img src="{{imgsrc}}">
         <p>{{text}}</p>
     </a>
@@ -21,7 +21,7 @@
 {% if alttext %}
   {% set name=alttext %}
 {% endif %}
-<a href="/dataset?_show_all_types=True&country={{name}}">
+<a href="/record?country={{name}}">
     <div class="col-md-2 country-box country-box-{{level}}">
         <span>{{name}}</span>
     </div>
@@ -43,9 +43,7 @@
                         <p>Helping people to realize the benefits of their countries' endowments of oil, gas and
                             minerals.</p>
                         <div class="text-center col-md-6 col-md-offset-3">
-                            <form action="dataset" method="get">
-                            <input type="hidden" name="_show_all_types" value="True">   
-                                
+                            <form action="record" method="get">
                             <div class="input-group" id="f">
                                     <input name="q" placeholder="Search for datasets and documents..." id="front-page-search-input" class="form-control" type="search">
                                     <span class="input-group-btn"><button id="front-page-search-input-icon" type="submit" class="btn btn-search">SEARCH</button>

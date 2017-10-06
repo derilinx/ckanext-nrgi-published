@@ -1,3 +1,3 @@
 {% for choice in field.choices|sort(attribute='value') if choice.value in data[field.field_name] %}
-<a href='/dataset?_show_all_types=True&{{field.field_name}}={{choice.value}}'>{{choice.value}}</a>{% if not loop.last %}, {% endif %}
+<a href='/record?{{field.field_name}}={{choice.value}}'>{{choice.value}}</a>{% if not loop.last %}, {% endif %}
 {% endfor %}
