@@ -106,7 +106,7 @@ class NrgiPlugin(plugins.SingletonPlugin):
     def before_index(self, pkg_dict):
         # JSON Strings to lists
         questions = []
-        for element in ('scoring_question', 'law_practice_question', 'question', 'country', 'country_iso3', 'year'):
+        for element in ('scoring_question', 'law_practice_question', 'question', 'country', 'country_iso3', 'year', 'assessment_year', 'category'):
             newlist = []
             aslist = json.loads(pkg_dict.get(element, '[]'))
             #Can be used to debug paster rebuild if bad data is in the DB
