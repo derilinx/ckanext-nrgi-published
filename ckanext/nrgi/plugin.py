@@ -139,9 +139,9 @@ class NrgiPlugin(plugins.SingletonPlugin):
     # IFacets
 
     def dataset_facets(self, facets_dict, package_type):
-        if package_type == 'dataset':
+        if package_type in ('record', 'dataset'):
             facets_dict = OrderedDict([
-                ('category', toolkit._('Theme')),
+                ('category', toolkit._('Natural Resource Charter Precepts')),
                 ('country', toolkit._('Countries')),
                 #('year', toolkit._('Year')),
                 ('res_format', toolkit._('Formats')),
@@ -151,6 +151,7 @@ class NrgiPlugin(plugins.SingletonPlugin):
         elif package_type == 'document':
             facets_dict = OrderedDict([
                 ('subcomponent', toolkit._('Sub-components')),
+                ('category', toolkit._('Natural Resource Charter Precepts')),
                 ('country', toolkit._('Countries')),
                 #('year', toolkit._('Year')),
                 ('assessment_type', toolkit._('Assessment Type')),

@@ -39,38 +39,6 @@
             ]
     },
     {
-            "field_name": "scoring_question",
-            "label": "Did this document contribute to scoring?",
-            "display_snippet": "scoring_nrgi.html",
-            "preset": "multiple_select",
-            "choices": [
-                {
-                    "label": "Scoring",
-                    "value": "scoring"
-                },
-                {
-                    "label": "Non-scoring",
-                    "value": "non-scoring"
-                }
-            ]
-    },
-    {
-            "field_name": "law_practice_question",
-            "label": "Are the questions here tagged with law and/or practice",
-            "display_snippet": "law_practice_nrgi.html",
-            "preset": "multiple_select",
-            "choices": [
-                {
-                    "label": "Law",
-                    "value": "law"
-                },
-                {
-                    "label": "Practice",
-                    "value": "practice"
-                }
-            ]
-    },
-    {
             "field_name": "question",
             "label": "Questions",
             "display_snippet": "multiple_link_with_labels_nrgi.html",
@@ -675,11 +643,43 @@
     ]
     },
     {
+            "field_name": "scoring_question",
+            "label": "Did this document contribute to RGI scoring?",
+            "display_snippet": "scoring_nrgi.html",
+            "preset": "multiple_select",
+            "choices": [
+                {
+                    "label": "Scoring",
+                    "value": "scoring"
+                },
+                {
+                    "label": "Non-scoring",
+                    "value": "non-scoring"
+                }
+            ]
+    },
+    {
+            "field_name": "law_practice_question",
+            "label": "Are the questions here tagged with law and/or practice",
+            "display_snippet": "law_practice_nrgi.html",
+            "preset": "multiple_select",
+            "choices": [
+                {
+                    "label": "Law",
+                    "value": "law"
+                },
+                {
+                    "label": "Practice",
+                    "value": "practice"
+                }
+            ]
+    },
+    {
             "field_name": "year",
-            "label": "Year",
+            "label": "Document Year",
             "display_snippet": "multiple_link_nrgi.html",
             "preset": "multiple_select",
-            "help_text": "The Year relevant to your dataset",
+            "help_text": "The Year relevant to the document",
             "help_inline": true,
             "choices": [
 {"value": "2017", "label": "2017"},
@@ -710,7 +710,7 @@
     {
             "field_name": "assessment_year",
             "label": "Assessment year",
-            "display_snippet": "multiple_link_nrgi.html",
+            "display_snippet": null,
             "preset": "multiple_select",
             "help_text": "The year or years for which the document was used for an assessment",
             "help_inline": true,
@@ -745,24 +745,22 @@
     },
     {
             "field_name": "category",
-            "label": "Category",
+            "label": "Natural Resource Charter Precept",
             "display_snippet": "multiple_link_nrgi.html",
-            "help_text": "The Category, or Theme, of your dataset",
-            "help_inline": true,
             "preset": "multiple_select",
             "choices": [
-            {"value":"Strategy, Consultation and Institutions", "label":"Strategy, Consultation and Institutions"},
-{"value":"Accountability and Transparency", "label":"Accountability and Transparency"},
-{"value":"Exploration and License Allocation", "label":"Exploration and License Allocation"},
-{"value":"Taxation", "label":"Taxation"},
-{"value":"Local Effects", "label":"Local Effects"},
-{"value":"Nationally Owned Resource Companies", "label":"Nationally Owned Resource Companies"},
-{"value":"Revenue Distribution", "label":"Revenue Distribution"},
-{"value":"Revenue Volatility", "label":"Revenue Volatility"},
-{"value":"Government Spending", "label":"Government Spending"},
-{"value":"Private Sector Development", "label":"Private Sector Development"},
-{"value":"Roles of Multinational Companies", "label":"Roles of Multinational Companies"},
-{"value":"Role of International Community", "label":"Role of International Community"}
+            {"value":"Precept 1: Strategy, Consultation and Institutions", "label":"Precept 1: Strategy, Consultation and Institutions"},
+{"value":"Precept 2: Accountability and Transparency", "label":"Precept 2: Accountability and Transparency"},
+{"value":"Precept 3: Exploration and License Allocation", "label":"Precept 3: Exploration and License Allocation"},
+{"value":"Precept 4: Taxation", "label":"Precept 4: Taxation"},
+{"value":"Precept 5: Local Effects", "label":"Precept 5: Local Effects"},
+{"value":"Precept 6: Nationally Owned Resource Companies", "label":"Precept 6: Nationally Owned Resource Companies"},
+{"value":"Precept 7: Revenue Distribution", "label":"Precept 7: Revenue Distribution"},
+{"value":"Precept 8: Revenue Volatility", "label":"Precept 8: Revenue Volatility"},
+{"value":"Precept 9: Government Spending", "label":"Precept 9: Government Spending"},
+{"value":"Precept 10: Private Sector Development", "label":"Precept 10: Private Sector Development"},
+{"value":"Precept 11: Roles of Multinational Companies", "label":"Precept 11: Roles of Multinational Companies"},
+{"value":"Precept 12: Role of International Community", "label":"Precept 12: Role of International Community"}
             ]
     },
     {
@@ -1025,7 +1023,7 @@
     {
             "field_name": "country_iso3",
             "label": "Country (ISO 3-letter code)",
-            "display_snippet": "multiple_link_nrgi.html",
+            "display_snippet": null,
             "preset": "multiple_select",
             "help_text": "The ISO 3-letter code of the country relating to your dataset",
             "help_inline": true,
@@ -1311,6 +1309,7 @@
     {
       "field_name": "editor",
       "label": "Editor",
+      "display_snippet": null,
       "form_placeholder": "Joe Bloggs"
     },
     {
@@ -1329,7 +1328,7 @@
       "label": "Author Email",
       "form_placeholder": "joe@example.com",
       "display_property": "dc:creator",
-      "display_snippet": "email_nrgi.html",
+      "display_snippet": null,
       "display_email_name_field": "author"
     },
     {
