@@ -108,7 +108,14 @@ class NrgiPlugin(plugins.SingletonPlugin):
         questions = []
         for element in ('scoring_question', 'law_practice_question', 'question', 'country', 'country_iso3', 'year', 'assessment_year', 'category'):
             newlist = []
-            aslist = json.loads(pkg_dict.get(element, '[]'))
+            try: 
+                aslist = json.loads(pkg_dict.get(element, '[]'))
+            except:
+                el = pkg_dict.get(element)
+                if el is not None:
+                    aslist = [el,]
+                else:
+                    aslist = []
             #Can be used to debug paster rebuild if bad data is in the DB
             #print pkg_dict.get('id'), element, pkg_dict.get(element, '[]')
             for value in aslist:
