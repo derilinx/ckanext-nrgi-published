@@ -106,16 +106,12 @@ class NrgiPlugin(plugins.SingletonPlugin):
     def before_index(self, pkg_dict):
         # JSON Strings to lists
         questions = []
-        for element in ('scoring_question', 'law_practice_question', 'question', 'country', 'country_iso3', 'year', 'assessment_year', 'category'):
+        multivalued_elements = ['scoring_question', 'law_practice_question', 'question', 'country', 'country_iso3', 'assessment_year', 'category']
+        if pkg_dict['type'] != 'document':
+            multivalued_elements.append('year')
+        for element in multivalued_elements:
             newlist = []
-            try: 
-                aslist = json.loads(pkg_dict.get(element, '[]'))
-            except:
-                el = pkg_dict.get(element)
-                if el is not None:
-                    aslist = [el,]
-                else:
-                    aslist = []
+            aslist = json.loads(pkg_dict.get(element, '[]'))
             #Can be used to debug paster rebuild if bad data is in the DB
             #print pkg_dict.get('id'), element, pkg_dict.get(element, '[]')
             for value in aslist:
