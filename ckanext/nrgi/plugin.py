@@ -144,7 +144,8 @@ class NrgiPlugin(plugins.SingletonPlugin):
             'document_count': document_count,
             'country_count': country_count,
             'theme_counts': theme_counts,
-            'get_facet_items_dict_questions': get_facet_items_dict_questions
+            'get_facet_items_dict_questions': get_facet_items_dict_questions,
+            'get_facet_items_dict_categories': get_facet_items_dict_categories
         }
 
     # IFacets
