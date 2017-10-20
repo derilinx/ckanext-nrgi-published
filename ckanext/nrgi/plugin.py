@@ -76,6 +76,9 @@ def theme_counts():
     except Exception:
         return {}
 
+def sort_by_display_name(facets):
+    return sorted(facets, key=lambda x: x['display_name'])
+
 #Change the display of question numbers from their index representation (int) to a text label used in the schema
 def get_facet_items_dict_questions(facet, limit=None, exclude_active=False):
     if facet != 'question':
@@ -94,7 +97,12 @@ def get_facet_items_dict_questions(facet, limit=None, exclude_active=False):
         newfacet['display_name'] = qchoices.get(facet['name'], facet['name'])
         newfacets.append(newfacet)
     
-    return sorted(newfacets, key=lambda x: x['display_name'])
+    return sort_by_display_name(newfacets)
+
+def get_facet_items_dict_categories(facet, limit=None, exclude_active=False):
+    facets = h.get_facet_items_dict(facet, limit=None, exclude_active=False)
+    return sort_by_display_name(facets)
+
 
 class NrgiPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
