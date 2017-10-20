@@ -77,7 +77,7 @@ def theme_counts():
         return {}
 
 def sort_by_display_name(facets):
-    return sorted(facets, key=lambda x: x['display_name'])
+    return natsorted(facets, key=lambda x: x['display_name'])
 
 #Change the display of question numbers from their index representation (int) to a text label used in the schema
 def get_facet_items_dict_questions(facet, limit=None, exclude_active=False):
