@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
-#dataset-search-form div label { display: none; }
+#dataset-search-form div label {
+  display: none;
+}
 body {
   font-family: "Open Sans";
   color: #000;
@@ -295,6 +297,12 @@ div[role=main] {
 .media-grid {
   border: none;
   background-image: none;
+}
+.search-form .search-input-group .input-group-btn .btn {
+  margin-top: 0px;
+}
+#organization-search-form div label {
+  display: none;
 }
 .resource-search-item {
   border: #e2e2e2 solid 1px;
