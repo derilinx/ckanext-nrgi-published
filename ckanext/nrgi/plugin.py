@@ -13,6 +13,9 @@ import json
 
 from natsort import natsorted
 
+#import numpy as np
+#import matplotlib.pyplot as plt
+
 qchoices = {}
 
 with open(os.path.dirname(os.path.realpath(__file__)) + '/schema.json') as jsonfile:    
@@ -22,6 +25,20 @@ with open(os.path.dirname(os.path.realpath(__file__)) + '/schema.json') as jsonf
             for item in field['choices']:
                 qchoices[item['value']] = item['label']
             break
+
+
+countries = h.get_facet_items_dict('country', limit=None, exclude_active=False)
+
+ccolors = {}
+
+cmap = plt.get_cmap('spectral')
+rawcols = cmap(np.linspace(0, 1, len(countries)))
+
+i = 0
+for col in rawcols:
+    ccolors[countries[i]['name']] = "rgba(" + str(int(round(rawcols[i][0],0))) + "," + str(int(round(rawcols[i][1],0))) + "," + str(int(round(rawcols[i][2],0))) + ",1.0)"
+    i += 1
+
 
 def get_from_flat_dict(list_of_dicts, key, default=None):
     '''Extract data from a list of dicts with keys 'key' and 'value'
@@ -77,6 +94,12 @@ def theme_counts():
         return q.get('facets').get('category', {})
     except Exception:
         return {}
+
+def sectorcolors():
+    return {'Mining': '#333333', 'Oil and Gas': '#7777ff'}
+
+def countrycolors():
+    return ccolors
 
 def sort_by_display_name(facets):
     return natsorted(facets, key=lambda x: x['display_name'])
@@ -146,6 +169,8 @@ class NrgiPlugin(plugins.SingletonPlugin):
             'document_count': document_count,
             'country_count': country_count,
             'theme_counts': theme_counts,
+            'sectorcolors': sectorcolors,
+            'countrycolors': countrycolors,
             'get_facet_items_dict_questions': get_facet_items_dict_questions,
             'get_facet_items_dict_categories': get_facet_items_dict_categories
         }

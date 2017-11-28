@@ -41,6 +41,13 @@ Example:
               {% elif package.get('state', '').startswith('deleted') %}
                 <span class="label label-danger">{{ _('Deleted') }}</span>
               {% endif %}
+              {% if package.get('assessment_type') %}
+                &nbsp;<span style="background-color: {{ h.sectorcolors().get(package.get('assessment_type'), '#1111de') }};" class="label label-info">{{ package.get('assessment_type') }}</span>
+              {% endif %}
+              {% set num_countries = package.get('country',[])|length %}
+              {% if num_countries == 1 %}
+                &nbsp;<span style="background-color: {{ h.countrycolors().get(package.get('country')[0], '#1111de') }};" class="label label-info">{{ package.get('country')[0] }}</span>
+              {% endif %}
               {{ h.popular('recent views', package.tracking_summary.recent, min=10) if package.tracking_summary }}
             {% endblock %}
           </h3>

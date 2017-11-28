@@ -1342,6 +1342,11 @@
       "field_name": "format",
       "label": "Format",
       "preset": "resource_format_autocomplete"
+    },
+    {
+      "field_name": "updated",
+      "label": "Data updated",
+      "preset": "date"
     }
   ]
 }
