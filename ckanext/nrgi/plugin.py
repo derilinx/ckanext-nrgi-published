@@ -82,7 +82,7 @@ def theme_counts():
         return {}
 
 def sectorcolors():
-    return {'Mining': '#333333', 'Oil and Gas': '#7777ff'}
+    return {'Mining': '#e25020', 'Oil and Gas': '#000000'}
 
 def countrycolors():
     return ccolors
