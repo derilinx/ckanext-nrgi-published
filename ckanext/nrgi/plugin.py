@@ -171,7 +171,7 @@ class NrgiPlugin(plugins.SingletonPlugin):
                 #('year', toolkit._('Year')),
                 ('res_format', toolkit._('Formats'))
                 #As nice as this is, the code to get the stars interferes with custom nrgi facets template
-                ('openness_score', toolkit._('Openness'))
+                #('openness_score', toolkit._('Openness'))
             ])
             
         elif package_type == 'document':
