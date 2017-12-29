@@ -169,7 +169,8 @@ class NrgiPlugin(plugins.SingletonPlugin):
                 ('category', toolkit._('Natural Resource Charter Precepts')),
                 ('country', toolkit._('Countries')),
                 #('year', toolkit._('Year')),
-                ('res_format', toolkit._('Formats')),
+                ('res_format', toolkit._('Formats'))
+                #As nice as this is, the code to get the stars interferes with custom nrgi facets template
                 ('openness_score', toolkit._('Openness'))
             ])
             
@@ -197,7 +198,8 @@ class NrgiPlugin(plugins.SingletonPlugin):
                   ('country', toolkit._('Countries')),
                   #('year', toolkit._('Year')),
                   ('res_format', toolkit._('Formats')),
-                  ('openness_score', toolkit._('Openness')),
+                  #As nice as this is, the code to get the stars interferes with custom nrgi facets template
+                  #('openness_score', toolkit._('Openness')),
                   ('category', toolkit._('Sub-components')),
                   ('country', toolkit._('Countries')),
                   ('assessment_type', toolkit._('Assessment Type')),
