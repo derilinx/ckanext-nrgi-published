@@ -2,6 +2,14 @@
 
 {% set site_logo = "./nrgi-logo.png" %}
 
+{% block header_account %}
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9D4GSD"
+		  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+{{super()}}
+{% endblock %}
+
 {% block header_logo %}
     <a class="logo" href="{{ h.url_for('home') }}"><img src="{{ h.url_for_static_or_external(site_logo) }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
 {% endblock %}
