@@ -200,7 +200,7 @@ class NrgiPlugin(plugins.SingletonPlugin):
                   ('res_format', toolkit._('Formats')),
                   #As nice as this is, the code to get the stars interferes with custom nrgi facets template
                   #('openness_score', toolkit._('Openness')),
-                  ('category', toolkit._('Sub-components')),
+                  ('category', toolkit._('Natural Resource Charter Precepts')),
                   ('country', toolkit._('Countries')),
                   ('assessment_type', toolkit._('Assessment Type')),
                   ('question', toolkit._('Questions'))#,
