@@ -1,4 +1,4 @@
-{% if data[field.field_name] is string %}
+{% if not data[field.field_name] is iterable or data[field.field_name] is string %}
   <a href='/record?{{field.field_name}}={{data[field.field_name]}}'>{{data[field.field_name]}}</a>
 {% else %}
   {% for choice in data[field.field_name]|list|sort %}
