@@ -176,12 +176,12 @@ class NrgiPlugin(plugins.SingletonPlugin):
             
         elif package_type == 'document':
             facets_dict = OrderedDict([
-                ('subcomponent', toolkit._('Sub-components')),
+                #('subcomponent', toolkit._('Sub-components')),
                 ('category', toolkit._('Natural Resource Charter Precepts')),
                 ('country', toolkit._('Countries')),
                 #('year', toolkit._('Year')),
-                ('assessment_type', toolkit._('Assessment Type')),
-                ('law_practice_question', toolkit._('Law/Practice Question')),
+                #('assessment_type', toolkit._('Assessment Type')),
+                #('law_practice_question', toolkit._('Law/Practice Question')),
                 ('question', toolkit._('Questions'))
             ])
 
