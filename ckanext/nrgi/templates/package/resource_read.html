@@ -12,3 +12,29 @@
               </li>
             {% endif %}
 {% endblock %}
+
+
+        {% block resource_content %}
+          {% block resource_read_title %}{{super()}}{% endblock %}
+          {% block resource_read_url %}{{super()}}
+          {% endblock %}
+	  {% block resource_source %}
+	      {% if c.package.organization.name == 'rgi' %}
+	      <div class="prose notes">
+		Source document for the 2017 Resource Governance Index (<a href="https://resourcegovernanceindex.org">https://resourcegovernanceindex.org</a>)
+	      </div>
+	      {% else %}
+		<div class="prose notes" property="rdfs:label">
+		  {% if res.description %}
+		    {{ h.render_markdown(res.description) }}
+		  {% endif %}
+		  {% if not res.description and c.package.notes %}
+		    <h3>{{ _('From the dataset abstract') }}</h3>
+		    <blockquote>{{ h.markdown_extract(h.get_translated(c.package, 'notes')) }}</blockquote>
+		    <p>{% trans dataset=c.package.title, url=h.url_for(controller='package', action='read', id=c.package['name']) %}Source: <a href="{{ url }}">{{ dataset }}</a>{% endtrans %}
+		  {% endif %}
+		</div>
+	      {% endif %}
+	  {% endblock %}
+        {% endblock %}
+	      
