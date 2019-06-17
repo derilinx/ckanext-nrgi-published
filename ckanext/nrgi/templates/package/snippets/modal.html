@@ -1,0 +1,35 @@
+<!-- Survey Modal -->
+
+<div id="surveyModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Can you help?</h4>
+            </div>
+            <div class="modal-body">
+                <div class="modal-text">Your feedback is crucial to us. Will you help us by taking a short
+                    survey?<br><br><span class="modal-helptext">Completion time: 2 mins</span></div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-survey-no" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary btn-survey-yes"><a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScEPUnBIoFTGIiZPFX5Sqj66Xdrw1dm6XR5KjdEBsfl2JDsCA/viewform">Yes
+                    I'll help</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.resource-url-analytics').click(function () {
+        if (document.cookie.indexOf("name") > 0) {
+            console.log("Cookie present, not offering survey")
+        }
+        else {document.cookie = "name=surveyed; max-age=30; path=/";
+                $('#surveyModal').modal('show');}
+        });
+</script>
