@@ -345,3 +345,43 @@ div[role=main] {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
+#surveyModal .btn a {
+  color: white;
+  text-decoration: none;
+}
+
+#surveyModal .btn a:hover {
+  text-decoration: none;
+}
+
+#surveyModal .modal-header {
+  background-color: #537386;
+  font-weight: 600;
+  color: white;
+
+}
+
+#surveyModal .modal-title {
+  text-transform: uppercase;
+  color: white;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1!important;
+  background-color: transparent;
+}
+
+.modal-backdrop in {
+  opacity: 0!important;
+}
+
+.modal-helptext {
+  font-size: 0.8em;
+  float:right;
+}
