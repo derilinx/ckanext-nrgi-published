@@ -1,0 +1,6 @@
+{% ckan_extends %}
+
+{% block primary_content_inner %}
+    {{super()}}
+{% snippet "package/snippets/modal.html", data=data, errors=errors %}
+{% endblock %}

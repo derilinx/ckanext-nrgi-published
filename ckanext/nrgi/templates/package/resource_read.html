@@ -1,40 +1,49 @@
 {% ckan_extends %}
 
+
 {% block resource_actions_inner %}
-            {% if h.check_access('package_update', {'id':pkg.id }) %}
-              <li>{% link_for _('Manage'), controller='package', action='resource_edit', id=pkg.name, resource_id=res.id, class_='btn btn-default', icon='wrench' %}</li>
-            {% endif %}
-            {% if res.url and h.is_url(res.url) %}
-              <li>
-                <a class="btn btn-primary resource-url-analytics resource-type-{{ res.resource_type }}" href="{{ res.url }}">
-                  <i class="fa fa-arrow-circle-o-down"></i> {{ _('Download') }}
-                </a>
-              </li>
-            {% endif %}
+    {% if h.check_access('package_update', {'id':pkg.id }) %}
+    <li>{% link_for _('Manage'), controller='package', action='resource_edit', id=pkg.name, resource_id=res.id, class_='btn
+        btn-default', icon='wrench' %}
+    </li>
+    {% endif %}
+
+    {% if res.url and h.is_url(res.url) %}
+    <li>
+        <a class="btn btn-primary resource-url-analytics resource-type-{{ res.resource_type }}" href="{{ res.url }}">
+            <i class="fa fa-arrow-circle-o-down"></i> {{ _('Download') }}
+        </a>
+    </li>
+    {% endif %}
+
+
 {% endblock %}
 
 
-        {% block resource_content %}
-          {% block resource_read_title %}{{super()}}{% endblock %}
-          {% block resource_read_url %}{{super()}}
-          {% endblock %}
-	  {% block resource_source %}
-	      {% if c.package.organization.name == 'rgi' %}
-	      <div class="prose notes">
-		Source document for the 2017 Resource Governance Index (<a href="https://resourcegovernanceindex.org">https://resourcegovernanceindex.org</a>)
-	      </div>
-	      {% else %}
-		<div class="prose notes" property="rdfs:label">
-		  {% if res.description %}
-		    {{ h.render_markdown(res.description) }}
-		  {% endif %}
-		  {% if not res.description and c.package.notes %}
-		    <h3>{{ _('From the dataset abstract') }}</h3>
-		    <blockquote>{{ h.markdown_extract(h.get_translated(c.package, 'notes')) }}</blockquote>
-		    <p>{% trans dataset=c.package.title, url=h.url_for(controller='package', action='read', id=c.package['name']) %}Source: <a href="{{ url }}">{{ dataset }}</a>{% endtrans %}
-		  {% endif %}
-		</div>
-	      {% endif %}
-	  {% endblock %}
-        {% endblock %}
+{% block resource_content %}
+{% snippet "package/snippets/modal.html", data=data, errors=errors %}
+
+    {% block resource_read_title %}{{super()}}{% endblock %}
+    {% block resource_read_url %}{{super()}}{% endblock %}
+
+{% block resource_source %}
+    {% if c.package.organization.name == 'rgi' %}
+        <div class="prose notes">
+            Source document for the 2017 Resource Governance Index (<a href="https://resourcegovernanceindex.org">https://resourcegovernanceindex.org</a>)
+        </div>
+    {% else %}
+        <div class="prose notes" property="rdfs:label">
+            {% if res.description %}
+                {{ h.render_markdown(res.description) }}
+            {% endif %}
+                {% if not res.description and c.package.notes %}
+                    <h3>{{ _('From the dataset abstract') }}</h3>
+                    <blockquote>{{ h.markdown_extract(h.get_translated(c.package, 'notes')) }}</blockquote>
+                    <p>{% trans dataset=c.package.title, url=h.url_for(controller='package', action='read', id=c.package['name'])
+                %}Source: <a href="{{ url }}">{{ dataset }}</a>{% endtrans %}
+                {% endif %}
+        </div>
+{% endif %}
+{% endblock %}
+{% endblock %}
 	      
