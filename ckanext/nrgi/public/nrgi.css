@@ -356,15 +356,24 @@ div[role=main] {
 }
 
 #surveyModal .modal-header {
-  background-color: #537386;
-  font-weight: 600;
-  color: white;
+  background-color: #FD6F51;
+  color: black;
 
 }
 
 #surveyModal .modal-title {
   text-transform: uppercase;
   color: white;
+  font-weight:700;
+}
+
+#surveyModal .modal {
+  top: 160px;
+}
+
+#surveyModal .modal-sm {
+  width: 480px;
+  margin-top: 160px;
 }
 
 .modal-backdrop {
@@ -384,4 +393,12 @@ div[role=main] {
 .modal-helptext {
   font-size: 0.8em;
   float:right;
+}
+
+.btn-survey-yes {
+  background-color: #557288 !important;
+}
+
+.btn-survey-yes:hover {
+  background-color: #FD6F51;
 }
