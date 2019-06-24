@@ -21,11 +21,18 @@
 
 
 {% block resource_content %}
-{% snippet "package/snippets/modal.html", data=data, errors=errors %}
+
 
     {% block resource_read_title %}{{super()}}{% endblock %}
-    {% block resource_read_url %}{{super()}}{% endblock %}
+              {% block resource_read_url %}
+            {% if res.url and h.is_url(res.url) %}
+              <p class="text-muted ellipsis">{{ _('URL:') }} <a target="_blank" class="resource-url-analytics" href="{{ res.url }}" title="{{ res.url }}">{{ res.url }}</a></p>
+            {% elif res.url %}
+              <p class="text-muted break-word">{{ _('URL:') }} {{ res.url }}</p>
+            {% endif %}
+          {% endblock %}
 
+{% snippet "package/snippets/modal.html", data=data, errors=errors %}
 {% block resource_source %}
     {% if c.package.organization.name == 'rgi' %}
         <div class="prose notes">
