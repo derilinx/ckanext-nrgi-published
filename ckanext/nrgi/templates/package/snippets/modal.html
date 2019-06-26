@@ -9,15 +9,14 @@
                 <h4 class="modal-title" id="myModalLabel">Take our survey</h4>
             </div>
             <div class="modal-body">
-                <div class="modal-text">Your feedback is crucial to us. Help us to improve ResourceData.org by taking a short
+                <div class="modal-text">Your feedback is important to us. Help us to improve ResourceData.org by taking a short
                     survey.<br><br><span class="modal-helptext">Completion time: 2 mins</span></div>
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default btn-survey-no" data-dismiss="modal">No</button>
                 <button type="button" class="btn btn-primary btn-survey-yes"><a target="_blank"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLScEPUnBIoFTGIiZPFX5Sqj66Xdrw1dm6XR5KjdEBsfl2JDsCA/viewform">Yes
-                    I'll help</a>
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScEPUnBIoFTGIiZPFX5Sqj66Xdrw1dm6XR5KjdEBsfl2JDsCA/viewform">Yes</a>
                 </button>
             </div>
         </div>
@@ -32,7 +31,9 @@
             console.log("Cookie present, not offering survey")
         }
         else {
-            document.cookie = "name=surveyed; max-age=30; path=/";
+            var CookieDate = new Date;
+            CookieDate.setFullYear(CookieDate.getFullYear() +10);
+            document.cookie = "name=surveyed; expires=" + CookieDate.toUTCString() + "; path=/";
             $('#surveyModal').modal('show');
         }
     });
