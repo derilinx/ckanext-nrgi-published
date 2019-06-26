@@ -397,6 +397,8 @@ div[role=main] {
 
 .btn-survey-yes {
   background-color: #557288 !important;
+  width: 120px;
+  text-align: center;
 }
 
 .btn-survey-yes:hover {
