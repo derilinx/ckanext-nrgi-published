@@ -10,7 +10,7 @@
 
     {% if res.url and h.is_url(res.url) %}
     <li>
-        <a target="_blank" class="btn btn-primary resource-url-analytics resource-type-{{ res.resource_type }}" href="{{ res.url }}">
+        <a target="_blank" class="btn btn-primary resource-url-analytics resource-type-{{ res.resource_type }}" href="{{ res.url }}" {% if res.format|lower =='pdf' %} download{% endif %}>
             <i class="fa fa-arrow-circle-o-down"></i> {{ _('Download') }}
         </a>
     </li>
