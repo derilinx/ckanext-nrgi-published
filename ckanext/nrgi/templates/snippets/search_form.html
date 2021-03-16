@@ -1,0 +1,15 @@
+{% ckan_extends %}
+
+{% block search_input %}
+<label for="field-giant-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock %}</label>
+<div class="input-group search-input-group">
+  <input id="field-giant-search" type="text" class="form-control" name="q" value="{{ query }}" autocomplete="off" placeholder="{{ placeholder }}">
+  {% block search_input_button %}
+  <span class="input-group-btn">
+    <button class="btn btn-default" type="submit" value="search">
+      <i class="fa fa-search"></i>
+    </button>
+  </span>
+  {% endblock %}
+</div>
+{% endblock %}
