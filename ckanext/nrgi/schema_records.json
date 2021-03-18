@@ -86,18 +86,6 @@
             ]
 	},
 	{
-            "field_name": "rgi_edition_year",
-            "label": "RGI Edition Year",
-            "display_snippet": "multiple_link_nrgi.html",
-            "help_text": "The RGI Survey Year",
-            "help_inline": true,
-            "preset": "multiple_select",
-            "choices": [
-		{"value": "2021", "label": "2021"},
-		{"value": "2017", "label": "2017"}
-            ]
-	},
-	{
 	    "field_name": "topic",
 	    "label": "Topic",
 	    "display_snippet": "multiple_link_nrgi.html",
