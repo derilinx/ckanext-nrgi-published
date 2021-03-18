@@ -1,7 +1,7 @@
 {
     "scheming_version": 1,
     "dataset_type": "record",
-    "about": "A meta schema to host all datasets",
+    "about": "A meta schema to define records",
     "about_url": "http://github.com/ckan/ckanext-scheming",
     "dataset_fields": [
 	{
@@ -29,13 +29,37 @@
 	    "form_placeholder": "eg. economy, mental health, government"
 	},
 	{
+	    "field_name": "assessment_type",
+	    "label": "Extractive Sector",
+	    "display_snippet": "search_link_type_specific_nrgi.html",
+	    "preset": "select",
+	    "choices": [
+		{
+		    "value": "Oil and Gas",
+		    "label": "Oil and Gas"
+		},
+		{
+		    "value": "Mining",
+		    "label": "Mining"
+		},
+		{
+		    "value": "Renewables",
+		    "label": "Renewables"
+		}
+	    ]
+	},
+	{
             "field_name": "year",
             "label": "Year",
             "display_snippet": "multiple_link_nrgi.html",
-            "help_text": "The Year relevant to your dataset",
+            "help_text": "The Year relevant to your record",
             "help_inline": true,
             "preset": "multiple_select",
             "choices": [
+		{"value": "2021", "label": "2021"},
+		{"value": "2020", "label": "2020"},
+		{"value": "2019", "label": "2019"},
+		{"value": "2018", "label": "2018"},
 		{"value": "2017", "label": "2017"},
 		{"value": "2016", "label": "2016"},
 		{"value": "2015", "label": "2015"},
@@ -62,25 +86,49 @@
             ]
 	},
 	{
-            "field_name": "category",
-            "label": "Natural Resource Charter Precept",
+            "field_name": "rgi_edition_year",
+            "label": "RGI Edition Year",
             "display_snippet": "multiple_link_nrgi.html",
+            "help_text": "The RGI Survey Year",
+            "help_inline": true,
             "preset": "multiple_select",
             "choices": [
-		{"value":"Precept 1: Strategy, Consultation and Institutions", "label":"Precept 1: Strategy, Consultation and Institutions"},
-		{"value":"Precept 2: Accountability and Transparency", "label":"Precept 2: Accountability and Transparency"},
-		{"value":"Precept 3: Exploration and License Allocation", "label":"Precept 3: Exploration and License Allocation"},
-		{"value":"Precept 4: Taxation", "label":"Precept 4: Taxation"},
-		{"value":"Precept 5: Local Effects", "label":"Precept 5: Local Effects"},
-		{"value":"Precept 6: Nationally Owned Resource Companies", "label":"Precept 6: Nationally Owned Resource Companies"},
-		{"value":"Precept 7: Revenue Distribution", "label":"Precept 7: Revenue Distribution"},
-		{"value":"Precept 8: Revenue Volatility", "label":"Precept 8: Revenue Volatility"},
-		{"value":"Precept 9: Government Spending", "label":"Precept 9: Government Spending"},
-		{"value":"Precept 10: Private Sector Development", "label":"Precept 10: Private Sector Development"},
-		{"value":"Precept 11: Roles of Multinational Companies", "label":"Precept 11: Roles of Multinational Companies"},
-		{"value":"Precept 12: Role of International Community", "label":"Precept 12: Role of International Community"}
+		{"value": "2021", "label": "2021"},
+		{"value": "2017", "label": "2017"}
             ]
-	},    
+	},
+	{
+	    "field_name": "topic",
+	    "label": "Topic",
+	    "display_snippet": "multiple_link_nrgi.html",
+	    "help_text": "The topic of the dataset",
+	    "help_inline": true,
+	    "preset": "multiple_select",
+	    "choices": [
+		{"value":"Beneficial ownership", "label": "Beneficial ownership" },
+		{"value":"Economic diversification","label": "Economic diversification"},
+		{"value":"Mandatory payment disclosure","label":"Mandatory payment disclosure" },
+		{"value":"Revenue sharing","label":"Revenue sharing" },
+		{"value":"Civic space","label": "Civic space"},
+		{"value":"Energy transition","label": "Energy transition"},
+		{"value":"Measurement of environmental and social impacts","label": "Measurement of environmental and social impacts" },
+		{"value":"Sovereign wealth funds","label": "Sovereign wealth funds"},
+		{"value":"Commodity prices","label": "Commodity prices"},
+		{"value":"Gender","label": "Gender"},
+		{"value":"Measurement of governance","label": "Measurement of governance"},
+		{"value":"State-owned enterprises","label": "State-owned enterprises"},
+		{"value":"Contract transparency and monitoring","label": "Contract transparency and monitoring"},
+		{"value":"Global initiatives","label": "Global initiatives"},
+		{"value":"Open data","label": "Open data"},
+		{"value":"Subnational governance","label": "Subnational governance"},
+		{"value":"Coronavirus","label": "Coronavirus"},
+		{"value":"Legislation and regulation","label": "Legislation and regulation"},
+		{"value":"Revenue management","label": "Revenue management"},
+		{"value":"Tax policy and revenue collection","label": "Tax policy and revenue collection"},
+		{"value":"Corruption","label": "Corruption"},
+		{"value":"Licensing and negotiation", "label":"Licensing and negotiation" }
+	    ]
+	},
 	{
             "field_name": "country",
             "label": "Country",
@@ -614,24 +662,10 @@
 	    "display_snippet": "link.html"
 	},
 	{
-	    "field_name": "version",
-	    "label": "Version",
-	    "validators": "ignore_missing unicode package_version_validator",
-	    "form_placeholder": "1.0"
-	},
-	{
 	    "field_name": "author",
 	    "label": "Author",
 	    "form_placeholder": "Joe Bloggs",
 	    "display_property": "dc:creator"
-	},
-	{
-	    "field_name": "author_email",
-	    "label": "Author Email",
-	    "form_placeholder": "joe@example.com",
-	    "display_property": "dc:creator",
-	    "display_snippet": "email_nrgi.html",
-	    "display_email_name_field": "author"
 	},
 	{
 	    "field_name": "maintainer",
@@ -646,8 +680,19 @@
 	    "display_property": "dc:contributor",
 	    "display_snippet": "email_nrgi.html",
 	    "display_email_name_field": "maintainer"
+	},
+	{
+	    "field_name": "last_updated",
+	    "label": "Last Updated",
+	    "preset": "date"
+	},
+	{
+	    "field_name": "created",
+	    "label": "Created",
+	    "preset": "date"
 	}
-    ],
+
+  ],
     "resource_fields": [
 	{
 	    "field_name": "url",
