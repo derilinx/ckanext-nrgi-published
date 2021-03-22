@@ -149,9 +149,11 @@ class NrgiPlugin(plugins.SingletonPlugin):
     def before_index(self, pkg_dict):
         # JSON Strings to lists
         questions = []
-        multivalued_elements = ['scoring_question', 'law_practice_question', 'question', 'country', 'country_iso3', 'assessment_year', 'category']
-        if pkg_dict['type'] != 'document':
-            multivalued_elements.append('year')
+        multivalued_elements = ['scoring_question',
+                                'law_practice_question', 'question',
+                                'country', 'country_iso3',
+                                'assessment_year', 'category',
+                                'rgi_edition_year', 'year']
         for element in multivalued_elements:
             newlist = []
             aslist = json.loads(pkg_dict.get(element, '[]'))
