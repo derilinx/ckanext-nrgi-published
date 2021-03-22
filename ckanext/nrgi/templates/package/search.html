@@ -21,6 +21,8 @@
         {{ h.snippet('snippets/facet_list.html', title=c.facet_titles[facet], items=h.get_facet_items_dict_questions(facet), name=facet, hide_empty=True, alternative_url=dataset_type) }}
       {% elif facet == 'category' %}
         {{ h.snippet('snippets/facet_list.html', title=c.facet_titles[facet], items=h.get_facet_items_dict_categories(facet), name=facet, hide_empty=True, alternative_url=dataset_type) }}
+      {% elif facet == 'dataset_type' %}
+        {{ h.snippet('snippets/facet_list.html', title=c.facet_titles[facet], name=facet, hide_empty=True, alternative_url=dataset_type, label_function=h.nrgi_dataset_type_label_function) }}
       {% else %}
         {{ h.snippet('snippets/facet_list.html', title=c.facet_titles[facet], name=facet, hide_empty=True, alternative_url=dataset_type) }}
       {% endif %}

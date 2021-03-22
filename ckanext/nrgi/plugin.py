@@ -15,6 +15,9 @@ from natsort import natsorted
 
 qchoices = {}
 
+import logging
+log = logging.getLogger(__name__)
+
 with open(os.path.dirname(os.path.realpath(__file__)) + '/schema_documents.json') as jsonfile:
     schema = json.load(jsonfile)
     for field in schema['dataset_fields']:
@@ -115,6 +118,15 @@ def get_facet_items_dict_categories(facet, limit=None, exclude_active=False):
     return sort_by_display_name(facets)
 
 
+def dataset_type_label_function(item):
+    display_names = {
+        'dataset': toolkit._('Dataset'),
+        'record': toolkit._('Document'),
+        'document': toolkit._('RGI Survey Document'),
+    }
+    return display_names.get(item['name'], item['name'])
+
+
 class NrgiPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
@@ -158,7 +170,8 @@ class NrgiPlugin(plugins.SingletonPlugin):
             'sectorcolors': sectorcolors,
             'countrycolors': countrycolors,
             'get_facet_items_dict_questions': get_facet_items_dict_questions,
-            'get_facet_items_dict_categories': get_facet_items_dict_categories
+            'get_facet_items_dict_categories': get_facet_items_dict_categories,
+            'nrgi_dataset_type_label_function': dataset_type_label_function,
         }
 
     # IFacets
@@ -166,7 +179,8 @@ class NrgiPlugin(plugins.SingletonPlugin):
     def dataset_facets(self, facets_dict, package_type):
         if package_type in ('record', 'dataset'):
             facets_dict = OrderedDict([
-                ('category', toolkit._('Natural Resource Charter Precepts')),
+                ('dataset_type', toolkit._('Type')),
+                #('category', toolkit._('Natural Resource Charter Precepts')),
                 ('country', toolkit._('Countries')),
                 #('year', toolkit._('Year')),
                 ('res_format', toolkit._('Formats'))
@@ -177,12 +191,13 @@ class NrgiPlugin(plugins.SingletonPlugin):
         elif package_type == 'document':
             facets_dict = OrderedDict([
                 #('subcomponent', toolkit._('Sub-components')),
-                ('category', toolkit._('Natural Resource Charter Precepts')),
+                #('category', toolkit._('Natural Resource Charter Precepts')),
                 ('country', toolkit._('Countries')),
                 #('year', toolkit._('Year')),
                 #('assessment_type', toolkit._('Assessment Type')),
                 #('law_practice_question', toolkit._('Law/Practice Question')),
-                ('question', toolkit._('Questions'))
+                ('res_format', toolkit._('Formats')),
+                #('question', toolkit._('Questions')),
             ])
 
         return facets_dict
@@ -200,10 +215,10 @@ class NrgiPlugin(plugins.SingletonPlugin):
                   ('res_format', toolkit._('Formats')),
                   #As nice as this is, the code to get the stars interferes with custom nrgi facets template
                   #('openness_score', toolkit._('Openness')),
-                  ('category', toolkit._('Natural Resource Charter Precepts')),
+                  #('category', toolkit._('Natural Resource Charter Precepts')),
                   ('country', toolkit._('Countries')),
                   ('assessment_type', toolkit._('Assessment Type')),
-                  ('question', toolkit._('Questions'))#,
+                  #('question', toolkit._('Questions'))#,
                   #Removed until we sort multivalued facets properly ('law_practice_question', toolkit._('Law/Practice Question'))
               ])
         facets_dict.update(g_facets_dict)
