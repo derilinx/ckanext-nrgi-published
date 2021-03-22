@@ -133,6 +133,18 @@ class NrgiPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IFacets, inherit=True)
     plugins.implements(plugins.IRoutes, inherit=True)
     plugins.implements(plugins.IPackageController, inherit=True)
+
+    def before_search(self, search_params):
+        # remove survey documents from the /document search.
+        # If there are specific document type queries, let it through
+        # if not, take out the documents.
+        log.error(search_params)
+        # /documents -> "+dataset_type:document"
+        fq = search_params.get('fq','')
+        if "+dataset_type:document" in fq or "dataset_type" in fq:
+            return search_params
+        search_params['fq'] = " ".join([fq, "-dataset_type:document"])
+        return search_params
     
     def before_index(self, pkg_dict):
         # JSON Strings to lists
