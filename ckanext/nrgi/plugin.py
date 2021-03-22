@@ -15,7 +15,7 @@ from natsort import natsorted
 
 qchoices = {}
 
-with open(os.path.dirname(os.path.realpath(__file__)) + '/schema.json') as jsonfile:    
+with open(os.path.dirname(os.path.realpath(__file__)) + '/schema_documents.json') as jsonfile:
     schema = json.load(jsonfile)
     for field in schema['dataset_fields']:
         if field['field_name'] == 'question':
