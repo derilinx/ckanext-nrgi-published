@@ -45,3 +45,8 @@ docs/_build/
 
 # JetBrains IDEs
 .idea
+
+#emacs
+*~
+\#*\#
+.\#*
