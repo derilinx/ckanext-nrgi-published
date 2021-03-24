@@ -1,0 +1,3 @@
+{% for value in data[field.field_name] %}
+    <a href="/{{ data.type }}?{{field.field_name}}={{value}}">{{value}}</a>{% if not loop.last %},{% endif %}
+{% endfor %}
