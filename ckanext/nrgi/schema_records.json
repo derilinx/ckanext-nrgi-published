@@ -23,16 +23,10 @@
 	    "form_placeholder": "eg. Some useful notes about the data"
 	},
 	{
-	    "field_name": "tag_string",
-	    "label": "Tags",
-	    "preset": "tag_string_autocomplete",
-	    "form_placeholder": "eg. economy, mental health, government"
-	},
-	{
 	    "field_name": "assessment_type",
-	    "label": "Extractive Sector",
+	    "label": "Sector",
 	    "display_snippet": "search_link_type_specific_nrgi.html",
-	    "preset": "select",
+	    "preset": "multiple_select",
 	    "choices": [
 		{
 		    "value": "Oil and Gas",
@@ -56,6 +50,22 @@
             "help_inline": true,
             "preset": "multiple_select",
             "choices": [
+        {
+          "value": "2025",
+          "label": "2025"
+        },
+        {
+          "value": "2024",
+          "label": "2024"
+        },
+        {
+          "value": "2023",
+          "label": "2023"
+        },
+        {
+          "value": "2022",
+          "label": "2022"
+        },
 		{"value": "2021", "label": "2021"},
 		{"value": "2020", "label": "2020"},
 		{"value": "2019", "label": "2019"},
