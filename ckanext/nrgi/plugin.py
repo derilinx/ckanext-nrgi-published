@@ -139,11 +139,10 @@ class NrgiPlugin(plugins.SingletonPlugin):
         # If there are specific document type queries, let it through
         # if not, take out the documents.
         log.error(search_params)
-        # /documents -> "+dataset_type:document"
+        # /dataset -> "+dataset_type:dataset"
         fq = search_params.get('fq','')
-        if "+dataset_type:document" in fq or "dataset_type" in fq:
-            return search_params
-        search_params['fq'] = " ".join([fq, "-dataset_type:document"])
+        if "+dataset_type:document" in fq:
+            search_params['fq'] = fq.replace("+dataset_type:document", "-dataset_type:dataset")
         return search_params
     
     def before_index(self, pkg_dict):
