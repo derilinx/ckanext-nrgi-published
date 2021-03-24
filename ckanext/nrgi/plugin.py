@@ -149,17 +149,32 @@ class NrgiPlugin(plugins.SingletonPlugin):
         # JSON Strings to lists
         questions = []
         multivalued_elements = ['scoring_question',
-                                'law_practice_question', 'question',
-                                'country', 'country_iso3',
-                                'assessment_year', 'category',
-                                'rgi_edition_year', 'year']
+                                'law_practice_question',
+                                'question',
+                                'country',
+                                'country_iso3',
+                                'assessment_type',
+                                'category',
+                                'rgi_edition_year']
+        
         for element in multivalued_elements:
             newlist = []
-            aslist = json.loads(pkg_dict.get(element, '[]'))
+            if not element in pkg_dict:
+                continue
+            elt = pkg_dict.get(element, '[]')
+            try:
+                aslist = json.loads(elt)
+            except ValueError:
+                pkg_dict[element] = [elt]
+                continue
+
             #Can be used to debug paster rebuild if bad data is in the DB
             #print pkg_dict.get('id'), element, pkg_dict.get(element, '[]')
-            for value in aslist:
-                newlist.append(value)
+            if isinstance(aslist, list):
+                for value in aslist:
+                    newlist.append(value)
+            elif isinstance(aslist, (str, int)):
+                newlist = [aslist]
             pkg_dict[element] = newlist
         return pkg_dict
 
