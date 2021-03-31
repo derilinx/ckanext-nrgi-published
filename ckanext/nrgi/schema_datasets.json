@@ -340,7 +340,11 @@
 {"value":"Somalia", "label":"Somalia"},
 {"value":"Saint Pierre and Miquelon", "label":"Saint Pierre and Miquelon"},
 {"value":"Serbia", "label":"Serbia"},
-{"value":"Sao Tome and Principe", "label":"Sao Tome and Principe"},
+        {
+          "value": "São Tomé and Príncipe",
+          "label": "São Tomé and Príncipe"
+        },
+
 {"value":"Suriname", "label":"Suriname"},
 {"value":"Slovakia", "label":"Slovakia"},
 {"value":"Slovenia", "label":"Slovenia"},
