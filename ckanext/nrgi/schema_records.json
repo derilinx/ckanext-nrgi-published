@@ -25,7 +25,7 @@
 	{
 	    "field_name": "assessment_type",
 	    "label": "Sector",
-	    "display_snippet": "search_link_type_specific_nrgi.html",
+	    "display_snippet": "search_link_type_specific_multiple_nrgi.html",
 	    "preset": "multiple_select",
 	    "choices": [
 		{
