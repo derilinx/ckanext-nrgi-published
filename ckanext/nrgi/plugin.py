@@ -79,8 +79,8 @@ def country_count():
 
 def theme_counts():
     try:
-        q = toolkit.get_action('package_search')({}, {'facet.field': ['category'], 'facet.limit': -1})
-        return q.get('facets').get('category', {})
+        q = toolkit.get_action('package_search')({}, {'facet.field': ['topic'], 'facet.limit': -1})
+        return q.get('facets').get('topic', {})
     except Exception:
         return {}
 
@@ -155,7 +155,9 @@ class NrgiPlugin(plugins.SingletonPlugin):
                                 'country_iso3',
                                 'assessment_type',
                                 'category',
-                                'rgi_edition_year']
+                                'rgi_edition_year',
+                                'year',
+                                'topic']
         
         for element in multivalued_elements:
             newlist = []
@@ -210,7 +212,8 @@ class NrgiPlugin(plugins.SingletonPlugin):
                 #('category', toolkit._('Natural Resource Charter Precepts')),
                 ('country', toolkit._('Countries')),
                 #('year', toolkit._('Year')),
-                ('res_format', toolkit._('Formats'))
+                ('topic', toolkit._('Topic')),
+                ('res_format', toolkit._('Formats')),
                 #As nice as this is, the code to get the stars interferes with custom nrgi facets template
                 #('openness_score', toolkit._('Openness'))
             ])
@@ -221,6 +224,7 @@ class NrgiPlugin(plugins.SingletonPlugin):
                 #('subcomponent', toolkit._('Sub-components')),
                 #('category', toolkit._('Natural Resource Charter Precepts')),
                 ('country', toolkit._('Countries')),
+                ('topic', toolkit._('Topic')),
                 #('year', toolkit._('Year')),
                 #('assessment_type', toolkit._('Assessment Type')),
                 #('law_practice_question', toolkit._('Law/Practice Question')),
