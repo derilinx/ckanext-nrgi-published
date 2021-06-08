@@ -1,7 +1,7 @@
 {% ckan_extends %}
 {% block head_extras -%}
   {% if pkg.organization.name == 'rgi' %}
-  {% do pkg.update(dict(notes="This document is part of the source library for the 2017 Resource Governance Index from NRGI.")) %}
+  {% do pkg.update(dict(notes="This document is part of the source library for the " + h.nrgi_rgi_year(pkg) +" from NRGI.")) %}
   {% endif %}
 {{super()}}
 {% endblock %}

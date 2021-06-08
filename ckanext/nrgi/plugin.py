@@ -126,7 +126,18 @@ def dataset_type_label_function(item):
     }
     return display_names.get(item['name'], item['name'])
 
+def rgi_year(pkg):
+    years = sorted(pkg.get('rgi_edition_year'))
+    if len(years) > 1:
+        year_string = " and ".join(years)
+        index = "Indexes"
+    else:
+        year_string = year[0]
+        index = "Index"
 
+    return " %s Resource Governance %s" %(year_string, index)
+
+        
 class NrgiPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
@@ -202,6 +213,7 @@ class NrgiPlugin(plugins.SingletonPlugin):
             'get_facet_items_dict_questions': get_facet_items_dict_questions,
             'get_facet_items_dict_categories': get_facet_items_dict_categories,
             'nrgi_dataset_type_label_function': dataset_type_label_function,
+            'nrgi_rgi_year': rgi_year,
         }
 
     # IFacets

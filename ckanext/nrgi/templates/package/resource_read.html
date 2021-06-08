@@ -36,7 +36,7 @@
 {% block resource_source %}
     {% if c.package.organization.name == 'rgi' %}
         <div class="prose notes">
-            Source document for the 2017 Resource Governance Index (<a href="https://resourcegovernanceindex.org">https://resourcegovernanceindex.org</a>)
+            Source document for the {{h.nrgi_rgi_year(c.package)}} (<a href="https://resourcegovernanceindex.org">https://resourcegovernanceindex.org</a>)
         </div>
     {% else %}
         <div class="prose notes" property="rdfs:label">
