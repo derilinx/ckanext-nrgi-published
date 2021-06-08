@@ -132,7 +132,7 @@ def rgi_year(pkg):
         year_string = " and ".join(years)
         index = "Indexes"
     else:
-        year_string = year[0]
+        year_string = years[0]
         index = "Index"
 
     return " %s Resource Governance %s" %(year_string, index)
