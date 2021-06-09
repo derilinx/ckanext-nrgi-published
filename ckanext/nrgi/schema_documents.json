@@ -36,11 +36,11 @@
           "value": "Mining",
           "label": "Mining"
         },
- 	  {
-	      "value": "Renewables",
-	      "label": "Renewables"
-	  }
-     ]
+        {
+          "value": "Renewables",
+          "label": "Renewables"
+        }
+      ]
     },
     {
       "field_name": "country",
@@ -2214,233 +2214,304 @@
           "value": "1984",
           "label": "1984"
         },
-	  {
+        {
           "value": "1983",
           "label": "1983"
         },
-         {
+        {
           "value": "1982",
           "label": "1982"
-         },
-         {
+        },
+        {
           "value": "1981",
           "label": "1981"
-         },
-	  {
+        },
+        {
           "value": "1980",
           "label": "1980"
-          },
-	  {
+        },
+        {
           "value": "1979",
           "label": "1979"
-          },
-	  {
+        },
+        {
           "value": "1978",
           "label": "1978"
-          },
-	  {
+        },
+        {
           "value": "1977",
           "label": "1977"
-          },
-	  {
+        },
+        {
           "value": "1976",
           "label": "1976"
-          },
-	  {
+        },
+        {
           "value": "1975",
           "label": "1975"
-          },
-	  {
+        },
+        {
           "value": "1974",
           "label": "1974"
-          },
-	  {
+        },
+        {
           "value": "1973",
           "label": "1973"
-          },
-	  {
+        },
+        {
           "value": "1972",
           "label": "1972"
-          },
-	  {
+        },
+        {
           "value": "1971",
           "label": "1971"
-          },
-	  {
+        },
+        {
           "value": "1970",
           "label": "1970"
-          },
-	  {
+        },
+        {
           "value": "1969",
           "label": "1969"
-          },
-	  {
+        },
+        {
           "value": "1968",
           "label": "1968"
-          },
-	  {
+        },
+        {
           "value": "1967",
           "label": "1967"
-          },
-	  {
+        },
+        {
           "value": "1966",
           "label": "1966"
-          },
-	  {
+        },
+        {
           "value": "1965",
           "label": "1965"
-          },
-	  {
+        },
+        {
           "value": "1964",
           "label": "1964"
-          },
-	  {
+        },
+        {
           "value": "1963",
           "label": "1963"
-          },
-	  {
+        },
+        {
           "value": "1962",
           "label": "1962"
-          },
-	  {
+        },
+        {
           "value": "1961",
           "label": "1961"
-          },
-	  {
+        },
+        {
           "value": "1960",
           "label": "1960"
-          },
-	  {
+        },
+        {
           "value": "1959",
           "label": "1959"
-          },
-	  {
+        },
+        {
           "value": "1958",
           "label": "1958"
-          },
-	  {
+        },
+        {
           "value": "1957",
           "label": "1957"
-          },
-	  {
+        },
+        {
           "value": "1956",
           "label": "1956"
-          },
-	  {
+        },
+        {
           "value": "1955",
           "label": "1955"
-          },
-	  {
+        },
+        {
           "value": "1954",
           "label": "1954"
-	  },
-	  {
+        },
+        {
           "value": "1953",
           "label": "1953"
-          },
-	  {
+        },
+        {
           "value": "1952",
           "label": "1952"
-          },
-	  {
+        },
+        {
           "value": "1951",
           "label": "1951"
-          },
-	  {
+        },
+        {
           "value": "1950",
           "label": "1950"
-          },
-	  {
+        },
+        {
           "value": "1949",
           "label": "1949"
-          },
-	  {
+        },
+        {
           "value": "1948",
           "label": "1948"
-          },
-	  {
+        },
+        {
           "value": "1946",
           "label": "1946"
-          },
-	  {
+        },
+        {
           "value": "1941",
           "label": "1941"
-          },
-	  {
+        },
+        {
           "value": "1940",
           "label": "1940"
-          },
-	  {
+        },
+        {
           "value": "1938",
           "label": "1938"
-          },
-	  {
+        },
+        {
           "value": "1934",
           "label": "1934"
-          },
-	  {
+        },
+        {
           "value": "1930",
           "label": "1930"
-          },
-	  {
+        },
+        {
           "value": "1924",
           "label": "1924"
-          },
-	  {
+        },
+        {
           "value": "1917",
           "label": "1917"
-          },
-	  {
+        },
+        {
           "value": "1916",
           "label": "1916"
-          }
-
+        }
       ]
     },
-      {
-          "field_name": "rgi_edition_year",
-          "label": "RGI Edition Year",
-          "display_snippet": "multiple_link_nrgi.html",
-          "help_text": "The RGI Survey Year",
-          "help_inline": true,
-          "preset": "multiple_select",
-          "choices": [
-	      {"value": "2021", "label": "2021"},
-	      {"value": "2017", "label": "2017"}
-          ]
-      },
-      	{
-	    "field_name": "topic",
-	    "label": "Topic",
-	    "display_snippet": "multiple_link_nrgi.html",
-	    "help_text": "The topic of the dataset",
-	    "help_inline": true,
-	    "preset": "multiple_select",
-	    "choices": [
-		{"value":"Beneficial ownership", "label": "Beneficial ownership" },
-		{"value":"Economic diversification","label": "Economic diversification"},
-		{"value":"Mandatory payment disclosure","label":"Mandatory payment disclosure" },
-		{"value":"Revenue sharing","label":"Revenue sharing" },
-		{"value":"Civic space","label": "Civic space"},
-		{"value":"Energy transition","label": "Energy transition"},
-		{"value":"Measurement of environmental and social impacts","label": "Measurement of environmental and social impacts" },
-		{"value":"Sovereign wealth funds","label": "Sovereign wealth funds"},
-		{"value":"Commodity prices","label": "Commodity prices"},
-		{"value":"Gender","label": "Gender"},
-		{"value":"Measurement of governance","label": "Measurement of governance"},
-		{"value":"State-owned enterprises","label": "State-owned enterprises"},
-		{"value":"Contract transparency and monitoring","label": "Contract transparency and monitoring"},
-		{"value":"Global initiatives","label": "Global initiatives"},
-		{"value":"Open data","label": "Open data"},
-		{"value":"Subnational governance","label": "Subnational governance"},
-		{"value":"Coronavirus","label": "Coronavirus"},
-		{"value":"Legislation and regulation","label": "Legislation and regulation"},
-		{"value":"Revenue management","label": "Revenue management"},
-		{"value":"Tax policy and revenue collection","label": "Tax policy and revenue collection"},
-		{"value":"Corruption","label": "Corruption"},
-		{"value":"Licensing and negotiation", "label":"Licensing and negotiation" }
-	    ]
-	},
+    {
+      "field_name": "rgi_edition_year",
+      "label": "RGI Edition Year",
+      "display_snippet": "multiple_link_nrgi.html",
+      "help_text": "The RGI Survey Year",
+      "help_inline": true,
+      "preset": "multiple_select",
+      "choices": [
+        {
+          "value": "2021",
+          "label": "2021"
+        },
+        {
+          "value": "2017",
+          "label": "2017"
+        }
+      ]
+    },
+    {
+      "field_name": "topic",
+      "label": "Topic",
+      "display_snippet": "multiple_link_nrgi.html",
+      "help_text": "The topic of the dataset",
+      "help_inline": true,
+      "preset": "multiple_select",
+      "choices": [
+        {
+          "value": "Beneficial ownership",
+          "label": "Beneficial ownership"
+        },
+        {
+          "value": "Economic diversification",
+          "label": "Economic diversification"
+        },
+        {
+          "value": "Mandatory payment disclosure",
+          "label": "Mandatory payment disclosure"
+        },
+        {
+          "value": "Revenue sharing",
+          "label": "Revenue sharing"
+        },
+        {
+          "value": "Civic space",
+          "label": "Civic space"
+        },
+        {
+          "value": "Energy transition",
+          "label": "Energy transition"
+        },
+        {
+          "value": "Measurement of environmental and social impacts",
+          "label": "Measurement of environmental and social impacts"
+        },
+        {
+          "value": "Sovereign wealth funds",
+          "label": "Sovereign wealth funds"
+        },
+        {
+          "value": "Commodity prices",
+          "label": "Commodity prices"
+        },
+        {
+          "value": "Gender",
+          "label": "Gender"
+        },
+        {
+          "value": "Measurement of governance",
+          "label": "Measurement of governance"
+        },
+        {
+          "value": "State-owned enterprises",
+          "label": "State-owned enterprises"
+        },
+        {
+          "value": "Contract transparency and monitoring",
+          "label": "Contract transparency and monitoring"
+        },
+        {
+          "value": "Global initiatives",
+          "label": "Global initiatives"
+        },
+        {
+          "value": "Open data",
+          "label": "Open data"
+        },
+        {
+          "value": "Subnational governance",
+          "label": "Subnational governance"
+        },
+        {
+          "value": "Coronavirus",
+          "label": "Coronavirus"
+        },
+        {
+          "value": "Legislation and regulation",
+          "label": "Legislation and regulation"
+        },
+        {
+          "value": "Revenue management",
+          "label": "Revenue management"
+        },
+        {
+          "value": "Tax policy and revenue collection",
+          "label": "Tax policy and revenue collection"
+        },
+        {
+          "value": "Corruption",
+          "label": "Corruption"
+        },
+        {
+          "value": "Licensing and negotiation",
+          "label": "Licensing and negotiation"
+        }
+      ]
+    },
     {
       "field_name": "document_type",
       "label": "Document Type",
@@ -2683,6 +2754,10 @@
           "value": "1.1.10d"
         },
         {
+          "label": "1.1.2a: Does a government agency maintain a publicly available registry of rights and license details (i.e. a cadaster)?",
+          "value": "1.1.2a"
+        },
+        {
           "label": "1.1.2b: Is the publicly available registry of licenses/contracts available online, offline or in paper?",
           "value": "1.1.2b"
         },
@@ -2767,8 +2842,20 @@
           "value": "1.3.1b"
         },
         {
+          "label": "1.3.1c: Are extractive companies required to prepare an SIA prior to development?",
+          "value": "1.3.1c"
+        },
+        {
+          "label": "1.3.1d: Is there a requirement for the SIA to be publicly disclosed?",
+          "value": "1.3.1d"
+        },
+        {
           "label": "1.3.2a: From 2015 onwards, have EIAs and/or SIAs been publicly disclosed?",
           "value": "1.3.2a"
+        },
+        {
+          "label": "1.3.2b: From 2019 onwards, have all SIAs been publicly disclosed?",
+          "value": "1.3.2b"
         },
         {
           "label": "1.3.3a: Are extractive companies required to prepare environmental mitigation management plans prior to development?",
@@ -3111,8 +3198,204 @@
           "value": "2.3.6c"
         },
         {
-          "label": "1.1.2a: Does a government agency maintain a publicly available registry of rights and license details (i.e. a cadaster)?",
-          "value": "1.1.2a"
+          "label": "4.1a: Is local content promoted in laws or policies?",
+          "value": "4.1a"
+        },
+        {
+          "label": "4.1b: Which areas does the law or policy governing the requirement or incentive for local content in the extractive industries cover?",
+          "value": "4.1b"
+        },
+        {
+          "label": "4.1c: Is the development of forward linkages promoted in laws, policies or by state equity?",
+          "value": "4.1c"
+        },
+        {
+          "label": "4.1d: Which areas does the law, policy or state equity promoting forward linkages from extractive industries cover?",
+          "value": "4.1d"
+        },
+        {
+          "label": "4.1.1a: Are there rules in law or public policy which require public reporting of local procurement statistics?",
+          "value": "4.1.1a"
+        },
+        {
+          "label": "4.1.1b: Are there rules in law or public policy which require public reporting of local employment statistics?",
+          "value": "4.1.1b"
+        },
+        {
+          "label": "4.1.2a: Has the government published a baseline assessment informing the local content policy?",
+          "value": "4.1.2a"
+        },
+        {
+          "label": "4.1.2b: From 2019 onwards, has the government published local procurement statistics?",
+          "value": "4.1.2b"
+        },
+        {
+          "label": "4.1.2c: From 2019 onwards, has the government published local employment statistics?",
+          "value": "4.1.2c"
+        },
+        {
+          "label": "4.1.3a: Are there rules in law or public policy which require public reporting of processing statistics?",
+          "value": "4.1.3a"
+        },
+        {
+          "label": "4.1.3b: Are there rules in law or public policy which require public reporting of domestic supply statistics?",
+          "value": "4.1.3b"
+        },
+        {
+          "label": "4.1.4a: Has the government published a baseline assessment informing the forward linkages policy?",
+          "value": "4.1.4a"
+        },
+        {
+          "label": "4.1.4b: From 2019 onwards, has the government published processing statistics?",
+          "value": "4.1.4b"
+        },
+        {
+          "label": "4.1.4c: From 2019 onwards, has the government published domestic supply statistics?",
+          "value": "4.1.4c"
+        },
+        {
+          "label": "4.1.5a: Are there rules which require publication of information about extractive industry suppliers' identities?",
+          "value": "4.1.5a"
+        },
+        {
+          "label": "4.1.5b: Are there rules which require beneficial ownership disclosure for extractive industry suppliers?",
+          "value": "4.1.5b"
+        },
+        {
+          "label": "4.1.6a: Does the country publish information about suppliers' identities?",
+          "value": "4.1.6a"
+        },
+        {
+          "label": "4.1.6b: From 2019 onwards, have the beneficial owners of extractive industry suppliers been disclosed?",
+          "value": "4.1.6b"
+        },
+        {
+          "label": "4.2a: Has the government announced targets for renewable energy's share of domestic energy consumption?",
+          "value": "4.2a"
+        },
+        {
+          "label": "4.2b: Has the government or a state-owned enterprise announced goals of investing in renewable energy provision?",
+          "value": "4.2b"
+        },
+        {
+          "label": "4.2.1a: Does the state-owned enterprise publish information on expenditure for exploration and appraisal of new upstream projects in that reporting year?",
+          "value": "4.2.1a"
+        },
+        {
+          "label": "4.2.1b: Does the state-owned enterprise publish information on expenditure for development of new upstream projects in that reporting year?",
+          "value": "4.2.1b"
+        },
+        {
+          "label": "4.2.1c: Does the state-owned enterprise publish information on it's projected future expenditure on exploration, appraisal and the development of new projects?",
+          "value": "4.2.1c"
+        },
+        {
+          "label": "4.2.1d: From 2019 onwards, has the government or a state-owned enterprise disclosed estimated break-even prices for current or projected future upstream projects?",
+          "value": "4.2.1d"
+        },
+        {
+          "label": "4.2.1e: From 2019 onwards, has the government or a state-owned enterprise disclosed its estimates for future projected fossil fuel prices and/or the impact that various scenarios would have on the viability of upstream projects?",
+          "value": "4.2.1e"
+        },
+        {
+          "label": "4.2.1f: From 2019 onwards, has the government or a state-owned enterprise disclosed fossil fuel related consumer subsidies made to public or private companies or to consumers, by volume or value?",
+          "value": "4.2.1f"
+        },
+        {
+          "label": "4.2.2a: Does the government or a state-owned enterprise report publicly on total emissions generated by operations in the  sector?",
+          "value": "4.2.2a"
+        },
+        {
+          "label": "4.2.2b: Does the government or a state-owned enterprise report publicly on emissions generated by flaring and venting in the oil and gas sector?",
+          "value": "4.2.2b"
+        },
+        {
+          "label": "5.1a: Has the government publicly disclosed a list of all active contracts and licenses, including contract amendments, indicating which are publicly available?",
+          "value": "5.1a"
+        },
+        {
+          "label": "5.2a: Do rules specify withholding taxes applicable to payments to non-resident extractive industry suppliers?",
+          "value": "5.2a"
+        },
+        {
+          "label": "5.3a: From 2019 onwards has the government published revenues from extractive industry suppliers?",
+          "value": "5.3a"
+        },
+        {
+          "label": "5.4a: Do rules require environmental inspection reports to be publicly disclosed?",
+          "value": "5.4a"
+        },
+        {
+          "label": "5.5a: From 2019 onwards, have environmental inspection reports been publicly disclosed?",
+          "value": "5.5a"
+        },
+        {
+          "label": "5.5b: From 2019 onwards, have environmental sanctions been disclosed?",
+          "value": "5.5b"
+        },
+        {
+          "label": "5.6a: Are there rules governing compensation when project development interferes with people's livelihoods (aspects of  both tangible and intangible value)?",
+          "value": "5.6a"
+        },
+        {
+          "label": "5.6b: Do existing rules governing the compensation and resettlement process include the following principles: - principle of consent of affected persons - principle of replacement cost for compensation - the right to be assisted for the restoration of livelihoods - the right to appeal against decisions on compensations.",
+          "value": "5.6b"
+        },
+        {
+          "label": "5.6c: Are there rules requiring the disclosure of the Resettlement Action Plan or the Livelihood Restoration Plan, in the event that they are required when a project interferes with people's livelihoods?",
+          "value": "5.6c"
+        },
+        {
+          "label": "5.7a: From 2019 onwards, have Resettlement Action Plans and/or Livelihood Restoration Plans been disclosed for projects which interfere with people's livelihoods?",
+          "value": "5.7a"
+        },
+        {
+          "label": "5.8a: Does the SOE publicly disclose its governance structure?",
+          "value": "5.8a"
+        },
+        {
+          "label": "5.8b: Does the SOE disclose its corporate structure?",
+          "value": "5.8b"
+        },
+        {
+          "label": "5.9a: Are there requirements for the SOE to publish information about procurement opportunities and contracts awarded?",
+          "value": "5.9a"
+        },
+        {
+          "label": "5.9b: Does the SOE publish information about procurement opportunities?",
+          "value": "5.9b"
+        },
+        {
+          "label": "5.9c: Does the SOE publish information about procurement contracts awarded?",
+          "value": "5.9c"
+        },
+        {
+          "label": "5.10a: What does the sovereign wealth fund self-report as its assets under management?",
+          "value": "5.10a"
+        },
+        {
+          "label": "5.11a: Do rules require that funds transferred to/from the sovereign wealth fund are transferred via the government's general unified account (e.g. treasury account)?",
+          "value": "5.11a"
+        },
+        {
+          "label": "5.12a: Does the sovereign wealth fund publicly disclose its governance structure?",
+          "value": "5.12a"
+        },
+        {
+          "label": "5.12b: Does the sovereign wealth fund publicly disclose its corporate structure?",
+          "value": "5.12b"
+        },
+        {
+          "label": "5.12c: Does the sovereign wealth fund publicly disclose the names of external asset managers, along with their assets under management and fees?",
+          "value": "5.12c"
+        },
+        {
+          "label": "5.13a: Does the government or a state-owned enterprise publish information on expenditure for new infrastructure projects built to transport, refine or distribute fossil fuels in that reporting year?",
+          "value": "5.13a"
+        },
+        {
+          "label": "5.13b: From 2019 onwards, has the government or a state-owned enterprise reported it's projected future expenditure on the development of new infrastructure projects built to transport, refine or distribute fossil fuels?",
+          "value": "5.13b"
         }
       ]
     },
